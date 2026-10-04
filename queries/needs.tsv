@@ -1,0 +1,37 @@
+need	name	terms	note
+N1	who sent which task to whom	selected|toAgent prov:startedAtTime Message	
+N2	the router's decision and plan	Routing candidate selected	
+N3	responsibility up to the person	accountableAgent prov:actedOnBehalfOf prov:Person	
+N4	what one agent passed to another	Handoff fromAgent toAgent Message	
+N5	agents created during a run	spawnedBy	
+N6	what each step called	ToolCall usedTool	
+N7	where the arguments of a call came from	ToolCall dependsOn	
+N8	what each step relied on	dependsOn derivedFrom	
+N9	changes to the outside world	Effect target	
+N10	what a bad source affected	dependsOn usedModel	
+N11	whether the data read was out of date	validAt|version	
+N12	retries and fallbacks	retryOf attempt	
+N13	why a loop stopped	iteration outcome	
+N14	which critique judged which draft	Check checked iteration	
+N15	parallel branches and their merge	partOf prov:startedAtTime prov:endedAtTime	
+N16	votes among candidates	Vote votedFor checked	
+N17	the order of asynchronous agents	prov:startedAtTime	
+N18	concurrent writes to shared state	MemoryRecord prov:wasRevisionOf	
+N19	data crossing users or tenants	scope	
+N20	where a memory came from	MemoryRecord MemoryAccess prov:wasGeneratedBy	
+N21	which memories a step read	MemoryAccess prov:used	
+N22	stale or superseded memory	MemoryRecord prov:wasRevisionOf|validAt|prov:wasInvalidatedBy	
+N23	each agent's working context	Message ModelCall	
+N24	untrusted content becoming memory	trustLevel MemoryRecord	
+N25	which step failed and how	status errorType	
+N26	failure attribution	FailureAttribution blamedStep|blamedAgent	
+N27	replay of a run	ModelCall usedModel temperature Message	
+N28	completeness of the record	source	
+N29	which check ran and what it decided	Check checked outcome	
+N30	approvals by people	Check outcome prov:Person	
+N31	tokens per call and agent	inputTokens outputTokens	
+N32	cost per call and agent	inputTokens outputTokens cost	
+N33	time per agent	prov:startedAtTime prov:endedAtTime	
+N34	effort out of proportion to the task	AgentInvocation ModelCall	
+N35	personal content in the record	contentCaptured	
+N36	access to the record	scope	

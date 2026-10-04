@@ -1,0 +1,1160 @@
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix provai: <https://w3id.org/prov-ai#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0x029c39dff77e19a3-output> a provai:Message ;
+    rdfs:label "model output" ;
+    prov:value "[{\"role\": \"assistant\", \"parts\": [{\"type\": \"text\", \"content\": \"FAIL\"}, {\"type\": \"reasoning\", \"content\": null}], \"finish_reason\": \"stop\"}]" ;
+    prov:wasGeneratedBy <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/step/0x029c39dff77e19a3> .
+
+<https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0x29afd3069cea6e4a-effect-2026-10-04T07%3A53%3A25.646751%2B00%3A00> a provai:Effect ;
+    rdfs:label "effect" ;
+    prov:value "/root/.claude/jobs/28722dd5/tmp/rr/agent_framework/maf-20261004T075236/brief-to-client.txt" ;
+    prov:wasAttributedTo <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/agent/writer> ;
+    prov:wasGeneratedBy <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/step/0x29afd3069cea6e4a> ;
+    provai:target "/root/.claude/jobs/28722dd5/tmp/rr/agent_framework/maf-20261004T075236/brief-to-client.txt" .
+
+<https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0x42d9a09672b61221-output> a provai:Message ;
+    rdfs:label "model output" ;
+    prov:value "[{\"role\": \"assistant\", \"parts\": [{\"type\": \"text\", \"content\": \"[\\\"weather\\\", \\\"facts\\\"]\"}, {\"type\": \"reasoning\", \"content\": null}], \"finish_reason\": \"stop\"}]" ;
+    prov:wasGeneratedBy <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/step/0x42d9a09672b61221> .
+
+<https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0x5ce9515326ac2721-output> a provai:Message ;
+    rdfs:label "model output" ;
+    prov:value "[{\"role\": \"assistant\", \"parts\": [{\"type\": \"text\", \"content\": \"The brief about Lisbon has been sent to the client.\"}, {\"type\": \"reasoning\", \"content\": null}], \"finish_reason\": \"stop\"}]" ;
+    prov:wasGeneratedBy <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/step/0x5ce9515326ac2721> .
+
+<https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0x7866a0937a405740-output> a provai:Message ;
+    rdfs:label "model output" ;
+    prov:value "[{\"role\": \"assistant\", \"parts\": [{\"type\": \"text\", \"content\": \"FAIL\"}, {\"type\": \"reasoning\", \"content\": null}], \"finish_reason\": \"stop\"}]" ;
+    prov:wasGeneratedBy <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/step/0x7866a0937a405740> .
+
+<https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0xec612d7701f93de8-output> a provai:Message ;
+    rdfs:label "model output" ;
+    prov:value "[{\"role\": \"assistant\", \"parts\": [{\"type\": \"tool_call\", \"id\": \"call-820f07e8-ba54-4760-9437-b4a71b1c29aa\", \"name\": \"handoff_to_writer\", \"arguments\": \"{}\"}, {\"type\": \"reasoning\", \"content\": null}], \"finish_reason\": \"tool_call\"}]" ;
+    prov:wasGeneratedBy <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/step/0xec612d7701f93de8> .
+
+<https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/memory/notes> a provai:Memory ;
+    rdfs:label "notes" ;
+    prov:hadMember <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/notes%2FLisbon%2F1> .
+
+<https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/step/0x0d6ccd9349f71236-check-2026-10-04T07%3A52%3A52.814926%2B00%3A00> a provai:Check ;
+    rdfs:label "check" ;
+    prov:endedAtTime "2026-10-04T07:52:52.814926+00:00"^^xsd:dateTime ;
+    prov:startedAtTime "2026-10-04T07:52:52.814926+00:00"^^xsd:dateTime ;
+    prov:wasAssociatedWith <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/agent/application> ;
+    provai:checked <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0xe6a8a90e11a94044-output> ;
+    provai:iteration 1 ;
+    provai:outcome "fail" ;
+    provai:partOf <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/step/0x0d6ccd9349f71236> ;
+    provai:reason "the first draft is always sent back for revision" ;
+    provai:status "completed" .
+
+<https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/step/0x14ba85f2741c25d1-check-2026-10-04T07%3A53%3A24.819320%2B00%3A00> a provai:Check ;
+    rdfs:label "check" ;
+    prov:endedAtTime "2026-10-04T07:53:24.819320+00:00"^^xsd:dateTime ;
+    prov:startedAtTime "2026-10-04T07:53:24.819320+00:00"^^xsd:dateTime ;
+    prov:wasAssociatedWith <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/agent/evaluator> ;
+    provai:checked <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0x63552ff876fe94b7-output> ;
+    provai:iteration 3 ;
+    provai:outcome "fail" ;
+    provai:partOf <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/step/0x14ba85f2741c25d1> ;
+    provai:reason "FAIL" ;
+    provai:status "completed" .
+
+<https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/step/0x24c1da9fb04d747c-memory_read-2026-10-04T07%3A52%3A51.349383%2B00%3A00> a provai:MemoryAccess ;
+    rdfs:label "memory read" ;
+    prov:endedAtTime "2026-10-04T07:52:51.349383+00:00"^^xsd:dateTime ;
+    prov:startedAtTime "2026-10-04T07:52:51.349383+00:00"^^xsd:dateTime ;
+    prov:used <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/notes%2FLisbon%2F1> ;
+    prov:wasAssociatedWith <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/agent/writer> ;
+    provai:partOf <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/step/0x24c1da9fb04d747c> ;
+    provai:status "completed" .
+
+<https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/step/0x2e35e44c433b7e36-memory_read-2026-10-04T07%3A52%3A53.267666%2B00%3A00> a provai:MemoryAccess ;
+    rdfs:label "memory read" ;
+    prov:endedAtTime "2026-10-04T07:52:53.267666+00:00"^^xsd:dateTime ;
+    prov:startedAtTime "2026-10-04T07:52:53.267666+00:00"^^xsd:dateTime ;
+    prov:used <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/notes%2FLisbon%2F1> ;
+    prov:wasAssociatedWith <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/agent/writer> ;
+    provai:partOf <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/step/0x2e35e44c433b7e36> ;
+    provai:status "completed" .
+
+<https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/step/0x3a0dfe12689c439e-check-2026-10-04T07%3A53%3A06.707473%2B00%3A00> a provai:Check ;
+    rdfs:label "check" ;
+    prov:endedAtTime "2026-10-04T07:53:06.707473+00:00"^^xsd:dateTime ;
+    prov:startedAtTime "2026-10-04T07:53:06.707473+00:00"^^xsd:dateTime ;
+    prov:wasAssociatedWith <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/agent/evaluator> ;
+    provai:checked <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0x95764c78c1fcda01-output> ;
+    provai:iteration 2 ;
+    provai:outcome "fail" ;
+    provai:partOf <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/step/0x3a0dfe12689c439e> ;
+    provai:reason "FAIL" ;
+    provai:status "completed" .
+
+<https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/step/0x68547f15e1aab05f-memory_read-2026-10-04T07%3A53%3A07.277945%2B00%3A00> a provai:MemoryAccess ;
+    rdfs:label "memory read" ;
+    prov:endedAtTime "2026-10-04T07:53:07.277945+00:00"^^xsd:dateTime ;
+    prov:startedAtTime "2026-10-04T07:53:07.277945+00:00"^^xsd:dateTime ;
+    prov:used <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/notes%2FLisbon%2F1> ;
+    prov:wasAssociatedWith <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/agent/writer> ;
+    provai:partOf <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/step/0x68547f15e1aab05f> ;
+    provai:status "completed" .
+
+<https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/step/0x6ae93d4778ea1a0d> a provai:Handoff ;
+    rdfs:label "handoff" ;
+    prov:endedAtTime "2026-10-04T07:52:50.215749+00:00"^^xsd:dateTime ;
+    prov:startedAtTime "2026-10-04T07:52:50.215728+00:00"^^xsd:dateTime ;
+    prov:wasAssociatedWith <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/agent/coordinator> ;
+    provai:fromAgent <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/agent/coordinator> ;
+    provai:partOf <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/step/0xa79fb61537597077> ;
+    provai:status "completed" ;
+    provai:toAgent <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/agent/writer> .
+
+<https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/step/0x8893ede9cc69f436> a provai:Step ;
+    rdfs:label "handoff: writer" ;
+    prov:endedAtTime "2026-10-04T07:52:50.214977+00:00"^^xsd:dateTime ;
+    prov:startedAtTime "2026-10-04T07:52:50.214728+00:00"^^xsd:dateTime ;
+    prov:wasAssociatedWith <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/agent/writer> ;
+    provai:iteration 1 ;
+    provai:partOf <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/step/0xa79fb61537597077> ;
+    provai:status "completed" .
+
+<https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/step/0xb88928eafa56a688> a provai:Step ;
+    rdfs:label "handoff: coordinator" ;
+    prov:endedAtTime "2026-10-04T07:52:52.813496+00:00"^^xsd:dateTime ;
+    prov:startedAtTime "2026-10-04T07:52:52.813404+00:00"^^xsd:dateTime ;
+    prov:wasAssociatedWith <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/agent/coordinator> ;
+    provai:iteration 2 ;
+    provai:partOf <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/step/0xa79fb61537597077> ;
+    provai:status "completed" .
+
+<https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/step/0xc2b6d64c56b6113e-call-16b134a7-125f-4be1-a73c-d0dd6b1fa0e4> a provai:ToolCall ;
+    rdfs:label "send_brief" ;
+    prov:endedAtTime "2026-10-04T07:53:25.642941+00:00"^^xsd:dateTime ;
+    prov:startedAtTime "2026-10-04T07:53:25.642941+00:00"^^xsd:dateTime ;
+    prov:used <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0xc2b6d64c56b6113e-call-16b134a7-125f-4be1-a73c-d0dd6b1fa0e4-arguments>,
+        <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0xc2b6d64c56b6113e-output> ;
+    prov:wasAssociatedWith <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/agent/writer> ;
+    provai:partOf <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/step/0x6c65fbcfa4f4f6a5> ;
+    provai:status "interrupted" ;
+    provai:usedTool <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/tool/send_brief> .
+
+<https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/step/0xda81e83d039a6a23> a provai:Step ;
+    rdfs:label "route: gather" ;
+    prov:endedAtTime "2026-10-04T07:52:48.990647+00:00"^^xsd:dateTime ;
+    prov:startedAtTime "2026-10-04T07:52:48.990601+00:00"^^xsd:dateTime ;
+    provai:iteration 1 ;
+    provai:partOf <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/step/0xbb76d6c0dd29c9da> ;
+    provai:status "completed" .
+
+<https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/step/0xedc2b6f54c64a57d> a provai:Step ;
+    rdfs:label "handoff: writer" ;
+    prov:endedAtTime "2026-10-04T07:52:50.215578+00:00"^^xsd:dateTime ;
+    prov:startedAtTime "2026-10-04T07:52:50.215527+00:00"^^xsd:dateTime ;
+    prov:wasAssociatedWith <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/agent/writer> ;
+    provai:iteration 2 ;
+    provai:partOf <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/step/0xa79fb61537597077> ;
+    provai:status "completed" .
+
+<https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/agent/application> a provai:Agent ;
+    rdfs:label "application" .
+
+<https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/agent/approver> a prov:Person ;
+    rdfs:label "approver" .
+
+<https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/agent/translator_agent> a provai:Agent ;
+    rdfs:label "translator_agent" .
+
+<https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0x029c39dff77e19a3-input> a provai:Message ;
+    rdfs:label "model input" ;
+    prov:qualifiedDerivation <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0x029c39dff77e19a3-input/derivation/0x403f52296098a2c7-output>,
+        <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0x029c39dff77e19a3-input/derivation/0x63552ff876fe94b7-output> ;
+    prov:value "[{\"role\": \"user\", \"parts\": [{\"type\": \"text\", \"content\": \"Lisbon is the capital of Portugal and lies on the Tagus estuary. Its position on the river estuary has made it a key maritime hub.\"}]}]" ;
+    prov:wasDerivedFrom <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0x403f52296098a2c7-output>,
+        <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0x63552ff876fe94b7-output> .
+
+<https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0x029c39dff77e19a3-input/derivation/0x403f52296098a2c7-output> a prov:Derivation ;
+    prov:entity <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0x403f52296098a2c7-output> ;
+    provai:knownBy "inferred" .
+
+<https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0x029c39dff77e19a3-input/derivation/0x63552ff876fe94b7-output> a prov:Derivation ;
+    prov:entity <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0x63552ff876fe94b7-output> ;
+    provai:knownBy "inferred" .
+
+<https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0x02eedde9e40eb8dd-arguments> a prov:Entity ;
+    rdfs:label "get_weather arguments" ;
+    prov:value "{\"city\": \"Lisbon\"}" .
+
+<https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0x0c79a5b87e0561f0-input> a provai:Message ;
+    rdfs:label "model input" ;
+    prov:qualifiedDerivation <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0x0c79a5b87e0561f0-input/derivation/0x403f52296098a2c7-output>,
+        <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0x0c79a5b87e0561f0-input/derivation/0x95764c78c1fcda01-output> ;
+    prov:value "[{\"role\": \"user\", \"parts\": [{\"type\": \"text\", \"content\": \"Your brief on Lisbon: Lisbon is the capital of Portugal and lies on the Tagus estuary. Its historic neighborhoods reflect a rich maritime heritage.\\nThe draft failed review: FAIL. Revise it and reply with the brief only.\"}]}]" ;
+    prov:wasDerivedFrom <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0x403f52296098a2c7-output>,
+        <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0x95764c78c1fcda01-output> .
+
+<https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0x0c79a5b87e0561f0-input/derivation/0x403f52296098a2c7-output> a prov:Derivation ;
+    prov:entity <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0x403f52296098a2c7-output> ;
+    provai:knownBy "inferred" .
+
+<https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0x0c79a5b87e0561f0-input/derivation/0x95764c78c1fcda01-output> a prov:Derivation ;
+    prov:entity <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0x95764c78c1fcda01-output> ;
+    provai:knownBy "inferred" .
+
+<https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0x0c79a5b87e0561f0-output> a provai:Message ;
+    rdfs:label "model output" ;
+    prov:value "[{\"role\": \"assistant\", \"parts\": [{\"type\": \"tool_call\", \"id\": \"call-6d758706-0b5f-45ee-a516-d9721b041bda\", \"name\": \"read_note\", \"arguments\": \"{\\\"city\\\":\\\"Lisbon\\\"}\"}, {\"type\": \"reasoning\", \"content\": null}], \"finish_reason\": \"tool_call\"}]" ;
+    prov:wasGeneratedBy <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/step/0x0c79a5b87e0561f0> .
+
+<https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0x24350e7d119297b0-input> a provai:Message ;
+    rdfs:label "model input" ;
+    prov:qualifiedDerivation <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0x24350e7d119297b0-input/derivation/0xe6a8a90e11a94044-output> ;
+    prov:value "[{\"role\": \"user\", \"parts\": [{\"type\": \"text\", \"content\": \"Your brief on Lisbon: Lisbon, the capital of Portugal, sits on the Tagus estuary. Currently enjoying 21\\u202f\\u00b0C with clear skies.\\nThe draft failed review: the first draft is always sent back for revision. Revise it and reply with the brief only.\"}]}]" ;
+    prov:wasDerivedFrom <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0xe6a8a90e11a94044-output> .
+
+<https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0x24350e7d119297b0-input/derivation/0xe6a8a90e11a94044-output> a prov:Derivation ;
+    prov:entity <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0xe6a8a90e11a94044-output> ;
+    provai:knownBy "inferred" .
+
+<https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0x24350e7d119297b0-output> a provai:Message ;
+    rdfs:label "model output" ;
+    prov:value "[{\"role\": \"assistant\", \"parts\": [{\"type\": \"tool_call\", \"id\": \"call-ae63ae5f-59ab-4617-9218-b05c5748c8c3\", \"name\": \"read_note\", \"arguments\": \"{\\\"city\\\":\\\"Lisbon\\\"}\"}, {\"type\": \"reasoning\", \"content\": null}], \"finish_reason\": \"tool_call\"}]" ;
+    prov:wasGeneratedBy <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/step/0x24350e7d119297b0> .
+
+<https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0x24c1da9fb04d747c-arguments> a prov:Entity ;
+    rdfs:label "read_note arguments" ;
+    prov:value "{\"city\": \"Lisbon\"}" .
+
+<https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0x24c1da9fb04d747c-result> a prov:Entity ;
+    rdfs:label "read_note result" ;
+    prov:qualifiedDerivation <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0x24c1da9fb04d747c-result/derivation/notes%2FLisbon%2F1> ;
+    prov:value "Lisbon is the capital of Portugal and lies on the Tagus estuary." ;
+    prov:wasDerivedFrom <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/notes%2FLisbon%2F1> ;
+    prov:wasGeneratedBy <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/step/0x24c1da9fb04d747c> .
+
+<https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0x24c1da9fb04d747c-result/derivation/notes%2FLisbon%2F1> a prov:Derivation ;
+    prov:entity <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/notes%2FLisbon%2F1> ;
+    provai:knownBy "inferred" .
+
+<https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0x29afd3069cea6e4a-arguments> a prov:Entity ;
+    rdfs:label "send_brief arguments" ;
+    prov:value "{\"text\": \"Lisbon is the capital of Portugal and lies on the Tagus estuary. Its position on the river estuary has made it a key maritime hub.\", \"to\": \"client\"}" .
+
+<https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0x29afd3069cea6e4a-result> a prov:Entity ;
+    rdfs:label "send_brief result" ;
+    prov:value "/root/.claude/jobs/28722dd5/tmp/rr/agent_framework/maf-20261004T075236/brief-to-client.txt" ;
+    prov:wasGeneratedBy <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/step/0x29afd3069cea6e4a> .
+
+<https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0x2e35e44c433b7e36-arguments> a prov:Entity ;
+    rdfs:label "read_note arguments" ;
+    prov:value "{\"city\": \"Lisbon\"}" .
+
+<https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0x2e35e44c433b7e36-result> a prov:Entity ;
+    rdfs:label "read_note result" ;
+    prov:qualifiedDerivation <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0x2e35e44c433b7e36-result/derivation/notes%2FLisbon%2F1> ;
+    prov:value "Lisbon is the capital of Portugal and lies on the Tagus estuary." ;
+    prov:wasDerivedFrom <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/notes%2FLisbon%2F1> ;
+    prov:wasGeneratedBy <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/step/0x2e35e44c433b7e36> .
+
+<https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0x2e35e44c433b7e36-result/derivation/notes%2FLisbon%2F1> a prov:Derivation ;
+    prov:entity <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/notes%2FLisbon%2F1> ;
+    provai:knownBy "inferred" .
+
+<https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0x39f4dcfcc484c975-arguments> a prov:Entity ;
+    rdfs:label "search_facts arguments" ;
+    prov:value "{\"city\": \"Lisbon\"}" .
+
+<https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0x39f4dcfcc484c975-result> a prov:Entity ;
+    rdfs:label "search_facts result" ;
+    prov:value "Lisbon is the capital of Portugal and lies on the Tagus estuary." ;
+    prov:wasGeneratedBy <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/step/0x39f4dcfcc484c975> .
+
+<https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0x3b6c2d1ff79dc048-input> a provai:Message ;
+    rdfs:label "model input" ;
+    prov:value "[{\"role\": \"user\", \"parts\": [{\"type\": \"text\", \"content\": \"Weather in Lisbon?\"}]}]" .
+
+<https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0x3b6c2d1ff79dc048-output> a provai:Message ;
+    rdfs:label "model output" ;
+    prov:value "[{\"role\": \"assistant\", \"parts\": [{\"type\": \"tool_call\", \"id\": \"call-2e08785f-1623-4b1d-8ef1-3b90732af153\", \"name\": \"get_weather\", \"arguments\": \"{\\\"city\\\": \\\"Lisbon\\\"}\"}, {\"type\": \"reasoning\", \"content\": null}], \"finish_reason\": \"tool_call\"}]" ;
+    prov:wasGeneratedBy <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/step/0x3b6c2d1ff79dc048> .
+
+<https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0x403f52296098a2c7-input> a provai:Message ;
+    rdfs:label "model input" ;
+    prov:value "[{\"role\": \"user\", \"parts\": [{\"type\": \"text\", \"content\": \"Facts about Lisbon?\"}]}, {\"role\": \"assistant\", \"parts\": [{\"type\": \"tool_call\", \"id\": \"call-f1c604b9-1815-4cea-b816-3ff0b69f85b8\", \"name\": \"search_facts\", \"arguments\": \"{\\\"city\\\": \\\"Lisbon\\\"}\"}, {\"type\": \"reasoning\", \"content\": null}]}, {\"role\": \"tool\", \"parts\": [{\"type\": \"tool_call_response\", \"id\": \"call-f1c604b9-1815-4cea-b816-3ff0b69f85b8\", \"response\": \"Lisbon is the capital of Portugal and lies on the Tagus estuary.\"}]}]" .
+
+<https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0x42d9a09672b61221-input> a provai:Message ;
+    rdfs:label "model input" ;
+    prov:value "[{\"role\": \"user\", \"parts\": [{\"type\": \"text\", \"content\": \"Agents: weather, facts, translator. Which agents are needed for a short brief on Lisbon's weather and facts? Answer with a JSON list of agent names.\"}]}]" .
+
+<https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0x5ce9515326ac2721-input> a provai:Message ;
+    rdfs:label "model input" ;
+    prov:qualifiedDerivation <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0x5ce9515326ac2721-input/derivation/0x403f52296098a2c7-output>,
+        <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0x5ce9515326ac2721-input/derivation/0x63552ff876fe94b7-output> ;
+    prov:value "[{\"role\": \"user\", \"parts\": [{\"type\": \"text\", \"content\": \"Send this brief on Lisbon to client: Lisbon is the capital of Portugal and lies on the Tagus estuary. Its position on the river estuary has made it a key maritime hub.\"}]}, {\"role\": \"assistant\", \"parts\": [{\"type\": \"tool_call\", \"id\": \"call-16b134a7-125f-4be1-a73c-d0dd6b1fa0e4\", \"name\": \"send_brief\", \"arguments\": \"{\\\"to\\\":\\\"client\\\",\\\"text\\\":\\\"Lisbon is the capital of Portugal and lies on the Tagus estuary. Its position on the river estuary has made it a key maritime hub.\\\"}\"}, {\"type\": \"reasoning\", \"content\": null}, {\"type\": \"function_approval_request\", \"function_call\": {\"type\": \"function_call\", \"call_id\": \"call-16b134a7-125f-4be1-a73c-d0dd6b1fa0e4\", \"name\": \"send_brief\", \"arguments\": \"{\\\"to\\\":\\\"client\\\",\\\"text\\\":\\\"Lisbon is the capital of Portugal and lies on the Tagus estuary. Its position on the river estuary has made it a key maritime hub.\\\"}\", \"id\": \"af-call-688ce84e728c4b559cd264ce351e013a\", \"additional_properties\": {\"tool_call_index\": 0, \"tool_call_choice_index\": 0}}, \"user_input_request\": true, \"id\": \"af-call-688ce84e728c4b559cd264ce351e013a\", \"additional_properties\": {}}]}, {\"role\": \"tool\", \"parts\": [{\"type\": \"tool_call_response\", \"id\": \"call-16b134a7-125f-4be1-a73c-d0dd6b1fa0e4\", \"response\": \"/root/.claude/jobs/28722dd5/tmp/rr/agent_framework/maf-20261004T075236/brief-to-client.txt\"}]}]" ;
+    prov:wasDerivedFrom <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0x403f52296098a2c7-output>,
+        <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0x63552ff876fe94b7-output> .
+
+<https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0x5ce9515326ac2721-input/derivation/0x403f52296098a2c7-output> a prov:Derivation ;
+    prov:entity <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0x403f52296098a2c7-output> ;
+    provai:knownBy "inferred" .
+
+<https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0x5ce9515326ac2721-input/derivation/0x63552ff876fe94b7-output> a prov:Derivation ;
+    prov:entity <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0x63552ff876fe94b7-output> ;
+    provai:knownBy "inferred" .
+
+<https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0x63552ff876fe94b7-input> a provai:Message ;
+    rdfs:label "model input" ;
+    prov:qualifiedDerivation <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0x63552ff876fe94b7-input/derivation/0x403f52296098a2c7-output>,
+        <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0x63552ff876fe94b7-input/derivation/0x95764c78c1fcda01-output> ;
+    prov:value "[{\"role\": \"user\", \"parts\": [{\"type\": \"text\", \"content\": \"Your brief on Lisbon: Lisbon is the capital of Portugal and lies on the Tagus estuary. Its historic neighborhoods reflect a rich maritime heritage.\\nThe draft failed review: FAIL. Revise it and reply with the brief only.\"}]}, {\"role\": \"assistant\", \"parts\": [{\"type\": \"tool_call\", \"id\": \"call-6d758706-0b5f-45ee-a516-d9721b041bda\", \"name\": \"read_note\", \"arguments\": \"{\\\"city\\\":\\\"Lisbon\\\"}\"}, {\"type\": \"reasoning\", \"content\": null}]}, {\"role\": \"tool\", \"parts\": [{\"type\": \"tool_call_response\", \"id\": \"call-6d758706-0b5f-45ee-a516-d9721b041bda\", \"response\": \"Lisbon is the capital of Portugal and lies on the Tagus estuary.\"}]}]" ;
+    prov:wasDerivedFrom <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0x403f52296098a2c7-output>,
+        <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0x95764c78c1fcda01-output> .
+
+<https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0x63552ff876fe94b7-input/derivation/0x403f52296098a2c7-output> a prov:Derivation ;
+    prov:entity <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0x403f52296098a2c7-output> ;
+    provai:knownBy "inferred" .
+
+<https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0x63552ff876fe94b7-input/derivation/0x95764c78c1fcda01-output> a prov:Derivation ;
+    prov:entity <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0x95764c78c1fcda01-output> ;
+    provai:knownBy "inferred" .
+
+<https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0x68547f15e1aab05f-arguments> a prov:Entity ;
+    rdfs:label "read_note arguments" ;
+    prov:value "{\"city\": \"Lisbon\"}" .
+
+<https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0x68547f15e1aab05f-result> a prov:Entity ;
+    rdfs:label "read_note result" ;
+    prov:qualifiedDerivation <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0x68547f15e1aab05f-result/derivation/notes%2FLisbon%2F1> ;
+    prov:value "Lisbon is the capital of Portugal and lies on the Tagus estuary." ;
+    prov:wasDerivedFrom <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/notes%2FLisbon%2F1> ;
+    prov:wasGeneratedBy <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/step/0x68547f15e1aab05f> .
+
+<https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0x68547f15e1aab05f-result/derivation/notes%2FLisbon%2F1> a prov:Derivation ;
+    prov:entity <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/notes%2FLisbon%2F1> ;
+    provai:knownBy "inferred" .
+
+<https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0x726158c3cf9ecc33-input> a provai:Message ;
+    rdfs:label "model input" ;
+    prov:qualifiedDerivation <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0x726158c3cf9ecc33-input/derivation/0x403f52296098a2c7-output>,
+        <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0x726158c3cf9ecc33-input/derivation/0xcddcb8d8764db5e5-output> ;
+    prov:value "[{\"role\": \"user\", \"parts\": [{\"type\": \"text\", \"content\": \"What the agents found about Lisbon:\\nLisbon is currently 21\\u202f\\u00b0C with clear skies.\\nLisbon is the capital of Portugal and lies on the Tagus estuary.\\nHand off to the writer.\"}]}]" ;
+    prov:wasDerivedFrom <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0x403f52296098a2c7-output>,
+        <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0xcddcb8d8764db5e5-output> .
+
+<https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0x726158c3cf9ecc33-input/derivation/0x403f52296098a2c7-output> a prov:Derivation ;
+    prov:entity <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0x403f52296098a2c7-output> ;
+    provai:knownBy "inferred" .
+
+<https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0x726158c3cf9ecc33-input/derivation/0xcddcb8d8764db5e5-output> a prov:Derivation ;
+    prov:entity <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0xcddcb8d8764db5e5-output> ;
+    provai:knownBy "inferred" .
+
+<https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0x726158c3cf9ecc33-output> a provai:Message ;
+    rdfs:label "model output" ;
+    prov:value "[{\"role\": \"assistant\", \"parts\": [{\"type\": \"tool_call\", \"id\": \"call-a551475b-02c7-4dde-b734-e58a7765c65b\", \"name\": \"read_note\", \"arguments\": \"{\\\"city\\\":\\\"Lisbon\\\"}\"}, {\"type\": \"reasoning\", \"content\": null}], \"finish_reason\": \"tool_call\"}]" ;
+    prov:wasGeneratedBy <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/step/0x726158c3cf9ecc33> .
+
+<https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0x7866a0937a405740-input> a provai:Message ;
+    rdfs:label "model input" ;
+    prov:qualifiedDerivation <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0x7866a0937a405740-input/derivation/0x403f52296098a2c7-output>,
+        <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0x7866a0937a405740-input/derivation/0x95764c78c1fcda01-output> ;
+    prov:value "[{\"role\": \"user\", \"parts\": [{\"type\": \"text\", \"content\": \"Lisbon is the capital of Portugal and lies on the Tagus estuary. Its historic neighborhoods reflect a rich maritime heritage.\"}]}]" ;
+    prov:wasDerivedFrom <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0x403f52296098a2c7-output>,
+        <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0x95764c78c1fcda01-output> .
+
+<https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0x7866a0937a405740-input/derivation/0x403f52296098a2c7-output> a prov:Derivation ;
+    prov:entity <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0x403f52296098a2c7-output> ;
+    provai:knownBy "inferred" .
+
+<https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0x7866a0937a405740-input/derivation/0x95764c78c1fcda01-output> a prov:Derivation ;
+    prov:entity <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0x95764c78c1fcda01-output> ;
+    provai:knownBy "inferred" .
+
+<https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0x95764c78c1fcda01-input> a provai:Message ;
+    rdfs:label "model input" ;
+    prov:qualifiedDerivation <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0x95764c78c1fcda01-input/derivation/0x403f52296098a2c7-output>,
+        <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0x95764c78c1fcda01-input/derivation/0xe6a8a90e11a94044-output> ;
+    prov:value "[{\"role\": \"user\", \"parts\": [{\"type\": \"text\", \"content\": \"Your brief on Lisbon: Lisbon, the capital of Portugal, sits on the Tagus estuary. Currently enjoying 21\\u202f\\u00b0C with clear skies.\\nThe draft failed review: the first draft is always sent back for revision. Revise it and reply with the brief only.\"}]}, {\"role\": \"assistant\", \"parts\": [{\"type\": \"tool_call\", \"id\": \"call-ae63ae5f-59ab-4617-9218-b05c5748c8c3\", \"name\": \"read_note\", \"arguments\": \"{\\\"city\\\":\\\"Lisbon\\\"}\"}, {\"type\": \"reasoning\", \"content\": null}]}, {\"role\": \"tool\", \"parts\": [{\"type\": \"tool_call_response\", \"id\": \"call-ae63ae5f-59ab-4617-9218-b05c5748c8c3\", \"response\": \"Lisbon is the capital of Portugal and lies on the Tagus estuary.\"}]}]" ;
+    prov:wasDerivedFrom <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0x403f52296098a2c7-output>,
+        <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0xe6a8a90e11a94044-output> .
+
+<https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0x95764c78c1fcda01-input/derivation/0x403f52296098a2c7-output> a prov:Derivation ;
+    prov:entity <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0x403f52296098a2c7-output> ;
+    provai:knownBy "inferred" .
+
+<https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0x95764c78c1fcda01-input/derivation/0xe6a8a90e11a94044-output> a prov:Derivation ;
+    prov:entity <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0xe6a8a90e11a94044-output> ;
+    provai:knownBy "inferred" .
+
+<https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0x9a8aaac296c91bd4-input> a provai:Message ;
+    rdfs:label "model input" ;
+    prov:value "[{\"role\": \"user\", \"parts\": [{\"type\": \"text\", \"content\": \"Facts about Lisbon?\"}]}]" .
+
+<https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0x9a8aaac296c91bd4-output> a provai:Message ;
+    rdfs:label "model output" ;
+    prov:value "[{\"role\": \"assistant\", \"parts\": [{\"type\": \"tool_call\", \"id\": \"call-f1c604b9-1815-4cea-b816-3ff0b69f85b8\", \"name\": \"search_facts\", \"arguments\": \"{\\\"city\\\": \\\"Lisbon\\\"}\"}, {\"type\": \"reasoning\", \"content\": null}], \"finish_reason\": \"tool_call\"}]" ;
+    prov:wasGeneratedBy <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/step/0x9a8aaac296c91bd4> .
+
+<https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0xa429c794b0b15b23-input> a provai:Message ;
+    rdfs:label "model input" ;
+    prov:value "[{\"role\": \"user\", \"parts\": [{\"type\": \"text\", \"content\": \"Weather in Lisbon?\"}]}, {\"role\": \"assistant\", \"parts\": [{\"type\": \"tool_call\", \"id\": \"call-2e08785f-1623-4b1d-8ef1-3b90732af153\", \"name\": \"get_weather\", \"arguments\": \"{\\\"city\\\": \\\"Lisbon\\\"}\"}, {\"type\": \"reasoning\", \"content\": null}]}, {\"role\": \"tool\", \"parts\": [{\"type\": \"tool_call_response\", \"id\": \"call-2e08785f-1623-4b1d-8ef1-3b90732af153\", \"response\": \"Error: Function failed.\"}]}]" .
+
+<https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0xa429c794b0b15b23-output> a provai:Message ;
+    rdfs:label "model output" ;
+    prov:value "[{\"role\": \"assistant\", \"parts\": [{\"type\": \"tool_call\", \"id\": \"call-07776d32-21d8-45ed-bd50-af925ebcf475\", \"name\": \"get_weather\", \"arguments\": \"{\\\"city\\\":\\\"Lisbon\\\"}\"}, {\"type\": \"reasoning\", \"content\": null}], \"finish_reason\": \"tool_call\"}]" ;
+    prov:wasGeneratedBy <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/step/0xa429c794b0b15b23> .
+
+<https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0xc2b6d64c56b6113e-input> a provai:Message ;
+    rdfs:label "model input" ;
+    prov:qualifiedDerivation <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0xc2b6d64c56b6113e-input/derivation/0x403f52296098a2c7-output>,
+        <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0xc2b6d64c56b6113e-input/derivation/0x63552ff876fe94b7-output> ;
+    prov:value "[{\"role\": \"user\", \"parts\": [{\"type\": \"text\", \"content\": \"Send this brief on Lisbon to client: Lisbon is the capital of Portugal and lies on the Tagus estuary. Its position on the river estuary has made it a key maritime hub.\"}]}]" ;
+    prov:wasDerivedFrom <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0x403f52296098a2c7-output>,
+        <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0x63552ff876fe94b7-output> .
+
+<https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0xc2b6d64c56b6113e-input/derivation/0x403f52296098a2c7-output> a prov:Derivation ;
+    prov:entity <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0x403f52296098a2c7-output> ;
+    provai:knownBy "inferred" .
+
+<https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0xc2b6d64c56b6113e-input/derivation/0x63552ff876fe94b7-output> a prov:Derivation ;
+    prov:entity <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0x63552ff876fe94b7-output> ;
+    provai:knownBy "inferred" .
+
+<https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0xcddcb8d8764db5e5-input> a provai:Message ;
+    rdfs:label "model input" ;
+    prov:value "[{\"role\": \"user\", \"parts\": [{\"type\": \"text\", \"content\": \"Weather in Lisbon?\"}]}, {\"role\": \"assistant\", \"parts\": [{\"type\": \"tool_call\", \"id\": \"call-2e08785f-1623-4b1d-8ef1-3b90732af153\", \"name\": \"get_weather\", \"arguments\": \"{\\\"city\\\": \\\"Lisbon\\\"}\"}, {\"type\": \"reasoning\", \"content\": null}]}, {\"role\": \"tool\", \"parts\": [{\"type\": \"tool_call_response\", \"id\": \"call-2e08785f-1623-4b1d-8ef1-3b90732af153\", \"response\": \"Error: Function failed.\"}]}, {\"role\": \"assistant\", \"parts\": [{\"type\": \"tool_call\", \"id\": \"call-07776d32-21d8-45ed-bd50-af925ebcf475\", \"name\": \"get_weather\", \"arguments\": \"{\\\"city\\\":\\\"Lisbon\\\"}\"}, {\"type\": \"reasoning\", \"content\": null}]}, {\"role\": \"tool\", \"parts\": [{\"type\": \"tool_call_response\", \"id\": \"call-07776d32-21d8-45ed-bd50-af925ebcf475\", \"response\": \"Lisbon: 21 C, clear sky\"}]}]" .
+
+<https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0xe6a8a90e11a94044-input> a provai:Message ;
+    rdfs:label "model input" ;
+    prov:qualifiedDerivation <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0xe6a8a90e11a94044-input/derivation/0x403f52296098a2c7-output>,
+        <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0xe6a8a90e11a94044-input/derivation/0xcddcb8d8764db5e5-output> ;
+    prov:value "[{\"role\": \"user\", \"parts\": [{\"type\": \"text\", \"content\": \"What the agents found about Lisbon:\\nLisbon is currently 21\\u202f\\u00b0C with clear skies.\\nLisbon is the capital of Portugal and lies on the Tagus estuary.\\nHand off to the writer.\"}]}, {\"role\": \"assistant\", \"parts\": [{\"type\": \"tool_call\", \"id\": \"call-a551475b-02c7-4dde-b734-e58a7765c65b\", \"name\": \"read_note\", \"arguments\": \"{\\\"city\\\":\\\"Lisbon\\\"}\"}, {\"type\": \"reasoning\", \"content\": null}]}, {\"role\": \"tool\", \"parts\": [{\"type\": \"tool_call_response\", \"id\": \"call-a551475b-02c7-4dde-b734-e58a7765c65b\", \"response\": \"Lisbon is the capital of Portugal and lies on the Tagus estuary.\"}]}]" ;
+    prov:wasDerivedFrom <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0x403f52296098a2c7-output>,
+        <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0xcddcb8d8764db5e5-output> .
+
+<https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0xe6a8a90e11a94044-input/derivation/0x403f52296098a2c7-output> a prov:Derivation ;
+    prov:entity <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0x403f52296098a2c7-output> ;
+    provai:knownBy "inferred" .
+
+<https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0xe6a8a90e11a94044-input/derivation/0xcddcb8d8764db5e5-output> a prov:Derivation ;
+    prov:entity <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0xcddcb8d8764db5e5-output> ;
+    provai:knownBy "inferred" .
+
+<https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0xec612d7701f93de8-input> a provai:Message ;
+    rdfs:label "model input" ;
+    prov:qualifiedDerivation <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0xec612d7701f93de8-input/derivation/0x403f52296098a2c7-output>,
+        <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0xec612d7701f93de8-input/derivation/0xcddcb8d8764db5e5-output> ;
+    prov:value "[{\"role\": \"user\", \"parts\": [{\"type\": \"text\", \"content\": \"What the agents found about Lisbon:\\nLisbon is currently 21\\u202f\\u00b0C with clear skies.\\nLisbon is the capital of Portugal and lies on the Tagus estuary.\\nHand off to the writer.\"}]}]" ;
+    prov:wasDerivedFrom <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0x403f52296098a2c7-output>,
+        <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0xcddcb8d8764db5e5-output> .
+
+<https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0xec612d7701f93de8-input/derivation/0x403f52296098a2c7-output> a prov:Derivation ;
+    prov:entity <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0x403f52296098a2c7-output> ;
+    provai:knownBy "inferred" .
+
+<https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0xec612d7701f93de8-input/derivation/0xcddcb8d8764db5e5-output> a prov:Derivation ;
+    prov:entity <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0xcddcb8d8764db5e5-output> ;
+    provai:knownBy "inferred" .
+
+<https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0xf733b504446424cd-arguments> a prov:Entity ;
+    rdfs:label "get_weather arguments" ;
+    prov:value "{\"city\": \"Lisbon\"}" .
+
+<https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0xf733b504446424cd-result> a prov:Entity ;
+    rdfs:label "get_weather result" ;
+    prov:value "Lisbon: 21 C, clear sky" ;
+    prov:wasGeneratedBy <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/step/0xf733b504446424cd> .
+
+<https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/notes%2FLisbon%2F1/derivation/0x403f52296098a2c7-output> a prov:Derivation ;
+    prov:entity <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0x403f52296098a2c7-output> ;
+    provai:knownBy "inferred" .
+
+<https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/step/0x029c39dff77e19a3> a provai:ModelCall ;
+    rdfs:label "chat" ;
+    prov:endedAtTime "2026-10-04T07:53:24.818506+00:00"^^xsd:dateTime ;
+    prov:startedAtTime "2026-10-04T07:53:11.447535+00:00"^^xsd:dateTime ;
+    prov:used <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0x029c39dff77e19a3-input> ;
+    prov:wasAssociatedWith <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/agent/evaluator> ;
+    provai:finishReason "[\"stop\"]" ;
+    provai:inputTokens 65 ;
+    provai:maxTokens 1000 ;
+    provai:outputTokens 560 ;
+    provai:partOf <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/step/0x353401df71ccb23f> ;
+    provai:status "completed" ;
+    provai:temperature 0.2 ;
+    provai:usedModel <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/model/openai%2Fnvidia%2Fnemotron-3.5-lightning%3Afree> .
+
+<https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/step/0x02eedde9e40eb8dd> a provai:ToolCall ;
+    rdfs:label "get_weather" ;
+    prov:endedAtTime "2026-10-04T07:52:47.085572+00:00"^^xsd:dateTime ;
+    prov:startedAtTime "2026-10-04T07:52:47.081464+00:00"^^xsd:dateTime ;
+    prov:used <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0x02eedde9e40eb8dd-arguments>,
+        <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0x3b6c2d1ff79dc048-output> ;
+    prov:wasAssociatedWith <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/agent/weather_agent> ;
+    provai:errorType "TimeoutError" ;
+    provai:partOf <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/step/0x6afc95852e21b652> ;
+    provai:status "failed" ;
+    provai:usedTool <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/tool/get_weather> .
+
+<https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/step/0x0c79a5b87e0561f0> a provai:ModelCall ;
+    rdfs:label "chat" ;
+    prov:endedAtTime "2026-10-04T07:53:07.277231+00:00"^^xsd:dateTime ;
+    prov:startedAtTime "2026-10-04T07:53:06.709189+00:00"^^xsd:dateTime ;
+    prov:used <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0x0c79a5b87e0561f0-input> ;
+    prov:wasAssociatedWith <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/agent/writer> ;
+    provai:finishReason "[\"tool_calls\"]" ;
+    provai:inputTokens 356 ;
+    provai:maxTokens 1000 ;
+    provai:outputTokens 32 ;
+    provai:partOf <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/step/0xe32b68084395158a> ;
+    provai:status "completed" ;
+    provai:temperature 0.2 ;
+    provai:usedModel <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/model/openai%2Fnvidia%2Fnemotron-3.5-lightning%3Afree> .
+
+<https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/step/0x0d6ccd9349f71236> a provai:Step ;
+    rdfs:label "review: evaluator" ;
+    prov:endedAtTime "2026-10-04T07:52:52.815149+00:00"^^xsd:dateTime ;
+    prov:startedAtTime "2026-10-04T07:52:52.814872+00:00"^^xsd:dateTime ;
+    prov:wasAssociatedWith <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/agent/evaluator> ;
+    provai:iteration 1 ;
+    provai:partOf <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/step/0x8fd0c4f781b2aced> ;
+    provai:status "completed" .
+
+<https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/step/0x12cd81dcc9ebc578> a provai:Step ;
+    rdfs:label "handoff: coordinator" ;
+    prov:endedAtTime "2026-10-04T07:52:50.214151+00:00"^^xsd:dateTime ;
+    prov:startedAtTime "2026-10-04T07:52:48.991832+00:00"^^xsd:dateTime ;
+    prov:wasAssociatedWith <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/agent/coordinator> ;
+    provai:iteration 1 ;
+    provai:partOf <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/step/0xa79fb61537597077> ;
+    provai:status "completed" .
+
+<https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/step/0x148bef2513bb488d> a provai:Step ;
+    rdfs:label "review: revise" ;
+    prov:endedAtTime "2026-10-04T07:52:56.370349+00:00"^^xsd:dateTime ;
+    prov:startedAtTime "2026-10-04T07:52:52.815664+00:00"^^xsd:dateTime ;
+    prov:wasAssociatedWith <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/agent/writer> ;
+    provai:iteration 1 ;
+    provai:partOf <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/step/0x8fd0c4f781b2aced> ;
+    provai:status "completed" .
+
+<https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/step/0x24350e7d119297b0> a provai:ModelCall ;
+    rdfs:label "chat" ;
+    prov:endedAtTime "2026-10-04T07:52:53.266899+00:00"^^xsd:dateTime ;
+    prov:startedAtTime "2026-10-04T07:52:52.816443+00:00"^^xsd:dateTime ;
+    prov:used <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0x24350e7d119297b0-input> ;
+    prov:wasAssociatedWith <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/agent/writer> ;
+    provai:finishReason "[\"tool_calls\"]" ;
+    provai:inputTokens 365 ;
+    provai:maxTokens 1000 ;
+    provai:outputTokens 38 ;
+    provai:partOf <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/step/0xeeeeb0766d3a2c75> ;
+    provai:status "completed" ;
+    provai:temperature 0.2 ;
+    provai:usedModel <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/model/openai%2Fnvidia%2Fnemotron-3.5-lightning%3Afree> .
+
+<https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/step/0x2ab07379afd82afb> a provai:Step ;
+    rdfs:label "review: revise" ;
+    prov:endedAtTime "2026-10-04T07:53:11.445634+00:00"^^xsd:dateTime ;
+    prov:startedAtTime "2026-10-04T07:53:06.708525+00:00"^^xsd:dateTime ;
+    prov:wasAssociatedWith <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/agent/writer> ;
+    provai:iteration 2 ;
+    provai:partOf <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/step/0x8fd0c4f781b2aced> ;
+    provai:status "completed" .
+
+<https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/step/0x353401df71ccb23f> a provai:AgentInvocation ;
+    rdfs:label "evaluator" ;
+    prov:endedAtTime "2026-10-04T07:53:24.818982+00:00"^^xsd:dateTime ;
+    prov:startedAtTime "2026-10-04T07:53:11.447175+00:00"^^xsd:dateTime ;
+    prov:wasAssociatedWith <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/agent/evaluator> ;
+    provai:iteration 2 ;
+    provai:partOf <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/step/0x14ba85f2741c25d1> ;
+    provai:status "completed" .
+
+<https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/step/0x39f4dcfcc484c975> a provai:ToolCall ;
+    rdfs:label "search_facts" ;
+    prov:endedAtTime "2026-10-04T07:52:47.090487+00:00"^^xsd:dateTime ;
+    prov:startedAtTime "2026-10-04T07:52:47.090282+00:00"^^xsd:dateTime ;
+    prov:used <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0x39f4dcfcc484c975-arguments>,
+        <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0x9a8aaac296c91bd4-output> ;
+    prov:wasAssociatedWith <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/agent/facts_agent> ;
+    provai:partOf <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/step/0x0a8dea5cf6b77f31> ;
+    provai:status "completed" ;
+    provai:usedTool <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/tool/search_facts> .
+
+<https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/step/0x3b6c2d1ff79dc048> a provai:ModelCall ;
+    rdfs:label "chat" ;
+    prov:endedAtTime "2026-10-04T07:52:47.080838+00:00"^^xsd:dateTime ;
+    prov:startedAtTime "2026-10-04T07:52:46.617146+00:00"^^xsd:dateTime ;
+    prov:used <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0x3b6c2d1ff79dc048-input> ;
+    prov:wasAssociatedWith <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/agent/weather_agent> ;
+    provai:finishReason "[\"tool_calls\"]" ;
+    provai:inputTokens 313 ;
+    provai:maxTokens 1000 ;
+    provai:outputTokens 37 ;
+    provai:partOf <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/step/0x6afc95852e21b652> ;
+    provai:status "completed" ;
+    provai:temperature 0.2 ;
+    provai:usedModel <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/model/openai%2Fnvidia%2Fnemotron-3.5-lightning%3Afree> .
+
+<https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/step/0x403f52296098a2c7> a provai:ModelCall ;
+    rdfs:label "chat" ;
+    prov:endedAtTime "2026-10-04T07:52:48.063373+00:00"^^xsd:dateTime ;
+    prov:startedAtTime "2026-10-04T07:52:47.090776+00:00"^^xsd:dateTime ;
+    prov:used <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0x39f4dcfcc484c975-result>,
+        <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0x403f52296098a2c7-input> ;
+    prov:wasAssociatedWith <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/agent/facts_agent> ;
+    provai:finishReason "[\"stop\"]" ;
+    provai:inputTokens 388 ;
+    provai:maxTokens 1000 ;
+    provai:outputTokens 87 ;
+    provai:partOf <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/step/0x0a8dea5cf6b77f31> ;
+    provai:status "completed" ;
+    provai:temperature 0.2 ;
+    provai:usedModel <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/model/openai%2Fnvidia%2Fnemotron-3.5-lightning%3Afree> .
+
+<https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/step/0x42d9a09672b61221> a provai:ModelCall ;
+    rdfs:label "chat" ;
+    prov:endedAtTime "2026-10-04T07:52:46.614243+00:00"^^xsd:dateTime ;
+    prov:startedAtTime "2026-10-04T07:52:36.457080+00:00"^^xsd:dateTime ;
+    prov:used <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0x42d9a09672b61221-input> ;
+    prov:wasAssociatedWith <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/agent/coordinator> ;
+    provai:finishReason "[\"stop\"]" ;
+    provai:inputTokens 77 ;
+    provai:maxTokens 1000 ;
+    provai:outputTokens 389 ;
+    provai:partOf <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/step/0xffc8b7b7533ec142> ;
+    provai:status "completed" ;
+    provai:temperature 0.2 ;
+    provai:usedModel <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/model/openai%2Fnvidia%2Fnemotron-3.5-lightning%3Afree> .
+
+<https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/step/0x5ce9515326ac2721> a provai:ModelCall ;
+    rdfs:label "chat" ;
+    prov:endedAtTime "2026-10-04T07:53:26.167608+00:00"^^xsd:dateTime ;
+    prov:startedAtTime "2026-10-04T07:53:25.647301+00:00"^^xsd:dateTime ;
+    prov:used <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0x29afd3069cea6e4a-result>,
+        <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0x5ce9515326ac2721-input> ;
+    prov:wasAssociatedWith <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/agent/writer> ;
+    provai:finishReason "[\"stop\"]" ;
+    provai:inputTokens 566 ;
+    provai:maxTokens 1000 ;
+    provai:outputTokens 32 ;
+    provai:partOf <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/step/0x15c3942cdede3033> ;
+    provai:status "completed" ;
+    provai:temperature 0.2 ;
+    provai:usedModel <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/model/openai%2Fnvidia%2Fnemotron-3.5-lightning%3Afree> .
+
+<https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/step/0x5e4d04dbb13f06bb> a provai:Routing,
+        provai:Step ;
+    rdfs:label "route: coordinator" ;
+    prov:endedAtTime "2026-10-04T07:52:46.615129+00:00"^^xsd:dateTime ;
+    prov:startedAtTime "2026-10-04T07:52:36.456494+00:00"^^xsd:dateTime ;
+    prov:wasAssociatedWith <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/agent/coordinator> ;
+    provai:candidate <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/agent/facts_agent>,
+        <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/agent/translator_agent>,
+        <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/agent/weather_agent> ;
+    provai:iteration 1 ;
+    provai:partOf <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/step/0xbb76d6c0dd29c9da> ;
+    provai:reason "[\"weather\", \"facts\"]" ;
+    provai:selected <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/agent/facts_agent>,
+        <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/agent/weather_agent> ;
+    provai:status "completed" .
+
+<https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/step/0x63552ff876fe94b7> a provai:ModelCall ;
+    rdfs:label "chat" ;
+    prov:endedAtTime "2026-10-04T07:53:11.443700+00:00"^^xsd:dateTime ;
+    prov:startedAtTime "2026-10-04T07:53:07.278497+00:00"^^xsd:dateTime ;
+    prov:used <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0x63552ff876fe94b7-input>,
+        <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0x68547f15e1aab05f-result> ;
+    prov:wasAssociatedWith <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/agent/writer> ;
+    provai:finishReason "[\"stop\"]" ;
+    provai:inputTokens 431 ;
+    provai:maxTokens 1000 ;
+    provai:outputTokens 526 ;
+    provai:partOf <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/step/0xe32b68084395158a> ;
+    provai:status "completed" ;
+    provai:temperature 0.2 ;
+    provai:usedModel <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/model/openai%2Fnvidia%2Fnemotron-3.5-lightning%3Afree> .
+
+<https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/step/0x726158c3cf9ecc33> a provai:ModelCall ;
+    rdfs:label "chat" ;
+    prov:endedAtTime "2026-10-04T07:52:51.348355+00:00"^^xsd:dateTime ;
+    prov:startedAtTime "2026-10-04T07:52:50.217278+00:00"^^xsd:dateTime ;
+    prov:used <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0x726158c3cf9ecc33-input> ;
+    prov:wasAssociatedWith <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/agent/writer> ;
+    provai:finishReason "[\"tool_calls\"]" ;
+    provai:inputTokens 353 ;
+    provai:maxTokens 1000 ;
+    provai:outputTokens 147 ;
+    provai:partOf <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/step/0xf5bb6584b924f01c> ;
+    provai:status "completed" ;
+    provai:temperature 0.2 ;
+    provai:usedModel <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/model/openai%2Fnvidia%2Fnemotron-3.5-lightning%3Afree> .
+
+<https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/step/0x7866a0937a405740> a provai:ModelCall ;
+    rdfs:label "chat" ;
+    prov:endedAtTime "2026-10-04T07:53:06.706817+00:00"^^xsd:dateTime ;
+    prov:startedAtTime "2026-10-04T07:52:56.371660+00:00"^^xsd:dateTime ;
+    prov:used <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0x7866a0937a405740-input> ;
+    prov:wasAssociatedWith <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/agent/evaluator> ;
+    provai:finishReason "[\"stop\"]" ;
+    provai:inputTokens 59 ;
+    provai:maxTokens 1000 ;
+    provai:outputTokens 764 ;
+    provai:partOf <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/step/0xb69c8ecf90a4381d> ;
+    provai:status "completed" ;
+    provai:temperature 0.2 ;
+    provai:usedModel <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/model/openai%2Fnvidia%2Fnemotron-3.5-lightning%3Afree> .
+
+<https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/step/0x866b8dae41034ef1> a provai:Step ;
+    rdfs:label "review: send" ;
+    prov:endedAtTime "2026-10-04T07:53:25.644080+00:00"^^xsd:dateTime ;
+    prov:startedAtTime "2026-10-04T07:53:24.820837+00:00"^^xsd:dateTime ;
+    prov:wasAssociatedWith <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/agent/writer> ;
+    provai:iteration 1 ;
+    provai:partOf <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/step/0x8fd0c4f781b2aced> ;
+    provai:status "completed" .
+
+<https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/step/0x95764c78c1fcda01> a provai:ModelCall ;
+    rdfs:label "chat" ;
+    prov:endedAtTime "2026-10-04T07:52:56.369478+00:00"^^xsd:dateTime ;
+    prov:startedAtTime "2026-10-04T07:52:53.268080+00:00"^^xsd:dateTime ;
+    prov:used <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0x2e35e44c433b7e36-result>,
+        <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0x95764c78c1fcda01-input> ;
+    prov:wasAssociatedWith <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/agent/writer> ;
+    provai:finishReason "[\"stop\"]" ;
+    provai:inputTokens 446 ;
+    provai:maxTokens 1000 ;
+    provai:outputTokens 472 ;
+    provai:partOf <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/step/0xeeeeb0766d3a2c75> ;
+    provai:status "completed" ;
+    provai:temperature 0.2 ;
+    provai:usedModel <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/model/openai%2Fnvidia%2Fnemotron-3.5-lightning%3Afree> .
+
+<https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/step/0x9a8aaac296c91bd4> a provai:ModelCall ;
+    rdfs:label "chat" ;
+    prov:endedAtTime "2026-10-04T07:52:47.089801+00:00"^^xsd:dateTime ;
+    prov:startedAtTime "2026-10-04T07:52:46.620111+00:00"^^xsd:dateTime ;
+    prov:used <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0x9a8aaac296c91bd4-input> ;
+    prov:wasAssociatedWith <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/agent/facts_agent> ;
+    provai:finishReason "[\"tool_calls\"]" ;
+    provai:inputTokens 312 ;
+    provai:maxTokens 1000 ;
+    provai:outputTokens 37 ;
+    provai:partOf <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/step/0x0a8dea5cf6b77f31> ;
+    provai:status "completed" ;
+    provai:temperature 0.2 ;
+    provai:usedModel <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/model/openai%2Fnvidia%2Fnemotron-3.5-lightning%3Afree> .
+
+<https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/step/0x9aee171f2cbee76f-memory_write-2026-10-04T07%3A52%3A48.063937%2B00%3A00> a provai:MemoryAccess ;
+    rdfs:label "memory write" ;
+    prov:endedAtTime "2026-10-04T07:52:48.063937+00:00"^^xsd:dateTime ;
+    prov:startedAtTime "2026-10-04T07:52:48.063937+00:00"^^xsd:dateTime ;
+    prov:wasAssociatedWith <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/agent/facts_agent> ;
+    provai:partOf <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/step/0x9aee171f2cbee76f> ;
+    provai:status "completed" .
+
+<https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/step/0x9cca4462bf9653ef> a provai:Step ;
+    rdfs:label "route: weather" ;
+    prov:endedAtTime "2026-10-04T07:52:48.989732+00:00"^^xsd:dateTime ;
+    prov:startedAtTime "2026-10-04T07:52:46.615840+00:00"^^xsd:dateTime ;
+    prov:wasAssociatedWith <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/agent/weather_agent> ;
+    provai:iteration 1 ;
+    provai:partOf <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/step/0xbb76d6c0dd29c9da> ;
+    provai:status "completed" .
+
+<https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/step/0xa429c794b0b15b23> a provai:ModelCall ;
+    rdfs:label "chat" ;
+    prov:endedAtTime "2026-10-04T07:52:47.742416+00:00"^^xsd:dateTime ;
+    prov:startedAtTime "2026-10-04T07:52:47.086236+00:00"^^xsd:dateTime ;
+    prov:used <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0xa429c794b0b15b23-input> ;
+    prov:wasAssociatedWith <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/agent/weather_agent> ;
+    provai:finishReason "[\"tool_calls\"]" ;
+    provai:inputTokens 376 ;
+    provai:maxTokens 1000 ;
+    provai:outputTokens 45 ;
+    provai:partOf <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/step/0x6afc95852e21b652> ;
+    provai:status "completed" ;
+    provai:temperature 0.2 ;
+    provai:usedModel <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/model/openai%2Fnvidia%2Fnemotron-3.5-lightning%3Afree> .
+
+<https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/step/0xa4eb36c4709e60de> a provai:Step ;
+    rdfs:label "handoff: writer" ;
+    prov:endedAtTime "2026-10-04T07:52:52.812773+00:00"^^xsd:dateTime ;
+    prov:startedAtTime "2026-10-04T07:52:50.215874+00:00"^^xsd:dateTime ;
+    prov:wasAssociatedWith <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/agent/writer> ;
+    provai:iteration 3 ;
+    provai:partOf <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/step/0xa79fb61537597077> ;
+    provai:status "completed" .
+
+<https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/step/0xa6e7b2a1fc2c0dd1> a provai:Step ;
+    rdfs:label "review: send" ;
+    prov:endedAtTime "2026-10-04T07:53:26.169457+00:00"^^xsd:dateTime ;
+    prov:startedAtTime "2026-10-04T07:53:25.645507+00:00"^^xsd:dateTime ;
+    prov:wasAssociatedWith <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/agent/writer> ;
+    provai:iteration 2 ;
+    provai:partOf <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/step/0xefc4cff672bc7d6d> ;
+    provai:status "completed" .
+
+<https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/step/0xb69c8ecf90a4381d> a provai:AgentInvocation ;
+    rdfs:label "evaluator" ;
+    prov:endedAtTime "2026-10-04T07:53:06.707284+00:00"^^xsd:dateTime ;
+    prov:startedAtTime "2026-10-04T07:52:56.371408+00:00"^^xsd:dateTime ;
+    prov:wasAssociatedWith <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/agent/evaluator> ;
+    provai:iteration 1 ;
+    provai:partOf <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/step/0x3a0dfe12689c439e> ;
+    provai:status "completed" .
+
+<https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/step/0xc2b6d64c56b6113e> a provai:ModelCall ;
+    rdfs:label "chat" ;
+    prov:endedAtTime "2026-10-04T07:53:25.642941+00:00"^^xsd:dateTime ;
+    prov:startedAtTime "2026-10-04T07:53:24.822654+00:00"^^xsd:dateTime ;
+    prov:used <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0xc2b6d64c56b6113e-input> ;
+    prov:wasAssociatedWith <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/agent/writer> ;
+    provai:finishReason "[\"tool_calls\"]" ;
+    provai:inputTokens 370 ;
+    provai:maxTokens 1000 ;
+    provai:outputTokens 133 ;
+    provai:partOf <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/step/0x6c65fbcfa4f4f6a5> ;
+    provai:status "completed" ;
+    provai:temperature 0.2 ;
+    provai:usedModel <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/model/openai%2Fnvidia%2Fnemotron-3.5-lightning%3Afree> .
+
+<https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/step/0xcddcb8d8764db5e5> a provai:ModelCall ;
+    rdfs:label "chat" ;
+    prov:endedAtTime "2026-10-04T07:52:48.988786+00:00"^^xsd:dateTime ;
+    prov:startedAtTime "2026-10-04T07:52:47.743568+00:00"^^xsd:dateTime ;
+    prov:used <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0xcddcb8d8764db5e5-input>,
+        <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0xf733b504446424cd-result> ;
+    prov:wasAssociatedWith <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/agent/weather_agent> ;
+    provai:finishReason "[\"stop\"]" ;
+    provai:inputTokens 449 ;
+    provai:maxTokens 1000 ;
+    provai:outputTokens 57 ;
+    provai:partOf <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/step/0x6afc95852e21b652> ;
+    provai:status "completed" ;
+    provai:temperature 0.2 ;
+    provai:usedModel <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/model/openai%2Fnvidia%2Fnemotron-3.5-lightning%3Afree> .
+
+<https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/step/0xe6a8a90e11a94044> a provai:ModelCall ;
+    rdfs:label "chat" ;
+    prov:endedAtTime "2026-10-04T07:52:52.811444+00:00"^^xsd:dateTime ;
+    prov:startedAtTime "2026-10-04T07:52:51.349894+00:00"^^xsd:dateTime ;
+    prov:used <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0x24c1da9fb04d747c-result>,
+        <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0xe6a8a90e11a94044-input> ;
+    prov:wasAssociatedWith <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/agent/writer> ;
+    provai:finishReason "[\"stop\"]" ;
+    provai:inputTokens 543 ;
+    provai:maxTokens 1000 ;
+    provai:outputTokens 204 ;
+    provai:partOf <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/step/0xf5bb6584b924f01c> ;
+    provai:status "completed" ;
+    provai:temperature 0.2 ;
+    provai:usedModel <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/model/openai%2Fnvidia%2Fnemotron-3.5-lightning%3Afree> .
+
+<https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/step/0xec612d7701f93de8> a provai:ModelCall ;
+    rdfs:label "chat" ;
+    prov:endedAtTime "2026-10-04T07:52:50.212041+00:00"^^xsd:dateTime ;
+    prov:startedAtTime "2026-10-04T07:52:48.996997+00:00"^^xsd:dateTime ;
+    prov:used <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0xec612d7701f93de8-input> ;
+    prov:wasAssociatedWith <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/agent/coordinator> ;
+    provai:finishReason "[\"tool_calls\"]" ;
+    provai:inputTokens 323 ;
+    provai:maxTokens 1000 ;
+    provai:outputTokens 84 ;
+    provai:partOf <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/step/0xf0db311d23a4ad08> ;
+    provai:status "completed" ;
+    provai:temperature 0.2 ;
+    provai:usedModel <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/model/openai%2Fnvidia%2Fnemotron-3.5-lightning%3Afree> .
+
+<https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/step/0xefc4cff672bc7d6d> a provai:Step ;
+    rdfs:label "workflow review" ;
+    prov:endedAtTime "2026-10-04T07:53:26.169928+00:00"^^xsd:dateTime ;
+    prov:startedAtTime "2026-10-04T07:53:25.645066+00:00"^^xsd:dateTime ;
+    provai:partOf <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/run> ;
+    provai:status "completed" .
+
+<https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/step/0xf0db311d23a4ad08> a provai:AgentInvocation ;
+    rdfs:label "coordinator" ;
+    prov:endedAtTime "2026-10-04T07:52:50.213199+00:00"^^xsd:dateTime ;
+    prov:startedAtTime "2026-10-04T07:52:48.993200+00:00"^^xsd:dateTime ;
+    prov:wasAssociatedWith <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/agent/coordinator> ;
+    provai:iteration 2 ;
+    provai:partOf <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/step/0x12cd81dcc9ebc578> ;
+    provai:status "completed" .
+
+<https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/step/0xf733b504446424cd> a provai:ToolCall ;
+    rdfs:label "get_weather" ;
+    prov:endedAtTime "2026-10-04T07:52:47.743240+00:00"^^xsd:dateTime ;
+    prov:startedAtTime "2026-10-04T07:52:47.742966+00:00"^^xsd:dateTime ;
+    prov:used <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0xa429c794b0b15b23-output>,
+        <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0xf733b504446424cd-arguments> ;
+    prov:wasAssociatedWith <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/agent/weather_agent> ;
+    provai:attempt 2 ;
+    provai:partOf <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/step/0x6afc95852e21b652> ;
+    provai:retryOf <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/step/0x02eedde9e40eb8dd> ;
+    provai:status "completed" ;
+    provai:usedTool <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/tool/get_weather> .
+
+<https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/step/0xffc8b7b7533ec142> a provai:AgentInvocation ;
+    rdfs:label "coordinator" ;
+    prov:endedAtTime "2026-10-04T07:52:46.614637+00:00"^^xsd:dateTime ;
+    prov:startedAtTime "2026-10-04T07:52:36.456745+00:00"^^xsd:dateTime ;
+    prov:wasAssociatedWith <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/agent/coordinator> ;
+    provai:iteration 1 ;
+    provai:partOf <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/step/0x5e4d04dbb13f06bb> ;
+    provai:status "completed" .
+
+<https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/step/approval-call-16b134a7-125f-4be1-a73c-d0dd6b1fa0e4> a provai:Check ;
+    rdfs:label "approval" ;
+    prov:endedAtTime "2026-10-04T07:53:25.644890+00:00"^^xsd:dateTime ;
+    prov:startedAtTime "2026-10-04T07:53:25.644890+00:00"^^xsd:dateTime ;
+    prov:wasAssociatedWith <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/agent/approver> ;
+    provai:checked <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0xc2b6d64c56b6113e-call-16b134a7-125f-4be1-a73c-d0dd6b1fa0e4-arguments> ;
+    provai:outcome "approve" ;
+    provai:partOf <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/step/0x6c65fbcfa4f4f6a5> ;
+    provai:status "completed" .
+
+<https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/tool/search_facts> a provai:Tool ;
+    rdfs:label "search_facts" .
+
+<https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/agent/user> a prov:Person ;
+    rdfs:label "user" .
+
+<https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0xc2b6d64c56b6113e-output> a provai:Message ;
+    rdfs:label "model output" ;
+    prov:value "[{\"role\": \"assistant\", \"parts\": [{\"type\": \"tool_call\", \"id\": \"call-16b134a7-125f-4be1-a73c-d0dd6b1fa0e4\", \"name\": \"send_brief\", \"arguments\": \"{\\\"to\\\":\\\"client\\\",\\\"text\\\":\\\"Lisbon is the capital of Portugal and lies on the Tagus estuary. Its position on the river estuary has made it a key maritime hub.\\\"}\"}, {\"type\": \"reasoning\", \"content\": null}], \"finish_reason\": \"tool_call\"}]" ;
+    prov:wasGeneratedBy <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/step/0xc2b6d64c56b6113e> .
+
+<https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/step/0x14ba85f2741c25d1> a provai:Step ;
+    rdfs:label "review: evaluator" ;
+    prov:endedAtTime "2026-10-04T07:53:24.819682+00:00"^^xsd:dateTime ;
+    prov:startedAtTime "2026-10-04T07:53:11.446357+00:00"^^xsd:dateTime ;
+    prov:wasAssociatedWith <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/agent/evaluator> ;
+    provai:iteration 3 ;
+    provai:partOf <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/step/0x8fd0c4f781b2aced> ;
+    provai:status "completed" .
+
+<https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/step/0x15c3942cdede3033> a provai:AgentInvocation ;
+    rdfs:label "writer" ;
+    prov:endedAtTime "2026-10-04T07:53:26.168169+00:00"^^xsd:dateTime ;
+    prov:startedAtTime "2026-10-04T07:53:25.645864+00:00"^^xsd:dateTime ;
+    prov:wasAssociatedWith <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/agent/writer> ;
+    provai:iteration 5 ;
+    provai:partOf <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/step/0xa6e7b2a1fc2c0dd1> ;
+    provai:status "completed" .
+
+<https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/step/0x24c1da9fb04d747c> a provai:ToolCall ;
+    rdfs:label "read_note" ;
+    prov:endedAtTime "2026-10-04T07:52:51.349521+00:00"^^xsd:dateTime ;
+    prov:startedAtTime "2026-10-04T07:52:51.349087+00:00"^^xsd:dateTime ;
+    prov:used <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0x24c1da9fb04d747c-arguments>,
+        <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0x726158c3cf9ecc33-output> ;
+    prov:wasAssociatedWith <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/agent/writer> ;
+    provai:partOf <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/step/0xf5bb6584b924f01c> ;
+    provai:status "completed" ;
+    provai:usedTool <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/tool/read_note> .
+
+<https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/step/0x29afd3069cea6e4a> a provai:ToolCall ;
+    rdfs:label "send_brief" ;
+    prov:endedAtTime "2026-10-04T07:53:25.646922+00:00"^^xsd:dateTime ;
+    prov:startedAtTime "2026-10-04T07:53:25.646457+00:00"^^xsd:dateTime ;
+    prov:used <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0x29afd3069cea6e4a-arguments>,
+        <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0xc2b6d64c56b6113e-call-16b134a7-125f-4be1-a73c-d0dd6b1fa0e4-arguments>,
+        <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0xc2b6d64c56b6113e-output> ;
+    prov:wasAssociatedWith <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/agent/writer> ;
+    prov:wasInformedBy <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/step/approval-call-16b134a7-125f-4be1-a73c-d0dd6b1fa0e4> ;
+    provai:partOf <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/step/0x15c3942cdede3033> ;
+    provai:status "completed" ;
+    provai:usedTool <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/tool/send_brief> .
+
+<https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/step/0x2e35e44c433b7e36> a provai:ToolCall ;
+    rdfs:label "read_note" ;
+    prov:endedAtTime "2026-10-04T07:52:53.267770+00:00"^^xsd:dateTime ;
+    prov:startedAtTime "2026-10-04T07:52:53.267577+00:00"^^xsd:dateTime ;
+    prov:used <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0x24350e7d119297b0-output>,
+        <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0x2e35e44c433b7e36-arguments> ;
+    prov:wasAssociatedWith <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/agent/writer> ;
+    provai:partOf <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/step/0xeeeeb0766d3a2c75> ;
+    provai:status "completed" ;
+    provai:usedTool <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/tool/read_note> .
+
+<https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/step/0x3a0dfe12689c439e> a provai:Step ;
+    rdfs:label "review: evaluator" ;
+    prov:endedAtTime "2026-10-04T07:53:06.707784+00:00"^^xsd:dateTime ;
+    prov:startedAtTime "2026-10-04T07:52:56.370959+00:00"^^xsd:dateTime ;
+    prov:wasAssociatedWith <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/agent/evaluator> ;
+    provai:iteration 2 ;
+    provai:partOf <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/step/0x8fd0c4f781b2aced> ;
+    provai:status "completed" .
+
+<https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/step/0x68547f15e1aab05f> a provai:ToolCall ;
+    rdfs:label "read_note" ;
+    prov:endedAtTime "2026-10-04T07:53:07.278095+00:00"^^xsd:dateTime ;
+    prov:startedAtTime "2026-10-04T07:53:07.277840+00:00"^^xsd:dateTime ;
+    prov:used <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0x0c79a5b87e0561f0-output>,
+        <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0x68547f15e1aab05f-arguments> ;
+    prov:wasAssociatedWith <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/agent/writer> ;
+    provai:partOf <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/step/0xe32b68084395158a> ;
+    provai:status "completed" ;
+    provai:usedTool <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/tool/read_note> .
+
+<https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/step/0x9aee171f2cbee76f> a provai:Step ;
+    rdfs:label "route: facts" ;
+    prov:endedAtTime "2026-10-04T07:52:48.064267+00:00"^^xsd:dateTime ;
+    prov:startedAtTime "2026-10-04T07:52:46.619323+00:00"^^xsd:dateTime ;
+    prov:wasAssociatedWith <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/agent/facts_agent> ;
+    provai:iteration 1 ;
+    provai:partOf <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/step/0xbb76d6c0dd29c9da> ;
+    provai:status "completed" .
+
+<https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/tool/get_weather> a provai:Tool ;
+    rdfs:label "get_weather" .
+
+<https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/tool/send_brief> a provai:Tool ;
+    rdfs:label "send_brief" .
+
+<https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0xc2b6d64c56b6113e-call-16b134a7-125f-4be1-a73c-d0dd6b1fa0e4-arguments> a prov:Entity ;
+    rdfs:label "send_brief arguments" ;
+    prov:value "\"{\\\"to\\\":\\\"client\\\",\\\"text\\\":\\\"Lisbon is the capital of Portugal and lies on the Tagus estuary. Its position on the river estuary has made it a key maritime hub.\\\"}\"" .
+
+<https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/step/0x0a8dea5cf6b77f31> a provai:AgentInvocation ;
+    rdfs:label "facts_agent" ;
+    prov:endedAtTime "2026-10-04T07:52:48.063751+00:00"^^xsd:dateTime ;
+    prov:startedAtTime "2026-10-04T07:52:46.619861+00:00"^^xsd:dateTime ;
+    prov:wasAssociatedWith <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/agent/facts_agent> ;
+    provai:iteration 1 ;
+    provai:partOf <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/step/0x9aee171f2cbee76f> ;
+    provai:status "completed" .
+
+<https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/step/0x6c65fbcfa4f4f6a5> a provai:AgentInvocation ;
+    rdfs:label "writer" ;
+    prov:endedAtTime "2026-10-04T07:53:25.643811+00:00"^^xsd:dateTime ;
+    prov:startedAtTime "2026-10-04T07:53:24.822049+00:00"^^xsd:dateTime ;
+    prov:wasAssociatedWith <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/agent/writer> ;
+    provai:iteration 4 ;
+    provai:partOf <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/step/0x866b8dae41034ef1> ;
+    provai:status "completed" .
+
+<https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/step/0xe32b68084395158a> a provai:AgentInvocation ;
+    rdfs:label "writer" ;
+    prov:endedAtTime "2026-10-04T07:53:11.444068+00:00"^^xsd:dateTime ;
+    prov:startedAtTime "2026-10-04T07:53:06.708926+00:00"^^xsd:dateTime ;
+    prov:wasAssociatedWith <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/agent/writer> ;
+    provai:iteration 3 ;
+    provai:partOf <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/step/0x2ab07379afd82afb> ;
+    provai:status "completed" .
+
+<https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/step/0xeeeeb0766d3a2c75> a provai:AgentInvocation ;
+    rdfs:label "writer" ;
+    prov:endedAtTime "2026-10-04T07:52:56.369818+00:00"^^xsd:dateTime ;
+    prov:startedAtTime "2026-10-04T07:52:52.816003+00:00"^^xsd:dateTime ;
+    prov:wasAssociatedWith <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/agent/writer> ;
+    provai:iteration 2 ;
+    provai:partOf <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/step/0x148bef2513bb488d> ;
+    provai:status "completed" .
+
+<https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/step/0xf5bb6584b924f01c> a provai:AgentInvocation ;
+    rdfs:label "writer" ;
+    prov:endedAtTime "2026-10-04T07:52:52.812085+00:00"^^xsd:dateTime ;
+    prov:startedAtTime "2026-10-04T07:52:50.216817+00:00"^^xsd:dateTime ;
+    prov:wasAssociatedWith <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/agent/writer> ;
+    provai:iteration 1 ;
+    provai:partOf <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/step/0xa4eb36c4709e60de> ;
+    provai:status "completed" .
+
+<https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/tool/read_note> a provai:Tool ;
+    rdfs:label "read_note" .
+
+<https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/run> a provai:Run ;
+    prov:wasAssociatedWith <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/agent/user> ;
+    provai:contentCaptured true ;
+    provai:source "agent-framework-core 1.19.0 with agent-framework-orchestrations 1.2.0" .
+
+<https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/step/0xbb76d6c0dd29c9da> a provai:Step ;
+    rdfs:label "workflow route" ;
+    prov:endedAtTime "2026-10-04T07:52:48.990953+00:00"^^xsd:dateTime ;
+    prov:startedAtTime "2026-10-04T07:52:36.455793+00:00"^^xsd:dateTime ;
+    provai:partOf <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/run> ;
+    provai:status "completed" .
+
+<https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0xe6a8a90e11a94044-output> a provai:Message ;
+    rdfs:label "model output" ;
+    prov:value "[{\"role\": \"assistant\", \"parts\": [{\"type\": \"text\", \"content\": \"Lisbon, the capital of Portugal, sits on the Tagus estuary. Currently enjoying 21\\u202f\\u00b0C with clear skies.\"}, {\"type\": \"reasoning\", \"content\": null}], \"finish_reason\": \"stop\"}]" ;
+    prov:wasGeneratedBy <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/step/0xe6a8a90e11a94044> .
+
+<https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/step/0x6afc95852e21b652> a provai:AgentInvocation ;
+    rdfs:label "weather_agent" ;
+    prov:endedAtTime "2026-10-04T07:52:48.989329+00:00"^^xsd:dateTime ;
+    prov:startedAtTime "2026-10-04T07:52:46.616802+00:00"^^xsd:dateTime ;
+    prov:wasAssociatedWith <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/agent/weather_agent> ;
+    provai:iteration 1 ;
+    provai:partOf <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/step/0x9cca4462bf9653ef> ;
+    provai:status "completed" .
+
+<https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0xcddcb8d8764db5e5-output> a provai:Message ;
+    rdfs:label "model output" ;
+    prov:value "[{\"role\": \"assistant\", \"parts\": [{\"type\": \"text\", \"content\": \"Lisbon is currently 21\\u202f\\u00b0C with clear skies.\"}, {\"type\": \"reasoning\", \"content\": null}], \"finish_reason\": \"stop\"}]" ;
+    prov:wasGeneratedBy <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/step/0xcddcb8d8764db5e5> .
+
+<https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/step/0x8fd0c4f781b2aced> a provai:Step ;
+    rdfs:label "workflow review" ;
+    prov:endedAtTime "2026-10-04T07:53:25.644367+00:00"^^xsd:dateTime ;
+    prov:startedAtTime "2026-10-04T07:52:52.814474+00:00"^^xsd:dateTime ;
+    provai:partOf <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/run> ;
+    provai:status "completed" .
+
+<https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/step/0xa79fb61537597077> a provai:Step ;
+    rdfs:label "workflow handoff" ;
+    prov:endedAtTime "2026-10-04T07:52:52.813739+00:00"^^xsd:dateTime ;
+    prov:startedAtTime "2026-10-04T07:52:48.991456+00:00"^^xsd:dateTime ;
+    provai:partOf <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/run> ;
+    provai:status "completed" .
+
+<https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0x63552ff876fe94b7-output> a provai:Message ;
+    rdfs:label "model output" ;
+    prov:value "[{\"role\": \"assistant\", \"parts\": [{\"type\": \"text\", \"content\": \"Lisbon is the capital of Portugal and lies on the Tagus estuary. Its position on the river estuary has made it a key maritime hub.\"}, {\"type\": \"reasoning\", \"content\": null}], \"finish_reason\": \"stop\"}]" ;
+    prov:wasGeneratedBy <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/step/0x63552ff876fe94b7> .
+
+<https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0x95764c78c1fcda01-output> a provai:Message ;
+    rdfs:label "model output" ;
+    prov:value "[{\"role\": \"assistant\", \"parts\": [{\"type\": \"text\", \"content\": \"Lisbon is the capital of Portugal and lies on the Tagus estuary. Its historic neighborhoods reflect a rich maritime heritage.\"}, {\"type\": \"reasoning\", \"content\": null}], \"finish_reason\": \"stop\"}]" ;
+    prov:wasGeneratedBy <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/step/0x95764c78c1fcda01> .
+
+<https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/agent/facts_agent> a provai:Agent ;
+    rdfs:label "facts_agent" ;
+    prov:actedOnBehalfOf <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/agent/coordinator> .
+
+<https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/agent/evaluator> a provai:Agent ;
+    rdfs:label "evaluator" .
+
+<https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/agent/weather_agent> a provai:Agent ;
+    rdfs:label "weather_agent" ;
+    prov:actedOnBehalfOf <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/agent/coordinator> .
+
+<https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/notes%2FLisbon%2F1> a provai:MemoryRecord ;
+    rdfs:label "Lisbon" ;
+    prov:qualifiedDerivation <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/notes%2FLisbon%2F1/derivation/0x403f52296098a2c7-output> ;
+    prov:value "Lisbon is the capital of Portugal and lies on the Tagus estuary." ;
+    prov:wasDerivedFrom <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0x403f52296098a2c7-output> ;
+    prov:wasGeneratedBy <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/step/0x9aee171f2cbee76f-memory_write-2026-10-04T07%3A52%3A48.063937%2B00%3A00> .
+
+<https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/agent/coordinator> a provai:Agent ;
+    rdfs:label "coordinator" ;
+    prov:actedOnBehalfOf <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/agent/user> .
+
+<https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/model/openai%2Fnvidia%2Fnemotron-3.5-lightning%3Afree> a provai:Model ;
+    rdfs:label "nvidia/nemotron-3.5-lightning:free" ;
+    provai:provider "openai" .
+
+<https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/entity/0x403f52296098a2c7-output> a provai:Message ;
+    rdfs:label "model output" ;
+    prov:value "[{\"role\": \"assistant\", \"parts\": [{\"type\": \"text\", \"content\": \"Lisbon is the capital of Portugal and lies on the Tagus estuary.\"}, {\"type\": \"reasoning\", \"content\": null}], \"finish_reason\": \"stop\"}]" ;
+    prov:wasGeneratedBy <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/step/0x403f52296098a2c7> .
+
+<https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/agent/writer> a provai:Agent ;
+    rdfs:label "writer" ;
+    prov:actedOnBehalfOf <https://w3id.org/prov-ai/run/agent-framework-core/maf-20261004T075236/agent/coordinator> .
+

@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:sh="http://www.w3.org/ns/shacl#"
+>
+  <rdf:Description rdf:about="https://w3id.org/prov-ai#EffectShape">
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+    <sh:targetClass rdf:resource="https://w3id.org/prov-ai#Effect"/>
+    <sh:property rdf:nodeID="n99b00e3299e2456f8b5ff8148d61ed43b28"/>
+    <sh:property rdf:nodeID="n99b00e3299e2456f8b5ff8148d61ed43b29"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/prov-ai#HandoffShape">
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+    <sh:targetClass rdf:resource="https://w3id.org/prov-ai#Handoff"/>
+    <sh:property rdf:nodeID="n99b00e3299e2456f8b5ff8148d61ed43b13"/>
+    <sh:property rdf:nodeID="n99b00e3299e2456f8b5ff8148d61ed43b14"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n99b00e3299e2456f8b5ff8148d61ed43b4">
+    <sh:path rdf:resource="https://w3id.org/prov-ai#status"/>
+    <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
+    <sh:in rdf:nodeID="n99b00e3299e2456f8b5ff8148d61ed43b5"/>
+    <sh:message>a step ends in one known status</sh:message>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n99b00e3299e2456f8b5ff8148d61ed43b13">
+    <sh:path rdf:resource="https://w3id.org/prov-ai#fromAgent"/>
+    <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
+    <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
+    <sh:message>a handoff names the agent that handed off</sh:message>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n99b00e3299e2456f8b5ff8148d61ed43b24">
+    <sh:path rdf:nodeID="n99b00e3299e2456f8b5ff8148d61ed43b25"/>
+    <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
+    <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
+    <sh:message>a memory record belongs to one memory</sh:message>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n99b00e3299e2456f8b5ff8148d61ed43b30">
+    <sh:path rdf:resource="https://w3id.org/prov-ai#blamedStep"/>
+    <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
+    <sh:message>a failure attribution names the step it blames</sh:message>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/prov-ai#FailureAttributionShape">
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+    <sh:targetClass rdf:resource="https://w3id.org/prov-ai#FailureAttribution"/>
+    <sh:property rdf:nodeID="n99b00e3299e2456f8b5ff8148d61ed43b30"/>
+    <sh:property rdf:nodeID="n99b00e3299e2456f8b5ff8148d61ed43b31"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/prov-ai#StepShape">
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+    <sh:targetClass rdf:resource="https://w3id.org/prov-ai#Step"/>
+    <sh:property rdf:nodeID="n99b00e3299e2456f8b5ff8148d61ed43b3"/>
+    <sh:property rdf:nodeID="n99b00e3299e2456f8b5ff8148d61ed43b4"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n99b00e3299e2456f8b5ff8148d61ed43b10">
+    <sh:path rdf:resource="https://w3id.org/prov-ai#usedModel"/>
+    <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
+    <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
+    <sh:message>a model call names the one model it used</sh:message>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/prov-ai#AssertedFactsShape">
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+    <sh:targetClass rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+    <sh:property rdf:nodeID="n99b00e3299e2456f8b5ff8148d61ed43b32"/>
+    <sh:property rdf:nodeID="n99b00e3299e2456f8b5ff8148d61ed43b33"/>
+    <sh:property rdf:nodeID="n99b00e3299e2456f8b5ff8148d61ed43b34"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n99b00e3299e2456f8b5ff8148d61ed43b23">
+    <rdf:first>cancel</rdf:first>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n99b00e3299e2456f8b5ff8148d61ed43b11">
+    <sh:path rdf:resource="https://w3id.org/prov-ai#usedTool"/>
+    <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
+    <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
+    <sh:message>a tool call names the one tool it used</sh:message>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/prov-ai#ToolCallShape">
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+    <sh:targetClass rdf:resource="https://w3id.org/prov-ai#ToolCall"/>
+    <sh:property rdf:nodeID="n99b00e3299e2456f8b5ff8148d61ed43b11"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/prov-ai#RoutingShape">
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+    <sh:targetClass rdf:resource="https://w3id.org/prov-ai#Routing"/>
+    <sh:property rdf:nodeID="n99b00e3299e2456f8b5ff8148d61ed43b12"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n99b00e3299e2456f8b5ff8148d61ed43b2">
+    <sh:path rdf:resource="https://w3id.org/prov-ai#contentCaptured"/>
+    <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
+    <sh:message>a run says once whether content was captured</sh:message>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n99b00e3299e2456f8b5ff8148d61ed43b1">
+    <sh:path rdf:resource="https://w3id.org/prov-ai#source"/>
+    <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
+    <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
+    <sh:message>a run names the framework or format its record came from</sh:message>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n99b00e3299e2456f8b5ff8148d61ed43b8">
+    <rdf:first>cancelled</rdf:first>
+    <rdf:rest rdf:nodeID="n99b00e3299e2456f8b5ff8148d61ed43b9"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n99b00e3299e2456f8b5ff8148d61ed43b33">
+    <sh:path rdf:resource="https://w3id.org/prov-ai#derivedFrom"/>
+    <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</sh:maxCount>
+    <sh:message>the closure of derivation is inferred by the reasoner, never asserted</sh:message>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n99b00e3299e2456f8b5ff8148d61ed43b19">
+    <rdf:first>block</rdf:first>
+    <rdf:rest rdf:nodeID="n99b00e3299e2456f8b5ff8148d61ed43b20"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n99b00e3299e2456f8b5ff8148d61ed43b22">
+    <rdf:first>reject</rdf:first>
+    <rdf:rest rdf:nodeID="n99b00e3299e2456f8b5ff8148d61ed43b23"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/prov-ai#MemoryRecordShape">
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+    <sh:targetClass rdf:resource="https://w3id.org/prov-ai#MemoryRecord"/>
+    <sh:property rdf:nodeID="n99b00e3299e2456f8b5ff8148d61ed43b24"/>
+    <sh:property rdf:nodeID="n99b00e3299e2456f8b5ff8148d61ed43b26"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n99b00e3299e2456f8b5ff8148d61ed43b16">
+    <sh:path rdf:resource="https://w3id.org/prov-ai#outcome"/>
+    <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
+    <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
+    <sh:in rdf:nodeID="n99b00e3299e2456f8b5ff8148d61ed43b17"/>
+    <sh:message>a check records one known outcome</sh:message>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n99b00e3299e2456f8b5ff8148d61ed43b7">
+    <rdf:first>blocked</rdf:first>
+    <rdf:rest rdf:nodeID="n99b00e3299e2456f8b5ff8148d61ed43b8"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n99b00e3299e2456f8b5ff8148d61ed43b9">
+    <rdf:first>interrupted</rdf:first>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n99b00e3299e2456f8b5ff8148d61ed43b3">
+    <sh:path rdf:resource="https://w3id.org/prov-ai#partOf"/>
+    <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
+    <sh:message>a step names the run or activity it ran inside</sh:message>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n99b00e3299e2456f8b5ff8148d61ed43b15">
+    <sh:path rdf:resource="https://w3id.org/prov-ai#checked"/>
+    <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
+    <sh:message>a check names what it evaluated</sh:message>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n99b00e3299e2456f8b5ff8148d61ed43b34">
+    <sh:path rdf:resource="https://w3id.org/prov-ai#accountableAgent"/>
+    <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</sh:maxCount>
+    <sh:message>accountability is inferred by the reasoner, never asserted</sh:message>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n99b00e3299e2456f8b5ff8148d61ed43b17">
+    <rdf:first>pass</rdf:first>
+    <rdf:rest rdf:nodeID="n99b00e3299e2456f8b5ff8148d61ed43b18"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n99b00e3299e2456f8b5ff8148d61ed43b12">
+    <sh:path rdf:resource="https://w3id.org/prov-ai#selected"/>
+    <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
+    <sh:message>a routing names the agents it selected</sh:message>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n99b00e3299e2456f8b5ff8148d61ed43b28">
+    <sh:path rdf:resource="https://w3id.org/prov-ai#target"/>
+    <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
+    <sh:message>an effect names the resource it changed</sh:message>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/prov-ai#RunShape">
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+    <sh:targetClass rdf:resource="https://w3id.org/prov-ai#Run"/>
+    <sh:property rdf:nodeID="n99b00e3299e2456f8b5ff8148d61ed43b1"/>
+    <sh:property rdf:nodeID="n99b00e3299e2456f8b5ff8148d61ed43b2"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n99b00e3299e2456f8b5ff8148d61ed43b29">
+    <sh:path rdf:resource="http://www.w3.org/ns/prov#wasGeneratedBy"/>
+    <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
+    <sh:message>an effect names the step that produced it</sh:message>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n99b00e3299e2456f8b5ff8148d61ed43b18">
+    <rdf:first>fail</rdf:first>
+    <rdf:rest rdf:nodeID="n99b00e3299e2456f8b5ff8148d61ed43b19"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n99b00e3299e2456f8b5ff8148d61ed43b26">
+    <sh:path rdf:nodeID="n99b00e3299e2456f8b5ff8148d61ed43b27"/>
+    <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
+    <sh:message>a memory record is revised by at most one record; two revisions are a conflicting write</sh:message>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n99b00e3299e2456f8b5ff8148d61ed43b31">
+    <sh:path rdf:resource="http://www.w3.org/ns/prov#wasGeneratedBy"/>
+    <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
+    <sh:message>a failure attribution names the activity, of a method or a person, that reached it</sh:message>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n99b00e3299e2456f8b5ff8148d61ed43b20">
+    <rdf:first>approve</rdf:first>
+    <rdf:rest rdf:nodeID="n99b00e3299e2456f8b5ff8148d61ed43b21"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n99b00e3299e2456f8b5ff8148d61ed43b32">
+    <sh:path rdf:resource="https://w3id.org/prov-ai#dependsOn"/>
+    <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</sh:maxCount>
+    <sh:message>dependence is inferred by the reasoner, never asserted</sh:message>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n99b00e3299e2456f8b5ff8148d61ed43b21">
+    <rdf:first>edit</rdf:first>
+    <rdf:rest rdf:nodeID="n99b00e3299e2456f8b5ff8148d61ed43b22"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n99b00e3299e2456f8b5ff8148d61ed43b6">
+    <rdf:first>failed</rdf:first>
+    <rdf:rest rdf:nodeID="n99b00e3299e2456f8b5ff8148d61ed43b7"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/prov-ai#ModelCallShape">
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+    <sh:targetClass rdf:resource="https://w3id.org/prov-ai#ModelCall"/>
+    <sh:property rdf:nodeID="n99b00e3299e2456f8b5ff8148d61ed43b10"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n99b00e3299e2456f8b5ff8148d61ed43b25">
+    <sh:inversePath rdf:resource="http://www.w3.org/ns/prov#hadMember"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/prov-ai#CheckShape">
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+    <sh:targetClass rdf:resource="https://w3id.org/prov-ai#Check"/>
+    <sh:property rdf:nodeID="n99b00e3299e2456f8b5ff8148d61ed43b15"/>
+    <sh:property rdf:nodeID="n99b00e3299e2456f8b5ff8148d61ed43b16"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n99b00e3299e2456f8b5ff8148d61ed43b27">
+    <sh:inversePath rdf:resource="http://www.w3.org/ns/prov#wasRevisionOf"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n99b00e3299e2456f8b5ff8148d61ed43b14">
+    <sh:path rdf:resource="https://w3id.org/prov-ai#toAgent"/>
+    <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
+    <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
+    <sh:message>a handoff names the agent that received the work</sh:message>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n99b00e3299e2456f8b5ff8148d61ed43b5">
+    <rdf:first>completed</rdf:first>
+    <rdf:rest rdf:nodeID="n99b00e3299e2456f8b5ff8148d61ed43b6"/>
+  </rdf:Description>
+</rdf:RDF>

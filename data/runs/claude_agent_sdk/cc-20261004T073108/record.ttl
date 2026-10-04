@@ -1,0 +1,738 @@
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix provai: <https://w3id.org/prov-ai#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/entity/0x57a93de904e29009-output> a provai:Message ;
+    rdfs:label "model output" ;
+    prov:value "[{\"text\": \"The brief has been sent to client.\"}]" ;
+    prov:wasGeneratedBy <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/step/0x57a93de904e29009> .
+
+<https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/entity/0xceb61b9f9802b751-effect-2026-10-04T07%3A33%3A38.407732%2B00%3A00> a provai:Effect ;
+    rdfs:label "effect" ;
+    prov:value "/root/.claude/jobs/28722dd5/tmp/rr/claude_agent_sdk/cc-20261004T073108/brief-to-client.txt" ;
+    prov:wasAttributedTo <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/agent/writer> ;
+    prov:wasGeneratedBy <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/step/0xceb61b9f9802b751> ;
+    provai:target "/root/.claude/jobs/28722dd5/tmp/rr/claude_agent_sdk/cc-20261004T073108/brief-to-client.txt" .
+
+<https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/entity/0xcf6ce226e7612de2-output> a provai:Message ;
+    rdfs:label "model output" ;
+    prov:value "[{\"text\": \"PASS\"}]" ;
+    prov:wasGeneratedBy <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/step/0xcf6ce226e7612de2> .
+
+<https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/memory/notes> a provai:Memory ;
+    rdfs:label "notes" ;
+    prov:hadMember <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/entity/notes%2FLisbon%2F1> .
+
+<https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/step/0x2be8a1979f380fc6-memory_read-2026-10-04T07%3A32%3A14.917577%2B00%3A00> a provai:MemoryAccess ;
+    rdfs:label "memory read" ;
+    prov:endedAtTime "2026-10-04T07:32:14.917577+00:00"^^xsd:dateTime ;
+    prov:startedAtTime "2026-10-04T07:32:14.917577+00:00"^^xsd:dateTime ;
+    prov:used <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/entity/notes%2FLisbon%2F1> ;
+    prov:wasAssociatedWith <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/agent/writer> ;
+    provai:partOf <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/step/0x2be8a1979f380fc6> ;
+    provai:status "completed" .
+
+<https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/step/0x43d61a3b9269cb16> a provai:ToolCall ;
+    rdfs:label "mcp__brief__search_facts" ;
+    prov:endedAtTime "2026-10-04T07:31:33.924871+00:00"^^xsd:dateTime ;
+    prov:startedAtTime "2026-10-04T07:31:33.920000+00:00"^^xsd:dateTime ;
+    prov:used <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/entity/0x10b502634b39bb23-output>,
+        <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/entity/0x43d61a3b9269cb16-arguments> ;
+    prov:wasAssociatedWith <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/agent/coordinator> ;
+    provai:partOf <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/step/0x6ca5083bc986aed6> ;
+    provai:status "blocked" ;
+    provai:usedTool <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/tool/mcp__brief__search_facts> .
+
+<https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/step/0x6c8ca08b5b566f7e> a provai:ToolCall ;
+    rdfs:label "mcp__brief__get_weather" ;
+    prov:endedAtTime "2026-10-04T07:31:33.903954+00:00"^^xsd:dateTime ;
+    prov:startedAtTime "2026-10-04T07:31:33.819000+00:00"^^xsd:dateTime ;
+    prov:used <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/entity/0x10b502634b39bb23-output>,
+        <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/entity/0x6c8ca08b5b566f7e-arguments> ;
+    prov:wasAssociatedWith <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/agent/coordinator> ;
+    provai:partOf <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/step/0x6ca5083bc986aed6> ;
+    provai:status "blocked" ;
+    provai:usedTool <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/tool/mcp__brief__get_weather> .
+
+<https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/step/check-1-2026-10-04T07%3A32%3A24.491251%2B00%3A00> a provai:Check ;
+    rdfs:label "check" ;
+    prov:endedAtTime "2026-10-04T07:32:24.491251+00:00"^^xsd:dateTime ;
+    prov:startedAtTime "2026-10-04T07:32:24.491251+00:00"^^xsd:dateTime ;
+    prov:wasAssociatedWith <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/agent/application> ;
+    provai:checked <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/entity/0x25b5fbd6c7c2898b-output> ;
+    provai:iteration 1 ;
+    provai:outcome "fail" ;
+    provai:partOf <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/run> ;
+    provai:reason "the first draft is always sent back for revision" ;
+    provai:status "completed" .
+
+<https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/step/check-2-2026-10-04T07%3A32%3A40.221509%2B00%3A00> a provai:Check ;
+    rdfs:label "check" ;
+    prov:endedAtTime "2026-10-04T07:32:40.221509+00:00"^^xsd:dateTime ;
+    prov:startedAtTime "2026-10-04T07:32:40.221509+00:00"^^xsd:dateTime ;
+    prov:wasAssociatedWith <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/agent/evaluator> ;
+    provai:checked <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/entity/0xaaa3999ed1ee496e-output> ;
+    provai:iteration 2 ;
+    provai:outcome "pass" ;
+    provai:partOf <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/run> ;
+    provai:reason "PASS" ;
+    provai:status "completed" .
+
+<https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/agent/Explore> a provai:Agent ;
+    rdfs:label "Explore" .
+
+<https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/agent/Plan> a provai:Agent ;
+    rdfs:label "Plan" .
+
+<https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/agent/application> a provai:Agent ;
+    rdfs:label "application" .
+
+<https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/agent/approver> a prov:Person ;
+    rdfs:label "approver" .
+
+<https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/agent/claude> a provai:Agent ;
+    rdfs:label "claude" .
+
+<https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/agent/general-purpose> a provai:Agent ;
+    rdfs:label "general-purpose" .
+
+<https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/agent/statusline-setup> a provai:Agent ;
+    rdfs:label "statusline-setup" .
+
+<https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/agent/translator_agent> a provai:Agent ;
+    rdfs:label "translator_agent" .
+
+<https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/entity/0x055adbc97a2cd819-arguments> a prov:Entity ;
+    rdfs:label "mcp__brief__get_weather arguments" ;
+    prov:value "{\"city\": \"Lisbon, Portugal\"}" .
+
+<https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/entity/0x055adbc97a2cd819-result> a prov:Entity ;
+    rdfs:label "mcp__brief__get_weather result" ;
+    prov:value "Lisbon, Portugal: 21 C, clear sky" ;
+    prov:wasGeneratedBy <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/step/0x055adbc97a2cd819> .
+
+<https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/entity/0x23486b986aabad50-arguments> a prov:Entity ;
+    rdfs:label "Agent arguments" ;
+    prov:value "{\"description\": \"Get Lisbon weather\", \"prompt\": \"Get the current weather for Lisbon, Portugal. Provide temperature, conditions, and any relevant weather details.\", \"subagent_type\": \"weather_agent\"}" .
+
+<https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/entity/0x23486b986aabad50-result> a prov:Entity ;
+    rdfs:label "Agent result" ;
+    prov:qualifiedDerivation <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/entity/0x23486b986aabad50-result/derivation/0xfcb116162b195da8-output> ;
+    prov:value "Lisbon, Portugal is currently 21°C with clear skies and no significant weather disturbances." ;
+    prov:wasDerivedFrom <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/entity/0xfcb116162b195da8-output> ;
+    prov:wasGeneratedBy <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/step/0x23486b986aabad50> .
+
+<https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/entity/0x23486b986aabad50-result/derivation/0xfcb116162b195da8-output> a prov:Derivation ;
+    prov:entity <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/entity/0xfcb116162b195da8-output> ;
+    provai:knownBy "inferred" .
+
+<https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/entity/0x23771c9de89d7944-arguments> a prov:Entity ;
+    rdfs:label "mcp__brief__search_facts arguments" ;
+    prov:value "{\"city\": \"Lisbon\"}" .
+
+<https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/entity/0x23771c9de89d7944-result> a prov:Entity ;
+    rdfs:label "mcp__brief__search_facts result" ;
+    prov:value "Lisbon is the capital of Portugal and lies on the Tagus estuary." ;
+    prov:wasGeneratedBy <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/step/0x23771c9de89d7944> .
+
+<https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/entity/0x2be8a1979f380fc6-arguments> a prov:Entity ;
+    rdfs:label "mcp__brief__read_note arguments" ;
+    prov:value "{\"city\": \"Lisbon\"}" .
+
+<https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/entity/0x2be8a1979f380fc6-result> a prov:Entity ;
+    rdfs:label "mcp__brief__read_note result" ;
+    prov:qualifiedDerivation <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/entity/0x2be8a1979f380fc6-result/derivation/notes%2FLisbon%2F1> ;
+    prov:value "Lisbon is the capital of Portugal and lies on the Tagus estuary." ;
+    prov:wasDerivedFrom <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/entity/notes%2FLisbon%2F1> ;
+    prov:wasGeneratedBy <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/step/0x2be8a1979f380fc6> .
+
+<https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/entity/0x2be8a1979f380fc6-result/derivation/notes%2FLisbon%2F1> a prov:Derivation ;
+    prov:entity <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/entity/notes%2FLisbon%2F1> ;
+    provai:knownBy "inferred" .
+
+<https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/entity/0x43d61a3b9269cb16-arguments> a prov:Entity ;
+    rdfs:label "mcp__brief__search_facts arguments" ;
+    prov:value "{\"city\": \"Lisbon\"}" .
+
+<https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/entity/0x48042c5dbaa642f1-output> a provai:Message ;
+    rdfs:label "model output" ;
+    prov:value "[{\"text\": \"{\\\"title\\\": \\\"Lisbon weather and facts\\\"}\"}]" ;
+    prov:wasGeneratedBy <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/step/0x48042c5dbaa642f1> .
+
+<https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/entity/0x6c8ca08b5b566f7e-arguments> a prov:Entity ;
+    rdfs:label "mcp__brief__get_weather arguments" ;
+    prov:value "{\"city\": \"Lisbon\"}" .
+
+<https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/entity/0x7b4a7ce9d388dd35-output> a provai:Message ;
+    rdfs:label "model output" ;
+    prov:value "[{\"text\": \"**Lisbon \\u2013 Short Brief**\\n\\n**Weather (as of today):**  \\nLisbon, Portugal is currently **21\\u00b0C with clear skies** and no significant weather disturbances.\\n\\n**Key Fact:**  \\nLisbon is the **capital of Portugal** and lies on the **Tagus estuary**.\"}]" ;
+    prov:wasGeneratedBy <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/step/0x7b4a7ce9d388dd35> .
+
+<https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/entity/0x7c2040b04a8aad6f-arguments> a prov:Entity ;
+    rdfs:label "Agent arguments" ;
+    prov:value "{\"description\": \"Get Lisbon facts\", \"prompt\": \"Get interesting facts about Lisbon, Portugal, including its history, population, geography, and notable features.\", \"subagent_type\": \"facts_agent\"}" .
+
+<https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/entity/0x7c2040b04a8aad6f-result/derivation/0x4bd934b0e75daf33-output> a prov:Derivation ;
+    prov:entity <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/entity/0x4bd934b0e75daf33-output> ;
+    provai:knownBy "inferred" .
+
+<https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/entity/0xa4f71ca1862caad8-arguments> a prov:Entity ;
+    rdfs:label "mcp__brief__get_weather arguments" ;
+    prov:value "{\"city\": \"Lisbon, Portugal\"}" .
+
+<https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/entity/0xa4f71ca1862caad8-result> a prov:Entity ;
+    rdfs:label "mcp__brief__get_weather result" ;
+    prov:value "weather service timed out" ;
+    prov:wasGeneratedBy <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/step/0xa4f71ca1862caad8> .
+
+<https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/entity/0xceb61b9f9802b751-result> a prov:Entity ;
+    rdfs:label "mcp__brief__send_brief result" ;
+    prov:value "/root/.claude/jobs/28722dd5/tmp/rr/claude_agent_sdk/cc-20261004T073108/brief-to-client.txt" ;
+    prov:wasGeneratedBy <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/step/0xceb61b9f9802b751> .
+
+<https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/entity/handoff-message> a provai:Message ;
+    rdfs:label "handoff message" ;
+    prov:value """Write a two-sentence brief on Lisbon from the coordinator's findings: **Lisbon – Short Brief**
+
+**Weather (as of today):**  
+Lisbon, Portugal is currently **21°C with clear skies** and no significant weather disturbances.
+
+**Key Fact:**  
+Lisbon is the **capital of Portugal** and lies on the **Tagus estuary**.""" ;
+    prov:wasGeneratedBy <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/step/handoff> .
+
+<https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/entity/notes%2FLisbon%2F1/derivation/0x7c2040b04a8aad6f-result> a prov:Derivation ;
+    prov:entity <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/entity/0x7c2040b04a8aad6f-result> ;
+    provai:knownBy "inferred" .
+
+<https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/session/2103c24e-0fba-4ef1-91c0-5b7a93830607> a provai:Session ;
+    rdfs:label "2103c24e-0fba-4ef1-91c0-5b7a93830607" .
+
+<https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/session/6458920b-9c4d-4aaf-9acd-81dbff57da64> a provai:Session ;
+    rdfs:label "6458920b-9c4d-4aaf-9acd-81dbff57da64" .
+
+<https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/session/edd720ac-5973-4dd2-aa98-2cd0fa299343> a provai:Session ;
+    rdfs:label "edd720ac-5973-4dd2-aa98-2cd0fa299343" .
+
+<https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/step/0x055adbc97a2cd819> a provai:ToolCall ;
+    rdfs:label "mcp__brief__get_weather" ;
+    prov:endedAtTime "2026-10-04T07:31:44.767705+00:00"^^xsd:dateTime ;
+    prov:startedAtTime "2026-10-04T07:31:44.759000+00:00"^^xsd:dateTime ;
+    prov:used <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/entity/0x055adbc97a2cd819-arguments>,
+        <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/entity/0x2d09d07387145ff6-output> ;
+    prov:wasAssociatedWith <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/agent/weather_agent> ;
+    provai:attempt 2 ;
+    provai:partOf <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/step/aeb7c0bc383ff875b> ;
+    provai:retryOf <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/step/0xa4f71ca1862caad8> ;
+    provai:status "completed" ;
+    provai:usedTool <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/tool/mcp__brief__get_weather> .
+
+<https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/step/0x10b502634b39bb23> a provai:ModelCall ;
+    rdfs:label "llm_request" ;
+    prov:endedAtTime "2026-10-04T07:31:33.897968+00:00"^^xsd:dateTime ;
+    prov:startedAtTime "2026-10-04T07:31:16.034000+00:00"^^xsd:dateTime ;
+    prov:used <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/entity/0x48042c5dbaa642f1-output> ;
+    prov:wasAssociatedWith <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/agent/coordinator> ;
+    provai:cost 0.067805 ;
+    provai:finishReason "tool_use" ;
+    provai:inputTokens 1831 ;
+    provai:outputTokens 2346 ;
+    provai:partOf <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/step/0x6ca5083bc986aed6> ;
+    provai:status "completed" ;
+    provai:usedModel <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/model/anthropic%2Fnvidia%2Fnemotron-3.5-lightning%3Afree> .
+
+<https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/step/0x23771c9de89d7944> a provai:ToolCall ;
+    rdfs:label "mcp__brief__search_facts" ;
+    prov:endedAtTime "2026-10-04T07:31:38.805456+00:00"^^xsd:dateTime ;
+    prov:startedAtTime "2026-10-04T07:31:38.725000+00:00"^^xsd:dateTime ;
+    prov:used <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/entity/0x23771c9de89d7944-arguments>,
+        <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/entity/0xde9d1465a4963c22-output> ;
+    prov:wasAssociatedWith <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/agent/facts_agent> ;
+    provai:partOf <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/step/a1220bfacc69a3168> ;
+    provai:status "completed" ;
+    provai:usedTool <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/tool/mcp__brief__search_facts> .
+
+<https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/step/0x25b5fbd6c7c2898b> a provai:ModelCall ;
+    rdfs:label "llm_request" ;
+    prov:endedAtTime "2026-10-04T07:32:24.477921+00:00"^^xsd:dateTime ;
+    prov:startedAtTime "2026-10-04T07:32:15.019000+00:00"^^xsd:dateTime ;
+    prov:used <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/entity/0x2be8a1979f380fc6-result>,
+        <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/entity/0xc445deb8a751150a-output> ;
+    prov:wasAssociatedWith <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/agent/writer> ;
+    provai:cost 0.01836 ;
+    provai:finishReason "end_turn" ;
+    provai:inputTokens 1247 ;
+    provai:outputTokens 485 ;
+    provai:partOf <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/step/0x285eeb077302b9fb> ;
+    provai:status "completed" ;
+    provai:usedModel <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/model/anthropic%2Fnvidia%2Fnemotron-3.5-lightning%3Afree> .
+
+<https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/step/0x2d09d07387145ff6> a provai:ModelCall ;
+    rdfs:label "llm_request" ;
+    prov:endedAtTime "2026-10-04T07:31:44.754719+00:00"^^xsd:dateTime ;
+    prov:startedAtTime "2026-10-04T07:31:42.914000+00:00"^^xsd:dateTime ;
+    prov:used <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/entity/0x3c98d5398f246fd2-output>,
+        <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/entity/0xa4f71ca1862caad8-result> ;
+    prov:wasAssociatedWith <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/agent/weather_agent> ;
+    provai:cost 0.00827 ;
+    provai:finishReason "tool_use" ;
+    provai:inputTokens 1189 ;
+    provai:outputTokens 93 ;
+    provai:partOf <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/step/aeb7c0bc383ff875b> ;
+    provai:status "completed" ;
+    provai:usedModel <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/model/anthropic%2Fnvidia%2Fnemotron-3.5-lightning%3Afree> .
+
+<https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/step/0x318e1f45a27470d1> a provai:AgentInvocation ;
+    rdfs:label "evaluator" ;
+    prov:endedAtTime "2026-10-04T07:32:39.821375+00:00"^^xsd:dateTime ;
+    prov:startedAtTime "2026-10-04T07:32:37.828000+00:00"^^xsd:dateTime ;
+    prov:wasAssociatedWith <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/agent/evaluator> ;
+    provai:iteration 1 ;
+    provai:partOf <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/run> ;
+    provai:status "completed" .
+
+<https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/step/0x3c98d5398f246fd2> a provai:ModelCall ;
+    rdfs:label "llm_request" ;
+    prov:endedAtTime "2026-10-04T07:31:42.827294+00:00"^^xsd:dateTime ;
+    prov:startedAtTime "2026-10-04T07:31:36.414000+00:00"^^xsd:dateTime ;
+    prov:wasAssociatedWith <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/agent/weather_agent> ;
+    provai:cost 0.012624999999999999 ;
+    provai:finishReason "tool_use" ;
+    provai:inputTokens 800 ;
+    provai:outputTokens 345 ;
+    provai:partOf <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/step/aeb7c0bc383ff875b> ;
+    provai:status "completed" ;
+    provai:usedModel <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/model/anthropic%2Fnvidia%2Fnemotron-3.5-lightning%3Afree> .
+
+<https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/step/0x48042c5dbaa642f1> a provai:ModelCall ;
+    rdfs:label "llm_request" ;
+    prov:endedAtTime "2026-10-04T07:31:46.875113+00:00"^^xsd:dateTime ;
+    prov:startedAtTime "2026-10-04T07:31:14.022000+00:00"^^xsd:dateTime ;
+    prov:wasAssociatedWith <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/agent/coordinator> ;
+    provai:cost 0.12077999999999998 ;
+    provai:finishReason "end_turn" ;
+    provai:inputTokens 771 ;
+    provai:outputTokens 4677 ;
+    provai:partOf <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/run> ;
+    provai:status "completed" ;
+    provai:usedModel <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/model/anthropic%2Fnvidia%2Fnemotron-3.5-lightning%3Afree> .
+
+<https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/step/0x4bd934b0e75daf33> a provai:ModelCall ;
+    rdfs:label "llm_request" ;
+    prov:endedAtTime "2026-10-04T07:31:56.339077+00:00"^^xsd:dateTime ;
+    prov:startedAtTime "2026-10-04T07:31:38.897000+00:00"^^xsd:dateTime ;
+    prov:used <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/entity/0x23771c9de89d7944-result>,
+        <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/entity/0xde9d1465a4963c22-output> ;
+    prov:wasAssociatedWith <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/agent/facts_agent> ;
+    provai:cost 0.010239999999999999 ;
+    provai:finishReason "end_turn" ;
+    provai:inputTokens 928 ;
+    provai:outputTokens 224 ;
+    provai:partOf <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/step/a1220bfacc69a3168> ;
+    provai:status "completed" ;
+    provai:usedModel <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/model/anthropic%2Fnvidia%2Fnemotron-3.5-lightning%3Afree> .
+
+<https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/step/0x522a14be2d6b5b52> a provai:ModelCall ;
+    rdfs:label "llm_request" ;
+    prov:endedAtTime "2026-10-04T07:31:36.301454+00:00"^^xsd:dateTime ;
+    prov:startedAtTime "2026-10-04T07:31:34.017000+00:00"^^xsd:dateTime ;
+    prov:used <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/entity/0x10b502634b39bb23-output> ;
+    prov:wasAssociatedWith <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/agent/coordinator> ;
+    provai:cost 0.018632999999999997 ;
+    provai:finishReason "tool_use" ;
+    provai:inputTokens 2064 ;
+    provai:outputTokens 289 ;
+    provai:partOf <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/step/0x6ca5083bc986aed6> ;
+    provai:status "completed" ;
+    provai:usedModel <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/model/anthropic%2Fnvidia%2Fnemotron-3.5-lightning%3Afree> .
+
+<https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/step/0x57a93de904e29009> a provai:ModelCall ;
+    rdfs:label "llm_request" ;
+    prov:endedAtTime "2026-10-04T07:33:39.022313+00:00"^^xsd:dateTime ;
+    prov:startedAtTime "2026-10-04T07:33:38.424000+00:00"^^xsd:dateTime ;
+    prov:used <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/entity/0x82e851eec789f470-output>,
+        <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/entity/0xceb61b9f9802b751-result> ;
+    prov:wasAssociatedWith <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/agent/writer> ;
+    provai:cost 0.007505 ;
+    provai:finishReason "end_turn" ;
+    provai:inputTokens 1386 ;
+    provai:outputTokens 23 ;
+    provai:partOf <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/step/0xbd2a22ae252e89f7> ;
+    provai:status "completed" ;
+    provai:usedModel <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/model/anthropic%2Fnvidia%2Fnemotron-3.5-lightning%3Afree> .
+
+<https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/step/0x7b4a7ce9d388dd35> a provai:ModelCall ;
+    rdfs:label "llm_request" ;
+    prov:endedAtTime "2026-10-04T07:32:07.264288+00:00"^^xsd:dateTime ;
+    prov:startedAtTime "2026-10-04T07:31:56.363000+00:00"^^xsd:dateTime ;
+    prov:used <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/entity/0x23486b986aabad50-result>,
+        <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/entity/0x522a14be2d6b5b52-output>,
+        <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/entity/0x7c2040b04a8aad6f-result> ;
+    prov:wasAssociatedWith <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/agent/coordinator> ;
+    provai:cost 0.023091000000000004 ;
+    provai:finishReason "end_turn" ;
+    provai:inputTokens 633 ;
+    provai:outputTokens 710 ;
+    provai:partOf <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/step/0x6ca5083bc986aed6> ;
+    provai:status "completed" ;
+    provai:usedModel <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/model/anthropic%2Fnvidia%2Fnemotron-3.5-lightning%3Afree> .
+
+<https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/step/0x7c2040b04a8aad6f-memory_write-2026-10-04T07%3A31%3A56.350379%2B00%3A00> a provai:MemoryAccess ;
+    rdfs:label "memory write" ;
+    prov:endedAtTime "2026-10-04T07:31:56.350379+00:00"^^xsd:dateTime ;
+    prov:startedAtTime "2026-10-04T07:31:56.350379+00:00"^^xsd:dateTime ;
+    prov:wasAssociatedWith <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/agent/facts_agent> ;
+    provai:partOf <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/step/0x7c2040b04a8aad6f> ;
+    provai:status "completed" .
+
+<https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/step/0x82e851eec789f470> a provai:ModelCall ;
+    rdfs:label "llm_request" ;
+    prov:endedAtTime "2026-10-04T07:33:38.356934+00:00"^^xsd:dateTime ;
+    prov:startedAtTime "2026-10-04T07:32:40.397000+00:00"^^xsd:dateTime ;
+    prov:used <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/entity/0xaaa3999ed1ee496e-output> ;
+    prov:wasAssociatedWith <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/agent/writer> ;
+    provai:cost 0.010450000000000001 ;
+    provai:finishReason "tool_use" ;
+    provai:inputTokens 1100 ;
+    provai:outputTokens 198 ;
+    provai:partOf <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/step/0xbd2a22ae252e89f7> ;
+    provai:status "completed" ;
+    provai:usedModel <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/model/anthropic%2Fnvidia%2Fnemotron-3.5-lightning%3Afree> .
+
+<https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/step/0xaaa3999ed1ee496e> a provai:ModelCall ;
+    rdfs:label "llm_request" ;
+    prov:endedAtTime "2026-10-04T07:32:34.195971+00:00"^^xsd:dateTime ;
+    prov:startedAtTime "2026-10-04T07:32:24.522000+00:00"^^xsd:dateTime ;
+    prov:used <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/entity/0x25b5fbd6c7c2898b-output> ;
+    prov:wasAssociatedWith <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/agent/writer> ;
+    provai:cost 0.01799 ;
+    provai:finishReason "end_turn" ;
+    provai:inputTokens 1008 ;
+    provai:outputTokens 518 ;
+    provai:partOf <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/step/0xbf3ef8875a977c8c> ;
+    provai:status "completed" ;
+    provai:usedModel <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/model/anthropic%2Fnvidia%2Fnemotron-3.5-lightning%3Afree> .
+
+<https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/step/0xbf3ef8875a977c8c> a provai:AgentInvocation ;
+    rdfs:label "writer" ;
+    prov:endedAtTime "2026-10-04T07:32:34.209417+00:00"^^xsd:dateTime ;
+    prov:startedAtTime "2026-10-04T07:32:24.495000+00:00"^^xsd:dateTime ;
+    prov:wasAssociatedWith <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/agent/writer> ;
+    provai:iteration 2 ;
+    provai:partOf <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/run> ;
+    provai:status "completed" .
+
+<https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/step/0xc445deb8a751150a> a provai:ModelCall ;
+    rdfs:label "llm_request" ;
+    prov:endedAtTime "2026-10-04T07:32:14.889791+00:00"^^xsd:dateTime ;
+    prov:startedAtTime "2026-10-04T07:32:10.024000+00:00"^^xsd:dateTime ;
+    prov:wasAssociatedWith <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/agent/writer> ;
+    provai:cost 0.013135 ;
+    provai:finishReason "tool_use" ;
+    provai:inputTokens 832 ;
+    provai:outputTokens 359 ;
+    provai:partOf <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/step/0x285eeb077302b9fb> ;
+    provai:status "completed" ;
+    provai:usedModel <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/model/anthropic%2Fnvidia%2Fnemotron-3.5-lightning%3Afree> .
+
+<https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/step/0xceb61b9f9802b751-approval-2026-10-04T07%3A33%3A38.367714%2B00%3A00> a provai:Check ;
+    rdfs:label "approval" ;
+    prov:endedAtTime "2026-10-04T07:33:38.367714+00:00"^^xsd:dateTime ;
+    prov:startedAtTime "2026-10-04T07:33:38.367714+00:00"^^xsd:dateTime ;
+    prov:wasAssociatedWith <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/agent/approver> ;
+    provai:checked <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/entity/0xceb61b9f9802b751-arguments> ;
+    provai:outcome "approve" ;
+    provai:partOf <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/step/0xceb61b9f9802b751> ;
+    provai:status "completed" .
+
+<https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/step/0xcf6ce226e7612de2> a provai:ModelCall ;
+    rdfs:label "llm_request" ;
+    prov:endedAtTime "2026-10-04T07:32:39.727647+00:00"^^xsd:dateTime ;
+    prov:startedAtTime "2026-10-04T07:32:38.398000+00:00"^^xsd:dateTime ;
+    prov:wasAssociatedWith <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/agent/evaluator> ;
+    provai:cost 0.007475 ;
+    provai:finishReason "end_turn" ;
+    provai:inputTokens 775 ;
+    provai:outputTokens 144 ;
+    provai:partOf <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/step/0x318e1f45a27470d1> ;
+    provai:status "completed" ;
+    provai:usedModel <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/model/anthropic%2Fnvidia%2Fnemotron-3.5-lightning%3Afree> .
+
+<https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/step/0xde9d1465a4963c22> a provai:ModelCall ;
+    rdfs:label "llm_request" ;
+    prov:endedAtTime "2026-10-04T07:31:38.718653+00:00"^^xsd:dateTime ;
+    prov:startedAtTime "2026-10-04T07:31:36.501000+00:00"^^xsd:dateTime ;
+    prov:wasAssociatedWith <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/agent/facts_agent> ;
+    provai:cost 0.00588 ;
+    provai:finishReason "tool_use" ;
+    provai:inputTokens 796 ;
+    provai:outputTokens 76 ;
+    provai:partOf <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/step/a1220bfacc69a3168> ;
+    provai:status "completed" ;
+    provai:usedModel <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/model/anthropic%2Fnvidia%2Fnemotron-3.5-lightning%3Afree> .
+
+<https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/step/0xfcb116162b195da8> a provai:ModelCall ;
+    rdfs:label "llm_request" ;
+    prov:endedAtTime "2026-10-04T07:31:47.259219+00:00"^^xsd:dateTime ;
+    prov:startedAtTime "2026-10-04T07:31:44.813000+00:00"^^xsd:dateTime ;
+    prov:used <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/entity/0x055adbc97a2cd819-result>,
+        <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/entity/0x2d09d07387145ff6-output> ;
+    prov:wasAssociatedWith <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/agent/weather_agent> ;
+    provai:cost 0.015575 ;
+    provai:finishReason "end_turn" ;
+    provai:inputTokens 1335 ;
+    provai:outputTokens 356 ;
+    provai:partOf <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/step/aeb7c0bc383ff875b> ;
+    provai:status "completed" ;
+    provai:usedModel <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/model/anthropic%2Fnvidia%2Fnemotron-3.5-lightning%3Afree> .
+
+<https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/step/handoff> a provai:Handoff ;
+    rdfs:label "handoff" ;
+    prov:endedAtTime "2026-10-04T07:32:09.216763+00:00"^^xsd:dateTime ;
+    prov:startedAtTime "2026-10-04T07:32:07.518475+00:00"^^xsd:dateTime ;
+    prov:used <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/entity/0x7b4a7ce9d388dd35-output> ;
+    prov:wasAssociatedWith <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/agent/coordinator> ;
+    provai:fromAgent <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/agent/coordinator> ;
+    provai:partOf <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/run> ;
+    provai:status "completed" ;
+    provai:toAgent <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/agent/writer> .
+
+<https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/tool/mcp__brief__read_note> a provai:Tool ;
+    rdfs:label "mcp__brief__read_note" .
+
+<https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/tool/mcp__brief__send_brief> a provai:Tool ;
+    rdfs:label "mcp__brief__send_brief" .
+
+<https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/agent/user> a prov:Person ;
+    rdfs:label "user" .
+
+<https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/entity/0x25b5fbd6c7c2898b-output> a provai:Message ;
+    rdfs:label "model output" ;
+    prov:value "[{\"text\": \"Lisbon is the capital of Portugal and lies on the Tagus estuary. The city's historic hills and vibrant riverfront showcase its maritime heritage and contemporary charm.\"}]" ;
+    prov:wasGeneratedBy <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/step/0x25b5fbd6c7c2898b> .
+
+<https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/entity/0x2d09d07387145ff6-output> a provai:Message ;
+    rdfs:label "model output" ;
+    prov:value "[{\"id\": \"call-2f08b79e-6298-427c-9fb7-e5e1abf7ab77\", \"name\": \"mcp__brief__get_weather\", \"input\": {\"city\": \"Lisbon, Portugal\"}}]" ;
+    prov:wasGeneratedBy <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/step/0x2d09d07387145ff6> .
+
+<https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/entity/0x3c98d5398f246fd2-output> a provai:Message ;
+    rdfs:label "model output" ;
+    prov:value "[{\"id\": \"call-6034e579-3cea-453f-a85f-8bb8cca70485\", \"name\": \"mcp__brief__get_weather\", \"input\": {\"city\": \"Lisbon, Portugal\"}}]" ;
+    prov:wasGeneratedBy <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/step/0x3c98d5398f246fd2> .
+
+<https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/entity/0x4bd934b0e75daf33-output> a provai:Message ;
+    rdfs:label "model output" ;
+    prov:value "[{\"text\": \"Lisbon is the capital of Portugal and lies on the Tagus estuary.\"}]" ;
+    prov:wasGeneratedBy <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/step/0x4bd934b0e75daf33> .
+
+<https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/entity/0x82e851eec789f470-output> a provai:Message ;
+    rdfs:label "model output" ;
+    prov:value "[{\"id\": \"call-f23f46f9-8b95-49c8-8d27-b70e04042d45\", \"name\": \"mcp__brief__send_brief\", \"input\": {\"text\": \"Lisbon, Portugal\\u2019s capital, rests on the Tagus estuary, enjoying today\\u2019s 21\\u202f\\u00b0C clear skies with no significant weather disturbances. The city\\u2019s historic hills and vibrant riverfront embody its maritime heritage and contemporary allure.\", \"to\": \"client\"}}]" ;
+    prov:wasGeneratedBy <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/step/0x82e851eec789f470> .
+
+<https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/entity/0xaaa3999ed1ee496e-output> a provai:Message ;
+    rdfs:label "model output" ;
+    prov:value "[{\"text\": \"Lisbon, Portugal\\u2019s capital, rests on the Tagus estuary, enjoying today\\u2019s 21\\u202f\\u00b0C clear skies with no significant weather disturbances. The city\\u2019s historic hills and vibrant riverfront embody its maritime heritage and contemporary allure.\"}]" ;
+    prov:wasGeneratedBy <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/step/0xaaa3999ed1ee496e> .
+
+<https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/entity/0xc445deb8a751150a-output> a provai:Message ;
+    rdfs:label "model output" ;
+    prov:value "[{\"id\": \"call-bfbe2217-0cbe-4799-9d92-471b2b3aa0b1\", \"name\": \"mcp__brief__read_note\", \"input\": {\"city\": \"Lisbon\"}}]" ;
+    prov:wasGeneratedBy <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/step/0xc445deb8a751150a> .
+
+<https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/entity/0xceb61b9f9802b751-arguments> a prov:Entity ;
+    rdfs:label "mcp__brief__send_brief arguments" ;
+    prov:value "{\"text\": \"Lisbon, Portugal\\u2019s capital, rests on the Tagus estuary, enjoying today\\u2019s 21\\u202f\\u00b0C clear skies with no significant weather disturbances. The city\\u2019s historic hills and vibrant riverfront embody its maritime heritage and contemporary allure.\", \"to\": \"client\"}" .
+
+<https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/entity/0xde9d1465a4963c22-output> a provai:Message ;
+    rdfs:label "model output" ;
+    prov:value "[{\"id\": \"call-4ab49184-6437-4e27-bd14-ea9f9f7a74b9\", \"name\": \"mcp__brief__search_facts\", \"input\": {\"city\": \"Lisbon\"}}]" ;
+    prov:wasGeneratedBy <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/step/0xde9d1465a4963c22> .
+
+<https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/entity/0xfcb116162b195da8-output> a provai:Message ;
+    rdfs:label "model output" ;
+    prov:value "[{\"text\": \"Lisbon, Portugal is currently 21\\u00b0C with clear skies and no significant weather disturbances.\"}]" ;
+    prov:wasGeneratedBy <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/step/0xfcb116162b195da8> .
+
+<https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/step/0x2be8a1979f380fc6> a provai:ToolCall ;
+    rdfs:label "mcp__brief__read_note" ;
+    prov:endedAtTime "2026-10-04T07:32:14.911623+00:00"^^xsd:dateTime ;
+    prov:startedAtTime "2026-10-04T07:32:14.894000+00:00"^^xsd:dateTime ;
+    prov:used <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/entity/0x2be8a1979f380fc6-arguments>,
+        <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/entity/0xc445deb8a751150a-output> ;
+    prov:wasAssociatedWith <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/agent/writer> ;
+    provai:partOf <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/step/0x285eeb077302b9fb> ;
+    provai:status "completed" ;
+    provai:usedTool <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/tool/mcp__brief__read_note> .
+
+<https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/step/0xa4f71ca1862caad8> a provai:ToolCall ;
+    rdfs:label "mcp__brief__get_weather" ;
+    prov:endedAtTime "2026-10-04T07:31:42.843733+00:00"^^xsd:dateTime ;
+    prov:startedAtTime "2026-10-04T07:31:42.832000+00:00"^^xsd:dateTime ;
+    prov:used <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/entity/0x3c98d5398f246fd2-output>,
+        <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/entity/0xa4f71ca1862caad8-arguments> ;
+    prov:wasAssociatedWith <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/agent/weather_agent> ;
+    provai:errorType "weather service timed out" ;
+    provai:partOf <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/step/aeb7c0bc383ff875b> ;
+    provai:status "failed" ;
+    provai:usedTool <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/tool/mcp__brief__get_weather> .
+
+<https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/tool/Agent> a provai:Tool ;
+    rdfs:label "Agent" .
+
+<https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/tool/mcp__brief__search_facts> a provai:Tool ;
+    rdfs:label "mcp__brief__search_facts" .
+
+<https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/agent/evaluator> a provai:Agent ;
+    rdfs:label "evaluator" .
+
+<https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/entity/0x10b502634b39bb23-output> a provai:Message ;
+    rdfs:label "model output" ;
+    prov:value "[{\"id\": \"call-fab77cb4-656b-41a1-b56d-8b8962839e8e\", \"name\": \"mcp__brief__get_weather\", \"input\": {\"city\": \"Lisbon\"}}, {\"id\": \"call-f2b8ec6e-59c7-4623-a4a5-a02357faa990\", \"name\": \"mcp__brief__search_facts\", \"input\": {\"city\": \"Lisbon\"}}]" ;
+    prov:wasGeneratedBy <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/step/0x10b502634b39bb23> .
+
+<https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/entity/0x522a14be2d6b5b52-output> a provai:Message ;
+    rdfs:label "model output" ;
+    prov:value "[{\"id\": \"call-441df2c6-2161-4748-90ad-cd727210aadc\", \"name\": \"Agent\", \"input\": {\"prompt\": \"Get the current weather for Lisbon, Portugal. Provide temperature, conditions, and any relevant weather details.\", \"description\": \"Get Lisbon weather\", \"subagent_type\": \"weather_agent\"}}, {\"id\": \"call-4052411d-1b90-4831-a408-5bd62745108a\", \"name\": \"Agent\", \"input\": {\"description\": \"Get Lisbon facts\", \"subagent_type\": \"facts_agent\", \"prompt\": \"Get interesting facts about Lisbon, Portugal, including its history, population, geography, and notable features.\"}}]" ;
+    prov:wasGeneratedBy <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/step/0x522a14be2d6b5b52> .
+
+<https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/entity/0x7c2040b04a8aad6f-result> a prov:Entity ;
+    rdfs:label "Agent result" ;
+    prov:qualifiedDerivation <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/entity/0x7c2040b04a8aad6f-result/derivation/0x4bd934b0e75daf33-output> ;
+    prov:value "Lisbon is the capital of Portugal and lies on the Tagus estuary." ;
+    prov:wasDerivedFrom <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/entity/0x4bd934b0e75daf33-output> ;
+    prov:wasGeneratedBy <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/step/0x7c2040b04a8aad6f> .
+
+<https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/step/0x23486b986aabad50> a provai:ToolCall ;
+    rdfs:label "Agent" ;
+    prov:endedAtTime "2026-10-04T07:31:47.401295+00:00"^^xsd:dateTime ;
+    prov:startedAtTime "2026-10-04T07:31:36.274000+00:00"^^xsd:dateTime ;
+    prov:used <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/entity/0x23486b986aabad50-arguments>,
+        <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/entity/0x522a14be2d6b5b52-output> ;
+    prov:wasAssociatedWith <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/agent/coordinator> ;
+    provai:partOf <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/step/0x6ca5083bc986aed6> ;
+    provai:status "completed" ;
+    provai:usedTool <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/tool/Agent> .
+
+<https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/step/0x285eeb077302b9fb> a provai:AgentInvocation ;
+    rdfs:label "writer" ;
+    prov:endedAtTime "2026-10-04T07:32:24.490763+00:00"^^xsd:dateTime ;
+    prov:startedAtTime "2026-10-04T07:32:09.525000+00:00"^^xsd:dateTime ;
+    prov:used <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/entity/handoff-message> ;
+    prov:wasAssociatedWith <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/agent/writer> ;
+    provai:iteration 1 ;
+    provai:partOf <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/run> ;
+    provai:status "completed" .
+
+<https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/step/0xbd2a22ae252e89f7> a provai:AgentInvocation ;
+    rdfs:label "writer" ;
+    prov:endedAtTime "2026-10-04T07:33:39.098891+00:00"^^xsd:dateTime ;
+    prov:startedAtTime "2026-10-04T07:32:40.223000+00:00"^^xsd:dateTime ;
+    prov:wasAssociatedWith <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/agent/writer> ;
+    provai:iteration 3 ;
+    provai:partOf <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/run> ;
+    provai:status "completed" .
+
+<https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/step/0xceb61b9f9802b751> a provai:ToolCall ;
+    rdfs:label "mcp__brief__send_brief" ;
+    prov:endedAtTime "2026-10-04T07:33:38.402308+00:00"^^xsd:dateTime ;
+    prov:startedAtTime "2026-10-04T07:33:38.363000+00:00"^^xsd:dateTime ;
+    prov:used <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/entity/0x82e851eec789f470-output>,
+        <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/entity/0xceb61b9f9802b751-arguments> ;
+    prov:wasAssociatedWith <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/agent/writer> ;
+    prov:wasInformedBy <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/step/0xceb61b9f9802b751-approval-2026-10-04T07%3A33%3A38.367714%2B00%3A00> ;
+    provai:partOf <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/step/0xbd2a22ae252e89f7> ;
+    provai:status "completed" ;
+    provai:usedTool <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/tool/mcp__brief__send_brief> .
+
+<https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/step/a1220bfacc69a3168> a provai:AgentInvocation ;
+    rdfs:label "facts_agent" ;
+    prov:endedAtTime "2026-10-04T07:31:56.343469+00:00"^^xsd:dateTime ;
+    prov:startedAtTime "2026-10-04T07:31:36.407214+00:00"^^xsd:dateTime ;
+    prov:wasAssociatedWith <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/agent/facts_agent> ;
+    provai:iteration 1 ;
+    provai:partOf <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/step/0x7c2040b04a8aad6f> ;
+    provai:status "completed" .
+
+<https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/tool/mcp__brief__get_weather> a provai:Tool ;
+    rdfs:label "mcp__brief__get_weather" .
+
+<https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/entity/notes%2FLisbon%2F1> a provai:MemoryRecord ;
+    rdfs:label "Lisbon" ;
+    prov:qualifiedDerivation <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/entity/notes%2FLisbon%2F1/derivation/0x7c2040b04a8aad6f-result> ;
+    prov:value "Lisbon is the capital of Portugal and lies on the Tagus estuary." ;
+    prov:wasDerivedFrom <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/entity/0x7c2040b04a8aad6f-result> ;
+    prov:wasGeneratedBy <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/step/0x7c2040b04a8aad6f-memory_write-2026-10-04T07%3A31%3A56.350379%2B00%3A00> .
+
+<https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/step/0x7c2040b04a8aad6f> a provai:ToolCall ;
+    rdfs:label "Agent" ;
+    prov:endedAtTime "2026-10-04T07:31:56.347532+00:00"^^xsd:dateTime ;
+    prov:startedAtTime "2026-10-04T07:31:36.316000+00:00"^^xsd:dateTime ;
+    prov:used <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/entity/0x522a14be2d6b5b52-output>,
+        <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/entity/0x7c2040b04a8aad6f-arguments> ;
+    prov:wasAssociatedWith <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/agent/coordinator> ;
+    provai:partOf <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/step/0x6ca5083bc986aed6> ;
+    provai:status "completed" ;
+    provai:usedTool <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/tool/Agent> .
+
+<https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/step/aeb7c0bc383ff875b> a provai:AgentInvocation ;
+    rdfs:label "weather_agent" ;
+    prov:endedAtTime "2026-10-04T07:31:47.265534+00:00"^^xsd:dateTime ;
+    prov:startedAtTime "2026-10-04T07:31:36.293097+00:00"^^xsd:dateTime ;
+    prov:wasAssociatedWith <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/agent/weather_agent> ;
+    provai:iteration 1 ;
+    provai:partOf <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/step/0x23486b986aabad50> ;
+    provai:status "completed" .
+
+<https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/agent/facts_agent> a provai:Agent ;
+    rdfs:label "facts_agent" ;
+    prov:actedOnBehalfOf <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/agent/coordinator> ;
+    provai:spawnedBy <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/step/0x7c2040b04a8aad6f> .
+
+<https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/step/0x6ca5083bc986aed6> a provai:AgentInvocation,
+        provai:Routing ;
+    rdfs:label "coordinator" ;
+    prov:endedAtTime "2026-10-04T07:32:07.277029+00:00"^^xsd:dateTime ;
+    prov:startedAtTime "2026-10-04T07:31:14.805000+00:00"^^xsd:dateTime ;
+    prov:wasAssociatedWith <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/agent/coordinator> ;
+    provai:candidate <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/agent/Explore>,
+        <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/agent/Plan>,
+        <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/agent/claude>,
+        <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/agent/facts_agent>,
+        <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/agent/general-purpose>,
+        <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/agent/statusline-setup>,
+        <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/agent/translator_agent>,
+        <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/agent/weather_agent> ;
+    provai:iteration 1 ;
+    provai:partOf <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/run> ;
+    provai:selected <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/agent/facts_agent>,
+        <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/agent/weather_agent> ;
+    provai:status "completed" .
+
+<https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/agent/weather_agent> a provai:Agent ;
+    rdfs:label "weather_agent" ;
+    prov:actedOnBehalfOf <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/agent/coordinator> ;
+    provai:spawnedBy <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/step/0x23486b986aabad50> .
+
+<https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/run> a provai:Run ;
+    prov:wasAssociatedWith <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/agent/user> ;
+    provai:contentCaptured true ;
+    provai:partOf <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/session/2103c24e-0fba-4ef1-91c0-5b7a93830607>,
+        <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/session/6458920b-9c4d-4aaf-9acd-81dbff57da64>,
+        <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/session/edd720ac-5973-4dd2-aa98-2cd0fa299343> ;
+    provai:source "claude-agent-sdk 0.2.163 with Claude Code 2.1.286 OpenTelemetry traces" .
+
+<https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/agent/writer> a provai:Agent ;
+    rdfs:label "writer" ;
+    prov:actedOnBehalfOf <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/agent/coordinator> .
+
+<https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/agent/coordinator> a provai:Agent ;
+    rdfs:label "coordinator" ;
+    prov:actedOnBehalfOf <https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/agent/user> .
+
+<https://w3id.org/prov-ai/run/claude-agent-sdk/cc-20261004T073108/model/anthropic%2Fnvidia%2Fnemotron-3.5-lightning%3Afree> a provai:Model ;
+    rdfs:label "nvidia/nemotron-3.5-lightning:free" ;
+    provai:provider "anthropic" .
+

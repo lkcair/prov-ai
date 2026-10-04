@@ -1,0 +1,1386 @@
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix provai: <https://w3id.org/prov-ai#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/654d7621-65f5-4ab1-8fc9-41ae7cab5121-effect-2026-10-04T07%3A51%3A48.277025Z> a provai:Effect ;
+    rdfs:label "effect" ;
+    prov:value "/root/.claude/jobs/28722dd5/tmp/rr/crewai/cr-20261004T075022/brief-to-client.txt" ;
+    prov:wasAttributedTo <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/agent/writer> ;
+    prov:wasGeneratedBy <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/step/654d7621-65f5-4ab1-8fc9-41ae7cab5121> ;
+    provai:target "/root/.claude/jobs/28722dd5/tmp/rr/crewai/cr-20261004T075022/brief-to-client.txt" .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/be6c9552-ac44-4900-932e-cc4d33f60c02-answer> a prov:Entity ;
+    rdfs:label "coordinator answer" ;
+    prov:qualifiedDerivation <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/be6c9552-ac44-4900-932e-cc4d33f60c02-answer/derivation/d3d8df52-a181-4fab-80b3-059f8ac2e094-output> ;
+    prov:value "[\"weather\", \"facts\"]" ;
+    prov:wasDerivedFrom <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/d3d8df52-a181-4fab-80b3-059f8ac2e094-output> ;
+    prov:wasGeneratedBy <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/step/be6c9552-ac44-4900-932e-cc4d33f60c02> .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/fc26617c-de32-4efd-85fd-8deff47885c5-answer> a prov:Entity ;
+    rdfs:label "evaluator answer" ;
+    prov:qualifiedDerivation <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/fc26617c-de32-4efd-85fd-8deff47885c5-answer/derivation/7ff8f7c7-174d-4f6c-b15a-b428dd667c52-output> ;
+    prov:value "PASS" ;
+    prov:wasDerivedFrom <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/7ff8f7c7-174d-4f6c-b15a-b428dd667c52-output> ;
+    prov:wasGeneratedBy <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/step/fc26617c-de32-4efd-85fd-8deff47885c5> .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/ff416313-181a-4497-8c21-d129ffcc7b22-answer> a prov:Entity ;
+    rdfs:label "writer answer" ;
+    prov:qualifiedDerivation <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/ff416313-181a-4497-8c21-d129ffcc7b22-answer/derivation/4db95eb0-4a3d-4fae-8b5a-78dc684d4480-output> ;
+    prov:value "The brief has been sent to the client as requested." ;
+    prov:wasDerivedFrom <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/4db95eb0-4a3d-4fae-8b5a-78dc684d4480-output> ;
+    prov:wasGeneratedBy <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/step/ff416313-181a-4497-8c21-d129ffcc7b22> .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/memory/notes> a provai:Memory ;
+    rdfs:label "notes" ;
+    prov:hadMember <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/1bac9a28-f1bb-448c-8a77-0443cbb73c19> .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/step/16c2966d-1d0a-4d8b-aa83-6ed5d63de8fc> a provai:Check ;
+    rdfs:label "check" ;
+    prov:endedAtTime "2026-10-04T07:51:10.927474+00:00"^^xsd:dateTime ;
+    prov:startedAtTime "2026-10-04T07:51:10.927474+00:00"^^xsd:dateTime ;
+    prov:wasAssociatedWith <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/agent/application> ;
+    provai:checked <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/97fa4770-e81e-4bdc-8464-708ad76919b3-answer> ;
+    provai:iteration 1 ;
+    provai:outcome "fail" ;
+    provai:partOf <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/step/af69e44f-2dc2-4f1a-b525-752350ff65fa> ;
+    provai:reason "the first draft is always sent back for revision" ;
+    provai:status "completed" .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/step/8669e6c2-3c12-4ca3-b1f9-bedb8b6c3163> a provai:MemoryAccess ;
+    rdfs:label "memory read" ;
+    prov:endedAtTime "2026-10-04T07:51:22.871645+00:00"^^xsd:dateTime ;
+    prov:startedAtTime "2026-10-04T07:51:22.859033+00:00"^^xsd:dateTime ;
+    prov:used <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/1bac9a28-f1bb-448c-8a77-0443cbb73c19> ;
+    prov:wasAssociatedWith <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/agent/writer> ;
+    provai:partOf <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/step/ebf161b0-24d9-4b1c-a814-b075de500492> ;
+    provai:status "completed" .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/step/a0a417f9-3b96-4957-8442-89250a68a0ec> a provai:Check ;
+    rdfs:label "check" ;
+    prov:endedAtTime "2026-10-04T07:51:34.807116+00:00"^^xsd:dateTime ;
+    prov:startedAtTime "2026-10-04T07:51:34.807116+00:00"^^xsd:dateTime ;
+    prov:wasAssociatedWith <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/agent/evaluator> ;
+    provai:checked <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/7a57b923-da38-45cc-a871-c49679af3a7d-answer> ;
+    provai:iteration 2 ;
+    provai:outcome "pass" ;
+    provai:partOf <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/step/84fc38fe-43d2-40f2-9a04-b954e2e0ffe4> ;
+    provai:reason "PASS" ;
+    provai:status "completed" .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/step/c11e0d7b-f551-4878-be52-ac35af4379db> a provai:MemoryAccess ;
+    rdfs:label "memory read" ;
+    prov:endedAtTime "2026-10-04T07:51:07.785804+00:00"^^xsd:dateTime ;
+    prov:startedAtTime "2026-10-04T07:51:07.742839+00:00"^^xsd:dateTime ;
+    prov:used <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/1bac9a28-f1bb-448c-8a77-0443cbb73c19> ;
+    prov:wasAssociatedWith <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/agent/writer> ;
+    provai:partOf <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/step/59312f2a-70ed-493f-b5a8-a541b1664543> ;
+    provai:status "completed" .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/agent/application> a provai:Agent ;
+    rdfs:label "application" .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/agent/approver> a prov:Person ;
+    rdfs:label "approver" .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/agent/translator_agent> a provai:Agent ;
+    rdfs:label "translator_agent" .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/0057ec77-104b-4ea5-9b24-ba7edf880b01-input> a provai:Message ;
+    rdfs:label "model input" ;
+    prov:qualifiedDerivation <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/0057ec77-104b-4ea5-9b24-ba7edf880b01-input/derivation/10c71596-8719-4c53-a716-9a3888d8e515-result>,
+        <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/0057ec77-104b-4ea5-9b24-ba7edf880b01-input/derivation/1bac9a28-f1bb-448c-8a77-0443cbb73c19>,
+        <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/0057ec77-104b-4ea5-9b24-ba7edf880b01-input/derivation/3158af12-ab02-459e-bdec-f111b3306610-output>,
+        <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/0057ec77-104b-4ea5-9b24-ba7edf880b01-input/derivation/4e190590-4a57-4399-a736-4675b0c5a910-output>,
+        <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/0057ec77-104b-4ea5-9b24-ba7edf880b01-input/derivation/fbf76b16-9fb5-4782-94a9-f7cfc035284d-answer>,
+        <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/0057ec77-104b-4ea5-9b24-ba7edf880b01-input/derivation/fffc3a1a-09b9-465e-89fd-99d30cfce2e8-answer> ;
+    prov:value "[{\"role\": \"system\", \"parts\": [{\"type\": \"text\", \"content\": \"You are writer. Write two-sentence briefs about cities. Always call read_note for the city first.\\nYour personal goal is: Write two-sentence briefs about cities. Always call read_note for the city first.\"}]}, {\"role\": \"user\", \"parts\": [{\"type\": \"text\", \"content\": \"\\nCurrent Task: Draft a two-sentence brief on Lisbon\\n\\nThis is the expected criteria for your final answer: Your best answer to your coworker asking you this, accounting for the context shared.\\nyou MUST return the actual complete content as the final answer, not a summary.\\n\\nThis is the context you're working with:\\nWeather: Lisbon is currently 21\\u202f\\u00b0C with clear skies. Facts: Lisbon is the capital of Portugal and lies on the Tagus estuary.\"}]}]" ;
+    prov:wasDerivedFrom <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/10c71596-8719-4c53-a716-9a3888d8e515-result>,
+        <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/1bac9a28-f1bb-448c-8a77-0443cbb73c19>,
+        <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/3158af12-ab02-459e-bdec-f111b3306610-output>,
+        <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/4e190590-4a57-4399-a736-4675b0c5a910-output>,
+        <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/fbf76b16-9fb5-4782-94a9-f7cfc035284d-answer>,
+        <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/fffc3a1a-09b9-465e-89fd-99d30cfce2e8-answer> .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/0057ec77-104b-4ea5-9b24-ba7edf880b01-input/derivation/10c71596-8719-4c53-a716-9a3888d8e515-result> a prov:Derivation ;
+    prov:entity <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/10c71596-8719-4c53-a716-9a3888d8e515-result> ;
+    provai:knownBy "inferred" .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/0057ec77-104b-4ea5-9b24-ba7edf880b01-input/derivation/1bac9a28-f1bb-448c-8a77-0443cbb73c19> a prov:Derivation ;
+    prov:entity <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/1bac9a28-f1bb-448c-8a77-0443cbb73c19> ;
+    provai:knownBy "inferred" .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/0057ec77-104b-4ea5-9b24-ba7edf880b01-input/derivation/3158af12-ab02-459e-bdec-f111b3306610-output> a prov:Derivation ;
+    prov:entity <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/3158af12-ab02-459e-bdec-f111b3306610-output> ;
+    provai:knownBy "inferred" .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/0057ec77-104b-4ea5-9b24-ba7edf880b01-input/derivation/4e190590-4a57-4399-a736-4675b0c5a910-output> a prov:Derivation ;
+    prov:entity <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/4e190590-4a57-4399-a736-4675b0c5a910-output> ;
+    provai:knownBy "inferred" .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/0057ec77-104b-4ea5-9b24-ba7edf880b01-input/derivation/fbf76b16-9fb5-4782-94a9-f7cfc035284d-answer> a prov:Derivation ;
+    prov:entity <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/fbf76b16-9fb5-4782-94a9-f7cfc035284d-answer> ;
+    provai:knownBy "inferred" .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/0057ec77-104b-4ea5-9b24-ba7edf880b01-input/derivation/fffc3a1a-09b9-465e-89fd-99d30cfce2e8-answer> a prov:Derivation ;
+    prov:entity <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/fffc3a1a-09b9-465e-89fd-99d30cfce2e8-answer> ;
+    provai:knownBy "inferred" .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/0057ec77-104b-4ea5-9b24-ba7edf880b01-output> a provai:Message ;
+    rdfs:label "model output" ;
+    prov:value "[{\"role\": \"assistant\", \"parts\": [{\"type\": \"tool_call\", \"name\": \"read_note\", \"arguments\": {\"city\": \"Lisbon\"}, \"id\": \"call-d61fb0ef-8392-4b06-bcf6-2fcd5ce4f444\"}], \"finish_reason\": \"tool_call\"}]" ;
+    prov:wasGeneratedBy <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/step/0057ec77-104b-4ea5-9b24-ba7edf880b01> .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/0456a90d-b859-49f8-90d8-c803c253de9f-arguments> a prov:Entity ;
+    rdfs:label "delegate_work_to_coworker arguments" ;
+    prov:qualifiedDerivation <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/0456a90d-b859-49f8-90d8-c803c253de9f-arguments/derivation/10c71596-8719-4c53-a716-9a3888d8e515-result>,
+        <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/0456a90d-b859-49f8-90d8-c803c253de9f-arguments/derivation/1bac9a28-f1bb-448c-8a77-0443cbb73c19>,
+        <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/0456a90d-b859-49f8-90d8-c803c253de9f-arguments/derivation/3158af12-ab02-459e-bdec-f111b3306610-output>,
+        <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/0456a90d-b859-49f8-90d8-c803c253de9f-arguments/derivation/fffc3a1a-09b9-465e-89fd-99d30cfce2e8-answer> ;
+    prov:value "{\"context\": \"Weather: Lisbon is currently 21\\u202f\\u00b0C with clear skies. Facts: Lisbon is the capital of Portugal and lies on the Tagus estuary.\", \"coworker\": \"writer\", \"task\": \"Draft a two-sentence brief on Lisbon\"}" ;
+    prov:wasDerivedFrom <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/10c71596-8719-4c53-a716-9a3888d8e515-result>,
+        <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/1bac9a28-f1bb-448c-8a77-0443cbb73c19>,
+        <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/3158af12-ab02-459e-bdec-f111b3306610-output>,
+        <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/fffc3a1a-09b9-465e-89fd-99d30cfce2e8-answer> .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/0456a90d-b859-49f8-90d8-c803c253de9f-arguments/derivation/10c71596-8719-4c53-a716-9a3888d8e515-result> a prov:Derivation ;
+    prov:entity <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/10c71596-8719-4c53-a716-9a3888d8e515-result> ;
+    provai:knownBy "inferred" .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/0456a90d-b859-49f8-90d8-c803c253de9f-arguments/derivation/1bac9a28-f1bb-448c-8a77-0443cbb73c19> a prov:Derivation ;
+    prov:entity <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/1bac9a28-f1bb-448c-8a77-0443cbb73c19> ;
+    provai:knownBy "inferred" .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/0456a90d-b859-49f8-90d8-c803c253de9f-arguments/derivation/3158af12-ab02-459e-bdec-f111b3306610-output> a prov:Derivation ;
+    prov:entity <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/3158af12-ab02-459e-bdec-f111b3306610-output> ;
+    provai:knownBy "inferred" .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/0456a90d-b859-49f8-90d8-c803c253de9f-arguments/derivation/fffc3a1a-09b9-465e-89fd-99d30cfce2e8-answer> a prov:Derivation ;
+    prov:entity <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/fffc3a1a-09b9-465e-89fd-99d30cfce2e8-answer> ;
+    provai:knownBy "inferred" .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/05e8d06a-0c73-4752-8c4a-a266f433348a-input> a provai:Message ;
+    rdfs:label "model input" ;
+    prov:value "[{\"role\": \"system\", \"parts\": [{\"type\": \"text\", \"content\": \"You are weather_agent. You do not know the weather. Always call get_weather first, even if an earlier attempt failed, then answer in one sentence.\\nYour personal goal is: You do not know the weather. Always call get_weather first, even if an earlier attempt failed, then answer in one sentence.\"}]}, {\"role\": \"user\", \"parts\": [{\"type\": \"text\", \"content\": \"\\nCurrent Task: Weather in Lisbon?\"}]}]" .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/05e8d06a-0c73-4752-8c4a-a266f433348a-output> a provai:Message ;
+    rdfs:label "model output" ;
+    prov:value "[{\"role\": \"assistant\", \"parts\": [{\"type\": \"tool_call\", \"name\": \"get_weather\", \"arguments\": {\"city\": \"Lisbon\"}, \"id\": \"call-2a89f9cd-8336-4cf0-8481-deded88a31c8\"}], \"finish_reason\": \"tool_call\"}]" ;
+    prov:wasGeneratedBy <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/step/05e8d06a-0c73-4752-8c4a-a266f433348a> .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/0e0ffdcb-9748-4e2d-8601-fabe73f434f3-input> a provai:Message ;
+    rdfs:label "model input" ;
+    prov:value "[{\"role\": \"system\", \"parts\": [{\"type\": \"text\", \"content\": \"You are facts_agent. You do not know facts about cities. Always call search_facts first, then answer in one sentence.\\nYour personal goal is: You do not know facts about cities. Always call search_facts first, then answer in one sentence.\"}]}, {\"role\": \"user\", \"parts\": [{\"type\": \"text\", \"content\": \"\\nCurrent Task: Facts about Lisbon?\"}]}]" .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/0e0ffdcb-9748-4e2d-8601-fabe73f434f3-output> a provai:Message ;
+    rdfs:label "model output" ;
+    prov:value "[{\"role\": \"assistant\", \"parts\": [{\"type\": \"tool_call\", \"name\": \"search_facts\", \"arguments\": {\"city\": \"Lisbon\"}, \"id\": \"call-9d7234bc-8c41-4b4f-ac7e-70f7001a41fd\"}], \"finish_reason\": \"tool_call\"}]" ;
+    prov:wasGeneratedBy <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/step/0e0ffdcb-9748-4e2d-8601-fabe73f434f3> .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/0e7c9e86-9bb2-4c18-b9ee-cca546bef7d0-input> a provai:Message ;
+    rdfs:label "model input" ;
+    prov:value "[{\"role\": \"system\", \"parts\": [{\"type\": \"text\", \"content\": \"You are weather_agent. You do not know the weather. Always call get_weather first, even if an earlier attempt failed, then answer in one sentence.\\nYour personal goal is: You do not know the weather. Always call get_weather first, even if an earlier attempt failed, then answer in one sentence.\"}]}, {\"role\": \"user\", \"parts\": [{\"type\": \"text\", \"content\": \"\\nCurrent Task: Weather in Lisbon?\"}]}, {\"role\": \"assistant\", \"parts\": [{\"type\": \"tool_call\", \"name\": \"'get_weather'\", \"arguments\": \"'{\\\"city\\\":\\\"Lisbon\\\"}'\", \"id\": \"call-2a89f9cd-8336-4cf0-8481-deded88a31c8\"}]}, {\"role\": \"tool\", \"parts\": [{\"type\": \"text\", \"content\": \"Error executing tool: weather service timed out\"}]}]" .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/0e7c9e86-9bb2-4c18-b9ee-cca546bef7d0-output> a provai:Message ;
+    rdfs:label "model output" ;
+    prov:value "[{\"role\": \"assistant\", \"parts\": [{\"type\": \"tool_call\", \"name\": \"get_weather\", \"arguments\": {\"city\": \"Lisbon\"}, \"id\": \"call-5a7fb40c-3f9c-44f0-8e14-9c4114255610\"}], \"finish_reason\": \"tool_call\"}]" ;
+    prov:wasGeneratedBy <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/step/0e7c9e86-9bb2-4c18-b9ee-cca546bef7d0> .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/10c71596-8719-4c53-a716-9a3888d8e515-arguments> a prov:Entity ;
+    rdfs:label "search_facts arguments" ;
+    prov:value "{\"city\": \"Lisbon\"}" .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/1bac9a28-f1bb-448c-8a77-0443cbb73c19/derivation/fffc3a1a-09b9-465e-89fd-99d30cfce2e8-answer> a prov:Derivation ;
+    prov:entity <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/fffc3a1a-09b9-465e-89fd-99d30cfce2e8-answer> ;
+    provai:knownBy "inferred" .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/3158af12-ab02-459e-bdec-f111b3306610-input> a provai:Message ;
+    rdfs:label "model input" ;
+    prov:qualifiedDerivation <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/3158af12-ab02-459e-bdec-f111b3306610-input/derivation/10c71596-8719-4c53-a716-9a3888d8e515-result> ;
+    prov:value "[{\"role\": \"system\", \"parts\": [{\"type\": \"text\", \"content\": \"You are facts_agent. You do not know facts about cities. Always call search_facts first, then answer in one sentence.\\nYour personal goal is: You do not know facts about cities. Always call search_facts first, then answer in one sentence.\"}]}, {\"role\": \"user\", \"parts\": [{\"type\": \"text\", \"content\": \"\\nCurrent Task: Facts about Lisbon?\"}]}, {\"role\": \"assistant\", \"parts\": [{\"type\": \"tool_call\", \"name\": \"'search_facts'\", \"arguments\": \"'{\\\"city\\\":\\\"Lisbon\\\"}'\", \"id\": \"call-9d7234bc-8c41-4b4f-ac7e-70f7001a41fd\"}]}, {\"role\": \"tool\", \"parts\": [{\"type\": \"text\", \"content\": \"Lisbon is the capital of Portugal and lies on the Tagus estuary.\"}]}]" ;
+    prov:wasDerivedFrom <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/10c71596-8719-4c53-a716-9a3888d8e515-result> .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/3158af12-ab02-459e-bdec-f111b3306610-input/derivation/10c71596-8719-4c53-a716-9a3888d8e515-result> a prov:Derivation ;
+    prov:entity <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/10c71596-8719-4c53-a716-9a3888d8e515-result> ;
+    provai:knownBy "inferred" .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/42b0fd81-b68f-4e69-8336-15b6163dc060-arguments> a prov:Entity ;
+    rdfs:label "get_weather arguments" ;
+    prov:value "{\"city\": \"Lisbon\"}" .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/47fef46d-c04a-4a18-a7d9-e8920992532b-arguments> a prov:Entity ;
+    rdfs:label "get_weather arguments" ;
+    prov:value "{\"city\": \"Lisbon\"}" .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/4db95eb0-4a3d-4fae-8b5a-78dc684d4480-input> a provai:Message ;
+    rdfs:label "model input" ;
+    prov:qualifiedDerivation <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/4db95eb0-4a3d-4fae-8b5a-78dc684d4480-input/derivation/654d7621-65f5-4ab1-8fc9-41ae7cab5121-result>,
+        <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/4db95eb0-4a3d-4fae-8b5a-78dc684d4480-input/derivation/7622babc-73d2-43b3-8d9c-4755f65fb64a-output>,
+        <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/4db95eb0-4a3d-4fae-8b5a-78dc684d4480-input/derivation/7a57b923-da38-45cc-a871-c49679af3a7d-answer>,
+        <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/4db95eb0-4a3d-4fae-8b5a-78dc684d4480-input/derivation/ea52ad93-3631-4040-91fa-71a4c35f8f4c-output> ;
+    prov:value "[{\"role\": \"system\", \"parts\": [{\"type\": \"text\", \"content\": \"You are writer. Send approved briefs with send_brief.\\nYour personal goal is: Send approved briefs with send_brief.\"}]}, {\"role\": \"user\", \"parts\": [{\"type\": \"text\", \"content\": \"\\nCurrent Task: Call send_brief with to='client' and this brief as text, unchanged:\\nLisbon, the capital of Portugal, lies on the Tagus estuary. The city enjoys a mild 21\\u202f\\u00b0C with clear skies today.\"}]}, {\"role\": \"assistant\", \"parts\": [{\"type\": \"tool_call\", \"name\": \"'send_brief'\", \"arguments\": \"'{\\\"to\\\":\\\"client\\\",\\\"text\\\":\\\"Lisbon, the capital of Portugal, lies on the Tagus estuary. The city enjoys a mild 21\\\\u202f\\u00b0C with clear skies today.\\\"}'\", \"id\": \"call-61fa1119-19c2-45ca-990f-4d4645fac734\"}]}, {\"role\": \"tool\", \"parts\": [{\"type\": \"text\", \"content\": \"/root/.claude/jobs/28722dd5/tmp/rr/crewai/cr-20261004T075022/brief-to-client.txt\"}]}]" ;
+    prov:wasDerivedFrom <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/654d7621-65f5-4ab1-8fc9-41ae7cab5121-result>,
+        <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/7622babc-73d2-43b3-8d9c-4755f65fb64a-output>,
+        <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/7a57b923-da38-45cc-a871-c49679af3a7d-answer>,
+        <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/ea52ad93-3631-4040-91fa-71a4c35f8f4c-output> .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/4db95eb0-4a3d-4fae-8b5a-78dc684d4480-input/derivation/654d7621-65f5-4ab1-8fc9-41ae7cab5121-result> a prov:Derivation ;
+    prov:entity <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/654d7621-65f5-4ab1-8fc9-41ae7cab5121-result> ;
+    provai:knownBy "inferred" .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/4db95eb0-4a3d-4fae-8b5a-78dc684d4480-input/derivation/7622babc-73d2-43b3-8d9c-4755f65fb64a-output> a prov:Derivation ;
+    prov:entity <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/7622babc-73d2-43b3-8d9c-4755f65fb64a-output> ;
+    provai:knownBy "inferred" .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/4db95eb0-4a3d-4fae-8b5a-78dc684d4480-input/derivation/7a57b923-da38-45cc-a871-c49679af3a7d-answer> a prov:Derivation ;
+    prov:entity <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/7a57b923-da38-45cc-a871-c49679af3a7d-answer> ;
+    provai:knownBy "inferred" .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/4db95eb0-4a3d-4fae-8b5a-78dc684d4480-input/derivation/ea52ad93-3631-4040-91fa-71a4c35f8f4c-output> a prov:Derivation ;
+    prov:entity <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/ea52ad93-3631-4040-91fa-71a4c35f8f4c-output> ;
+    provai:knownBy "inferred" .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/4e190590-4a57-4399-a736-4675b0c5a910-input> a provai:Message ;
+    rdfs:label "model input" ;
+    prov:qualifiedDerivation <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/4e190590-4a57-4399-a736-4675b0c5a910-input/derivation/47fef46d-c04a-4a18-a7d9-e8920992532b-result> ;
+    prov:value "[{\"role\": \"system\", \"parts\": [{\"type\": \"text\", \"content\": \"You are weather_agent. You do not know the weather. Always call get_weather first, even if an earlier attempt failed, then answer in one sentence.\\nYour personal goal is: You do not know the weather. Always call get_weather first, even if an earlier attempt failed, then answer in one sentence.\"}]}, {\"role\": \"user\", \"parts\": [{\"type\": \"text\", \"content\": \"\\nCurrent Task: Weather in Lisbon?\"}]}, {\"role\": \"assistant\", \"parts\": [{\"type\": \"tool_call\", \"name\": \"'get_weather'\", \"arguments\": \"'{\\\"city\\\":\\\"Lisbon\\\"}'\", \"id\": \"call-2a89f9cd-8336-4cf0-8481-deded88a31c8\"}]}, {\"role\": \"tool\", \"parts\": [{\"type\": \"text\", \"content\": \"Error executing tool: weather service timed out\"}]}, {\"role\": \"assistant\", \"parts\": [{\"type\": \"tool_call\", \"name\": \"'get_weather'\", \"arguments\": \"'{\\\"city\\\":\\\"Lisbon\\\"}'\", \"id\": \"call-5a7fb40c-3f9c-44f0-8e14-9c4114255610\"}]}, {\"role\": \"tool\", \"parts\": [{\"type\": \"text\", \"content\": \"Lisbon: 21 C, clear sky\"}]}]" ;
+    prov:wasDerivedFrom <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/47fef46d-c04a-4a18-a7d9-e8920992532b-result> .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/4e190590-4a57-4399-a736-4675b0c5a910-input/derivation/47fef46d-c04a-4a18-a7d9-e8920992532b-result> a prov:Derivation ;
+    prov:entity <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/47fef46d-c04a-4a18-a7d9-e8920992532b-result> ;
+    provai:knownBy "inferred" .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/59312f2a-70ed-493f-b5a8-a541b1664543-arguments> a prov:Entity ;
+    rdfs:label "read_note arguments" ;
+    prov:value "{\"city\": \"Lisbon\"}" .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/59312f2a-70ed-493f-b5a8-a541b1664543-result/derivation/1bac9a28-f1bb-448c-8a77-0443cbb73c19> a prov:Derivation ;
+    prov:entity <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/1bac9a28-f1bb-448c-8a77-0443cbb73c19> ;
+    provai:knownBy "inferred" .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/5b82ec59-c1bf-4625-9e99-d86995fcb3a5-input> a provai:Message ;
+    rdfs:label "model input" ;
+    prov:qualifiedDerivation <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/5b82ec59-c1bf-4625-9e99-d86995fcb3a5-input/derivation/7622babc-73d2-43b3-8d9c-4755f65fb64a-output>,
+        <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/5b82ec59-c1bf-4625-9e99-d86995fcb3a5-input/derivation/7a57b923-da38-45cc-a871-c49679af3a7d-answer>,
+        <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/5b82ec59-c1bf-4625-9e99-d86995fcb3a5-input/derivation/ea52ad93-3631-4040-91fa-71a4c35f8f4c-output> ;
+    prov:value "[{\"role\": \"system\", \"parts\": [{\"type\": \"text\", \"content\": \"You are writer. Send approved briefs with send_brief.\\nYour personal goal is: Send approved briefs with send_brief.\"}]}, {\"role\": \"user\", \"parts\": [{\"type\": \"text\", \"content\": \"\\nCurrent Task: Call send_brief with to='client' and this brief as text, unchanged:\\nLisbon, the capital of Portugal, lies on the Tagus estuary. The city enjoys a mild 21\\u202f\\u00b0C with clear skies today.\"}]}]" ;
+    prov:wasDerivedFrom <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/7622babc-73d2-43b3-8d9c-4755f65fb64a-output>,
+        <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/7a57b923-da38-45cc-a871-c49679af3a7d-answer>,
+        <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/ea52ad93-3631-4040-91fa-71a4c35f8f4c-output> .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/5b82ec59-c1bf-4625-9e99-d86995fcb3a5-input/derivation/7622babc-73d2-43b3-8d9c-4755f65fb64a-output> a prov:Derivation ;
+    prov:entity <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/7622babc-73d2-43b3-8d9c-4755f65fb64a-output> ;
+    provai:knownBy "inferred" .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/5b82ec59-c1bf-4625-9e99-d86995fcb3a5-input/derivation/7a57b923-da38-45cc-a871-c49679af3a7d-answer> a prov:Derivation ;
+    prov:entity <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/7a57b923-da38-45cc-a871-c49679af3a7d-answer> ;
+    provai:knownBy "inferred" .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/5b82ec59-c1bf-4625-9e99-d86995fcb3a5-input/derivation/ea52ad93-3631-4040-91fa-71a4c35f8f4c-output> a prov:Derivation ;
+    prov:entity <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/ea52ad93-3631-4040-91fa-71a4c35f8f4c-output> ;
+    provai:knownBy "inferred" .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/5b82ec59-c1bf-4625-9e99-d86995fcb3a5-output> a provai:Message ;
+    rdfs:label "model output" ;
+    prov:value "[{\"role\": \"assistant\", \"parts\": [{\"type\": \"tool_call\", \"name\": \"send_brief\", \"arguments\": {\"to\": \"client\", \"text\": \"Lisbon, the capital of Portugal, lies on the Tagus estuary. The city enjoys a mild 21\\u202f\\u00b0C with clear skies today.\"}, \"id\": \"call-61fa1119-19c2-45ca-990f-4d4645fac734\"}], \"finish_reason\": \"tool_call\"}]" ;
+    prov:wasGeneratedBy <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/step/5b82ec59-c1bf-4625-9e99-d86995fcb3a5> .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/654d7621-65f5-4ab1-8fc9-41ae7cab5121-arguments> a prov:Entity ;
+    rdfs:label "send_brief arguments" ;
+    prov:value "{\"text\": \"Lisbon, the capital of Portugal, lies on the Tagus estuary. The city enjoys a mild 21\\u202f\\u00b0C with clear skies today.\", \"to\": \"client\"}" .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/7622babc-73d2-43b3-8d9c-4755f65fb64a-input> a provai:Message ;
+    rdfs:label "model input" ;
+    prov:qualifiedDerivation <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/7622babc-73d2-43b3-8d9c-4755f65fb64a-input/derivation/0456a90d-b859-49f8-90d8-c803c253de9f-result>,
+        <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/7622babc-73d2-43b3-8d9c-4755f65fb64a-input/derivation/10c71596-8719-4c53-a716-9a3888d8e515-result>,
+        <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/7622babc-73d2-43b3-8d9c-4755f65fb64a-input/derivation/1bac9a28-f1bb-448c-8a77-0443cbb73c19>,
+        <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/7622babc-73d2-43b3-8d9c-4755f65fb64a-input/derivation/3158af12-ab02-459e-bdec-f111b3306610-output>,
+        <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/7622babc-73d2-43b3-8d9c-4755f65fb64a-input/derivation/4e190590-4a57-4399-a736-4675b0c5a910-output>,
+        <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/7622babc-73d2-43b3-8d9c-4755f65fb64a-input/derivation/59312f2a-70ed-493f-b5a8-a541b1664543-result>,
+        <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/7622babc-73d2-43b3-8d9c-4755f65fb64a-input/derivation/9105f6d9-2fb8-4349-9729-695dbbd6ddb8-output>,
+        <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/7622babc-73d2-43b3-8d9c-4755f65fb64a-input/derivation/934904a4-31fb-425b-a953-13b4d1243f93-answer>,
+        <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/7622babc-73d2-43b3-8d9c-4755f65fb64a-input/derivation/97fa4770-e81e-4bdc-8464-708ad76919b3-answer>,
+        <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/7622babc-73d2-43b3-8d9c-4755f65fb64a-input/derivation/ebf161b0-24d9-4b1c-a814-b075de500492-result>,
+        <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/7622babc-73d2-43b3-8d9c-4755f65fb64a-input/derivation/f7bb6479-4a5f-4c7f-9433-36e0091a34d9-output>,
+        <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/7622babc-73d2-43b3-8d9c-4755f65fb64a-input/derivation/fbf76b16-9fb5-4782-94a9-f7cfc035284d-answer>,
+        <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/7622babc-73d2-43b3-8d9c-4755f65fb64a-input/derivation/fffc3a1a-09b9-465e-89fd-99d30cfce2e8-answer> ;
+    prov:value "[{\"role\": \"system\", \"parts\": [{\"type\": \"text\", \"content\": \"You are writer. Write two-sentence briefs about cities. Always call read_note for the city first.\\nYour personal goal is: Write two-sentence briefs about cities. Always call read_note for the city first.\"}]}, {\"role\": \"user\", \"parts\": [{\"type\": \"text\", \"content\": \"\\nCurrent Task: Write a two-sentence brief on Lisbon. Weather: Lisbon is currently 21\\u202f\\u00b0C with clear skies.. Facts: Lisbon is the capital of Portugal and lies on the Tagus estuary.. The last draft failed review: the first draft is always sent back for revision. Fix it. Last draft: Lisbon, the capital of Portugal, sits on the Tagus estuary. The city currently basks in 21\\u202f\\u00b0C clear skies.. Reply with the brief only.\"}]}, {\"role\": \"assistant\", \"parts\": [{\"type\": \"tool_call\", \"name\": \"'read_note'\", \"arguments\": \"'{\\\"city\\\":\\\"Lisbon\\\"}'\", \"id\": \"call-e1cfc1f1-f34f-4dee-bd0a-20dc4dc8c4af\"}]}, {\"role\": \"tool\", \"parts\": [{\"type\": \"text\", \"content\": \"Lisbon is the capital of Portugal and lies on the Tagus estuary.\"}]}]" ;
+    prov:wasDerivedFrom <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/0456a90d-b859-49f8-90d8-c803c253de9f-result>,
+        <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/10c71596-8719-4c53-a716-9a3888d8e515-result>,
+        <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/1bac9a28-f1bb-448c-8a77-0443cbb73c19>,
+        <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/3158af12-ab02-459e-bdec-f111b3306610-output>,
+        <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/4e190590-4a57-4399-a736-4675b0c5a910-output>,
+        <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/59312f2a-70ed-493f-b5a8-a541b1664543-result>,
+        <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/9105f6d9-2fb8-4349-9729-695dbbd6ddb8-output>,
+        <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/934904a4-31fb-425b-a953-13b4d1243f93-answer>,
+        <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/97fa4770-e81e-4bdc-8464-708ad76919b3-answer>,
+        <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/ebf161b0-24d9-4b1c-a814-b075de500492-result>,
+        <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/f7bb6479-4a5f-4c7f-9433-36e0091a34d9-output>,
+        <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/fbf76b16-9fb5-4782-94a9-f7cfc035284d-answer>,
+        <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/fffc3a1a-09b9-465e-89fd-99d30cfce2e8-answer> .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/7622babc-73d2-43b3-8d9c-4755f65fb64a-input/derivation/0456a90d-b859-49f8-90d8-c803c253de9f-result> a prov:Derivation ;
+    prov:entity <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/0456a90d-b859-49f8-90d8-c803c253de9f-result> ;
+    provai:knownBy "inferred" .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/7622babc-73d2-43b3-8d9c-4755f65fb64a-input/derivation/10c71596-8719-4c53-a716-9a3888d8e515-result> a prov:Derivation ;
+    prov:entity <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/10c71596-8719-4c53-a716-9a3888d8e515-result> ;
+    provai:knownBy "inferred" .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/7622babc-73d2-43b3-8d9c-4755f65fb64a-input/derivation/1bac9a28-f1bb-448c-8a77-0443cbb73c19> a prov:Derivation ;
+    prov:entity <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/1bac9a28-f1bb-448c-8a77-0443cbb73c19> ;
+    provai:knownBy "inferred" .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/7622babc-73d2-43b3-8d9c-4755f65fb64a-input/derivation/3158af12-ab02-459e-bdec-f111b3306610-output> a prov:Derivation ;
+    prov:entity <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/3158af12-ab02-459e-bdec-f111b3306610-output> ;
+    provai:knownBy "inferred" .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/7622babc-73d2-43b3-8d9c-4755f65fb64a-input/derivation/4e190590-4a57-4399-a736-4675b0c5a910-output> a prov:Derivation ;
+    prov:entity <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/4e190590-4a57-4399-a736-4675b0c5a910-output> ;
+    provai:knownBy "inferred" .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/7622babc-73d2-43b3-8d9c-4755f65fb64a-input/derivation/59312f2a-70ed-493f-b5a8-a541b1664543-result> a prov:Derivation ;
+    prov:entity <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/59312f2a-70ed-493f-b5a8-a541b1664543-result> ;
+    provai:knownBy "inferred" .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/7622babc-73d2-43b3-8d9c-4755f65fb64a-input/derivation/9105f6d9-2fb8-4349-9729-695dbbd6ddb8-output> a prov:Derivation ;
+    prov:entity <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/9105f6d9-2fb8-4349-9729-695dbbd6ddb8-output> ;
+    provai:knownBy "inferred" .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/7622babc-73d2-43b3-8d9c-4755f65fb64a-input/derivation/934904a4-31fb-425b-a953-13b4d1243f93-answer> a prov:Derivation ;
+    prov:entity <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/934904a4-31fb-425b-a953-13b4d1243f93-answer> ;
+    provai:knownBy "inferred" .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/7622babc-73d2-43b3-8d9c-4755f65fb64a-input/derivation/97fa4770-e81e-4bdc-8464-708ad76919b3-answer> a prov:Derivation ;
+    prov:entity <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/97fa4770-e81e-4bdc-8464-708ad76919b3-answer> ;
+    provai:knownBy "inferred" .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/7622babc-73d2-43b3-8d9c-4755f65fb64a-input/derivation/ebf161b0-24d9-4b1c-a814-b075de500492-result> a prov:Derivation ;
+    prov:entity <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/ebf161b0-24d9-4b1c-a814-b075de500492-result> ;
+    provai:knownBy "inferred" .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/7622babc-73d2-43b3-8d9c-4755f65fb64a-input/derivation/f7bb6479-4a5f-4c7f-9433-36e0091a34d9-output> a prov:Derivation ;
+    prov:entity <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/f7bb6479-4a5f-4c7f-9433-36e0091a34d9-output> ;
+    provai:knownBy "inferred" .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/7622babc-73d2-43b3-8d9c-4755f65fb64a-input/derivation/fbf76b16-9fb5-4782-94a9-f7cfc035284d-answer> a prov:Derivation ;
+    prov:entity <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/fbf76b16-9fb5-4782-94a9-f7cfc035284d-answer> ;
+    provai:knownBy "inferred" .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/7622babc-73d2-43b3-8d9c-4755f65fb64a-input/derivation/fffc3a1a-09b9-465e-89fd-99d30cfce2e8-answer> a prov:Derivation ;
+    prov:entity <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/fffc3a1a-09b9-465e-89fd-99d30cfce2e8-answer> ;
+    provai:knownBy "inferred" .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/7a57b923-da38-45cc-a871-c49679af3a7d-answer/derivation/7622babc-73d2-43b3-8d9c-4755f65fb64a-output> a prov:Derivation ;
+    prov:entity <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/7622babc-73d2-43b3-8d9c-4755f65fb64a-output> ;
+    provai:knownBy "inferred" .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/7ff8f7c7-174d-4f6c-b15a-b428dd667c52-input> a provai:Message ;
+    rdfs:label "model input" ;
+    prov:qualifiedDerivation <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/7ff8f7c7-174d-4f6c-b15a-b428dd667c52-input/derivation/7622babc-73d2-43b3-8d9c-4755f65fb64a-output>,
+        <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/7ff8f7c7-174d-4f6c-b15a-b428dd667c52-input/derivation/7a57b923-da38-45cc-a871-c49679af3a7d-answer> ;
+    prov:value "[{\"role\": \"system\", \"parts\": [{\"type\": \"text\", \"content\": \"You are evaluator. Check whether a brief mentions the weather. Answer PASS or FAIL.\\nYour personal goal is: Check whether a brief mentions the weather. Answer PASS or FAIL.\"}]}, {\"role\": \"user\", \"parts\": [{\"type\": \"text\", \"content\": \"\\nCurrent Task: Does this brief mention the weather? Answer PASS or FAIL.\\nLisbon, the capital of Portugal, lies on the Tagus estuary. The city enjoys a mild 21\\u202f\\u00b0C with clear skies today.\\n\\nProvide your complete response:\"}]}]" ;
+    prov:wasDerivedFrom <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/7622babc-73d2-43b3-8d9c-4755f65fb64a-output>,
+        <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/7a57b923-da38-45cc-a871-c49679af3a7d-answer> .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/7ff8f7c7-174d-4f6c-b15a-b428dd667c52-input/derivation/7622babc-73d2-43b3-8d9c-4755f65fb64a-output> a prov:Derivation ;
+    prov:entity <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/7622babc-73d2-43b3-8d9c-4755f65fb64a-output> ;
+    provai:knownBy "inferred" .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/7ff8f7c7-174d-4f6c-b15a-b428dd667c52-input/derivation/7a57b923-da38-45cc-a871-c49679af3a7d-answer> a prov:Derivation ;
+    prov:entity <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/7a57b923-da38-45cc-a871-c49679af3a7d-answer> ;
+    provai:knownBy "inferred" .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/9105f6d9-2fb8-4349-9729-695dbbd6ddb8-input> a provai:Message ;
+    rdfs:label "model input" ;
+    prov:qualifiedDerivation <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/9105f6d9-2fb8-4349-9729-695dbbd6ddb8-input/derivation/0456a90d-b859-49f8-90d8-c803c253de9f-result>,
+        <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/9105f6d9-2fb8-4349-9729-695dbbd6ddb8-input/derivation/10c71596-8719-4c53-a716-9a3888d8e515-result>,
+        <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/9105f6d9-2fb8-4349-9729-695dbbd6ddb8-input/derivation/1bac9a28-f1bb-448c-8a77-0443cbb73c19>,
+        <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/9105f6d9-2fb8-4349-9729-695dbbd6ddb8-input/derivation/3158af12-ab02-459e-bdec-f111b3306610-output>,
+        <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/9105f6d9-2fb8-4349-9729-695dbbd6ddb8-input/derivation/4e190590-4a57-4399-a736-4675b0c5a910-output>,
+        <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/9105f6d9-2fb8-4349-9729-695dbbd6ddb8-input/derivation/59312f2a-70ed-493f-b5a8-a541b1664543-result>,
+        <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/9105f6d9-2fb8-4349-9729-695dbbd6ddb8-input/derivation/934904a4-31fb-425b-a953-13b4d1243f93-answer>,
+        <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/9105f6d9-2fb8-4349-9729-695dbbd6ddb8-input/derivation/f7bb6479-4a5f-4c7f-9433-36e0091a34d9-output>,
+        <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/9105f6d9-2fb8-4349-9729-695dbbd6ddb8-input/derivation/fbf76b16-9fb5-4782-94a9-f7cfc035284d-answer>,
+        <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/9105f6d9-2fb8-4349-9729-695dbbd6ddb8-input/derivation/fffc3a1a-09b9-465e-89fd-99d30cfce2e8-answer> ;
+    prov:value "[{\"role\": \"system\", \"parts\": [{\"type\": \"text\", \"content\": \"You are coordinator. Plan briefs on cities and hand the work to the writer.\\nYour personal goal is: Plan briefs on cities and hand the work to the writer.\"}]}, {\"role\": \"user\", \"parts\": [{\"type\": \"text\", \"content\": \"\\nCurrent Task: Delegate the drafting of a two-sentence brief on Lisbon to the writer with the Delegate work to coworker tool, passing these findings as context. Weather: Lisbon is currently 21\\u202f\\u00b0C with clear skies.. Facts: Lisbon is the capital of Portugal and lies on the Tagus estuary.. Return the writer's brief only.\\n\\nThis is the expected criteria for your final answer: the writer's two-sentence brief\\nyou MUST return the actual complete content as the final answer, not a summary.\"}]}, {\"role\": \"assistant\", \"parts\": [{\"type\": \"tool_call\", \"name\": \"'delegate_work_to_coworker'\", \"arguments\": \"'{\\\"coworker\\\":\\\"writer\\\",\\\"task\\\":\\\"Draft a two-sentence brief on Lisbon\\\",\\\"context\\\":\\\"Weather: Lisbon is currently 21\\\\u202f\\u00b0C with clear skies. Facts: Lisbon is the capital of Portugal and lies on the Tagus estuary.\\\"}'\", \"id\": \"call-de8730c5-ee01-4a5a-93ac-6bf3cbc17e0d\"}]}, {\"role\": \"tool\", \"parts\": [{\"type\": \"text\", \"content\": \"Lisbon, the capital of Portugal, sits on the Tagus estuary. The city currently basks in 21\\u202f\\u00b0C clear skies.\"}]}]" ;
+    prov:wasDerivedFrom <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/0456a90d-b859-49f8-90d8-c803c253de9f-result>,
+        <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/10c71596-8719-4c53-a716-9a3888d8e515-result>,
+        <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/1bac9a28-f1bb-448c-8a77-0443cbb73c19>,
+        <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/3158af12-ab02-459e-bdec-f111b3306610-output>,
+        <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/4e190590-4a57-4399-a736-4675b0c5a910-output>,
+        <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/59312f2a-70ed-493f-b5a8-a541b1664543-result>,
+        <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/934904a4-31fb-425b-a953-13b4d1243f93-answer>,
+        <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/f7bb6479-4a5f-4c7f-9433-36e0091a34d9-output>,
+        <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/fbf76b16-9fb5-4782-94a9-f7cfc035284d-answer>,
+        <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/fffc3a1a-09b9-465e-89fd-99d30cfce2e8-answer> .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/9105f6d9-2fb8-4349-9729-695dbbd6ddb8-input/derivation/0456a90d-b859-49f8-90d8-c803c253de9f-result> a prov:Derivation ;
+    prov:entity <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/0456a90d-b859-49f8-90d8-c803c253de9f-result> ;
+    provai:knownBy "inferred" .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/9105f6d9-2fb8-4349-9729-695dbbd6ddb8-input/derivation/10c71596-8719-4c53-a716-9a3888d8e515-result> a prov:Derivation ;
+    prov:entity <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/10c71596-8719-4c53-a716-9a3888d8e515-result> ;
+    provai:knownBy "inferred" .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/9105f6d9-2fb8-4349-9729-695dbbd6ddb8-input/derivation/1bac9a28-f1bb-448c-8a77-0443cbb73c19> a prov:Derivation ;
+    prov:entity <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/1bac9a28-f1bb-448c-8a77-0443cbb73c19> ;
+    provai:knownBy "inferred" .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/9105f6d9-2fb8-4349-9729-695dbbd6ddb8-input/derivation/3158af12-ab02-459e-bdec-f111b3306610-output> a prov:Derivation ;
+    prov:entity <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/3158af12-ab02-459e-bdec-f111b3306610-output> ;
+    provai:knownBy "inferred" .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/9105f6d9-2fb8-4349-9729-695dbbd6ddb8-input/derivation/4e190590-4a57-4399-a736-4675b0c5a910-output> a prov:Derivation ;
+    prov:entity <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/4e190590-4a57-4399-a736-4675b0c5a910-output> ;
+    provai:knownBy "inferred" .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/9105f6d9-2fb8-4349-9729-695dbbd6ddb8-input/derivation/59312f2a-70ed-493f-b5a8-a541b1664543-result> a prov:Derivation ;
+    prov:entity <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/59312f2a-70ed-493f-b5a8-a541b1664543-result> ;
+    provai:knownBy "inferred" .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/9105f6d9-2fb8-4349-9729-695dbbd6ddb8-input/derivation/934904a4-31fb-425b-a953-13b4d1243f93-answer> a prov:Derivation ;
+    prov:entity <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/934904a4-31fb-425b-a953-13b4d1243f93-answer> ;
+    provai:knownBy "inferred" .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/9105f6d9-2fb8-4349-9729-695dbbd6ddb8-input/derivation/f7bb6479-4a5f-4c7f-9433-36e0091a34d9-output> a prov:Derivation ;
+    prov:entity <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/f7bb6479-4a5f-4c7f-9433-36e0091a34d9-output> ;
+    provai:knownBy "inferred" .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/9105f6d9-2fb8-4349-9729-695dbbd6ddb8-input/derivation/fbf76b16-9fb5-4782-94a9-f7cfc035284d-answer> a prov:Derivation ;
+    prov:entity <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/fbf76b16-9fb5-4782-94a9-f7cfc035284d-answer> ;
+    provai:knownBy "inferred" .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/9105f6d9-2fb8-4349-9729-695dbbd6ddb8-input/derivation/fffc3a1a-09b9-465e-89fd-99d30cfce2e8-answer> a prov:Derivation ;
+    prov:entity <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/fffc3a1a-09b9-465e-89fd-99d30cfce2e8-answer> ;
+    provai:knownBy "inferred" .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/934904a4-31fb-425b-a953-13b4d1243f93-answer/derivation/f7bb6479-4a5f-4c7f-9433-36e0091a34d9-output> a prov:Derivation ;
+    prov:entity <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/f7bb6479-4a5f-4c7f-9433-36e0091a34d9-output> ;
+    provai:knownBy "inferred" .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/97fa4770-e81e-4bdc-8464-708ad76919b3-answer/derivation/9105f6d9-2fb8-4349-9729-695dbbd6ddb8-output> a prov:Derivation ;
+    prov:entity <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/9105f6d9-2fb8-4349-9729-695dbbd6ddb8-output> ;
+    provai:knownBy "inferred" .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/a7ffbdbd-b625-48b5-86bd-f3d3a8488798-input> a provai:Message ;
+    rdfs:label "model input" ;
+    prov:qualifiedDerivation <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/a7ffbdbd-b625-48b5-86bd-f3d3a8488798-input/derivation/0456a90d-b859-49f8-90d8-c803c253de9f-result>,
+        <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/a7ffbdbd-b625-48b5-86bd-f3d3a8488798-input/derivation/10c71596-8719-4c53-a716-9a3888d8e515-result>,
+        <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/a7ffbdbd-b625-48b5-86bd-f3d3a8488798-input/derivation/1bac9a28-f1bb-448c-8a77-0443cbb73c19>,
+        <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/a7ffbdbd-b625-48b5-86bd-f3d3a8488798-input/derivation/3158af12-ab02-459e-bdec-f111b3306610-output>,
+        <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/a7ffbdbd-b625-48b5-86bd-f3d3a8488798-input/derivation/4e190590-4a57-4399-a736-4675b0c5a910-output>,
+        <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/a7ffbdbd-b625-48b5-86bd-f3d3a8488798-input/derivation/59312f2a-70ed-493f-b5a8-a541b1664543-result>,
+        <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/a7ffbdbd-b625-48b5-86bd-f3d3a8488798-input/derivation/9105f6d9-2fb8-4349-9729-695dbbd6ddb8-output>,
+        <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/a7ffbdbd-b625-48b5-86bd-f3d3a8488798-input/derivation/934904a4-31fb-425b-a953-13b4d1243f93-answer>,
+        <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/a7ffbdbd-b625-48b5-86bd-f3d3a8488798-input/derivation/97fa4770-e81e-4bdc-8464-708ad76919b3-answer>,
+        <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/a7ffbdbd-b625-48b5-86bd-f3d3a8488798-input/derivation/f7bb6479-4a5f-4c7f-9433-36e0091a34d9-output>,
+        <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/a7ffbdbd-b625-48b5-86bd-f3d3a8488798-input/derivation/fbf76b16-9fb5-4782-94a9-f7cfc035284d-answer>,
+        <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/a7ffbdbd-b625-48b5-86bd-f3d3a8488798-input/derivation/fffc3a1a-09b9-465e-89fd-99d30cfce2e8-answer> ;
+    prov:value "[{\"role\": \"system\", \"parts\": [{\"type\": \"text\", \"content\": \"You are writer. Write two-sentence briefs about cities. Always call read_note for the city first.\\nYour personal goal is: Write two-sentence briefs about cities. Always call read_note for the city first.\"}]}, {\"role\": \"user\", \"parts\": [{\"type\": \"text\", \"content\": \"\\nCurrent Task: Write a two-sentence brief on Lisbon. Weather: Lisbon is currently 21\\u202f\\u00b0C with clear skies.. Facts: Lisbon is the capital of Portugal and lies on the Tagus estuary.. The last draft failed review: the first draft is always sent back for revision. Fix it. Last draft: Lisbon, the capital of Portugal, sits on the Tagus estuary. The city currently basks in 21\\u202f\\u00b0C clear skies.. Reply with the brief only.\"}]}]" ;
+    prov:wasDerivedFrom <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/0456a90d-b859-49f8-90d8-c803c253de9f-result>,
+        <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/10c71596-8719-4c53-a716-9a3888d8e515-result>,
+        <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/1bac9a28-f1bb-448c-8a77-0443cbb73c19>,
+        <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/3158af12-ab02-459e-bdec-f111b3306610-output>,
+        <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/4e190590-4a57-4399-a736-4675b0c5a910-output>,
+        <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/59312f2a-70ed-493f-b5a8-a541b1664543-result>,
+        <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/9105f6d9-2fb8-4349-9729-695dbbd6ddb8-output>,
+        <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/934904a4-31fb-425b-a953-13b4d1243f93-answer>,
+        <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/97fa4770-e81e-4bdc-8464-708ad76919b3-answer>,
+        <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/f7bb6479-4a5f-4c7f-9433-36e0091a34d9-output>,
+        <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/fbf76b16-9fb5-4782-94a9-f7cfc035284d-answer>,
+        <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/fffc3a1a-09b9-465e-89fd-99d30cfce2e8-answer> .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/a7ffbdbd-b625-48b5-86bd-f3d3a8488798-input/derivation/0456a90d-b859-49f8-90d8-c803c253de9f-result> a prov:Derivation ;
+    prov:entity <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/0456a90d-b859-49f8-90d8-c803c253de9f-result> ;
+    provai:knownBy "inferred" .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/a7ffbdbd-b625-48b5-86bd-f3d3a8488798-input/derivation/10c71596-8719-4c53-a716-9a3888d8e515-result> a prov:Derivation ;
+    prov:entity <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/10c71596-8719-4c53-a716-9a3888d8e515-result> ;
+    provai:knownBy "inferred" .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/a7ffbdbd-b625-48b5-86bd-f3d3a8488798-input/derivation/1bac9a28-f1bb-448c-8a77-0443cbb73c19> a prov:Derivation ;
+    prov:entity <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/1bac9a28-f1bb-448c-8a77-0443cbb73c19> ;
+    provai:knownBy "inferred" .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/a7ffbdbd-b625-48b5-86bd-f3d3a8488798-input/derivation/3158af12-ab02-459e-bdec-f111b3306610-output> a prov:Derivation ;
+    prov:entity <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/3158af12-ab02-459e-bdec-f111b3306610-output> ;
+    provai:knownBy "inferred" .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/a7ffbdbd-b625-48b5-86bd-f3d3a8488798-input/derivation/4e190590-4a57-4399-a736-4675b0c5a910-output> a prov:Derivation ;
+    prov:entity <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/4e190590-4a57-4399-a736-4675b0c5a910-output> ;
+    provai:knownBy "inferred" .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/a7ffbdbd-b625-48b5-86bd-f3d3a8488798-input/derivation/59312f2a-70ed-493f-b5a8-a541b1664543-result> a prov:Derivation ;
+    prov:entity <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/59312f2a-70ed-493f-b5a8-a541b1664543-result> ;
+    provai:knownBy "inferred" .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/a7ffbdbd-b625-48b5-86bd-f3d3a8488798-input/derivation/9105f6d9-2fb8-4349-9729-695dbbd6ddb8-output> a prov:Derivation ;
+    prov:entity <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/9105f6d9-2fb8-4349-9729-695dbbd6ddb8-output> ;
+    provai:knownBy "inferred" .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/a7ffbdbd-b625-48b5-86bd-f3d3a8488798-input/derivation/934904a4-31fb-425b-a953-13b4d1243f93-answer> a prov:Derivation ;
+    prov:entity <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/934904a4-31fb-425b-a953-13b4d1243f93-answer> ;
+    provai:knownBy "inferred" .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/a7ffbdbd-b625-48b5-86bd-f3d3a8488798-input/derivation/97fa4770-e81e-4bdc-8464-708ad76919b3-answer> a prov:Derivation ;
+    prov:entity <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/97fa4770-e81e-4bdc-8464-708ad76919b3-answer> ;
+    provai:knownBy "inferred" .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/a7ffbdbd-b625-48b5-86bd-f3d3a8488798-input/derivation/f7bb6479-4a5f-4c7f-9433-36e0091a34d9-output> a prov:Derivation ;
+    prov:entity <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/f7bb6479-4a5f-4c7f-9433-36e0091a34d9-output> ;
+    provai:knownBy "inferred" .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/a7ffbdbd-b625-48b5-86bd-f3d3a8488798-input/derivation/fbf76b16-9fb5-4782-94a9-f7cfc035284d-answer> a prov:Derivation ;
+    prov:entity <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/fbf76b16-9fb5-4782-94a9-f7cfc035284d-answer> ;
+    provai:knownBy "inferred" .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/a7ffbdbd-b625-48b5-86bd-f3d3a8488798-input/derivation/fffc3a1a-09b9-465e-89fd-99d30cfce2e8-answer> a prov:Derivation ;
+    prov:entity <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/fffc3a1a-09b9-465e-89fd-99d30cfce2e8-answer> ;
+    provai:knownBy "inferred" .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/a7ffbdbd-b625-48b5-86bd-f3d3a8488798-output> a provai:Message ;
+    rdfs:label "model output" ;
+    prov:value "[{\"role\": \"assistant\", \"parts\": [{\"type\": \"tool_call\", \"name\": \"read_note\", \"arguments\": {\"city\": \"Lisbon\"}, \"id\": \"call-e1cfc1f1-f34f-4dee-bd0a-20dc4dc8c4af\"}], \"finish_reason\": \"tool_call\"}]" ;
+    prov:wasGeneratedBy <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/step/a7ffbdbd-b625-48b5-86bd-f3d3a8488798> .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/be6c9552-ac44-4900-932e-cc4d33f60c02-answer/derivation/d3d8df52-a181-4fab-80b3-059f8ac2e094-output> a prov:Derivation ;
+    prov:entity <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/d3d8df52-a181-4fab-80b3-059f8ac2e094-output> ;
+    provai:knownBy "inferred" .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/c28ed091-927a-4814-96f4-40b70461bbb3-input> a provai:Message ;
+    rdfs:label "model input" ;
+    prov:qualifiedDerivation <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/c28ed091-927a-4814-96f4-40b70461bbb3-input/derivation/10c71596-8719-4c53-a716-9a3888d8e515-result>,
+        <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/c28ed091-927a-4814-96f4-40b70461bbb3-input/derivation/1bac9a28-f1bb-448c-8a77-0443cbb73c19>,
+        <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/c28ed091-927a-4814-96f4-40b70461bbb3-input/derivation/3158af12-ab02-459e-bdec-f111b3306610-output>,
+        <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/c28ed091-927a-4814-96f4-40b70461bbb3-input/derivation/4e190590-4a57-4399-a736-4675b0c5a910-output>,
+        <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/c28ed091-927a-4814-96f4-40b70461bbb3-input/derivation/fbf76b16-9fb5-4782-94a9-f7cfc035284d-answer>,
+        <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/c28ed091-927a-4814-96f4-40b70461bbb3-input/derivation/fffc3a1a-09b9-465e-89fd-99d30cfce2e8-answer> ;
+    prov:value "[{\"role\": \"system\", \"parts\": [{\"type\": \"text\", \"content\": \"You are coordinator. Plan briefs on cities and hand the work to the writer.\\nYour personal goal is: Plan briefs on cities and hand the work to the writer.\"}]}, {\"role\": \"user\", \"parts\": [{\"type\": \"text\", \"content\": \"\\nCurrent Task: Delegate the drafting of a two-sentence brief on Lisbon to the writer with the Delegate work to coworker tool, passing these findings as context. Weather: Lisbon is currently 21\\u202f\\u00b0C with clear skies.. Facts: Lisbon is the capital of Portugal and lies on the Tagus estuary.. Return the writer's brief only.\\n\\nThis is the expected criteria for your final answer: the writer's two-sentence brief\\nyou MUST return the actual complete content as the final answer, not a summary.\"}]}]" ;
+    prov:wasDerivedFrom <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/10c71596-8719-4c53-a716-9a3888d8e515-result>,
+        <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/1bac9a28-f1bb-448c-8a77-0443cbb73c19>,
+        <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/3158af12-ab02-459e-bdec-f111b3306610-output>,
+        <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/4e190590-4a57-4399-a736-4675b0c5a910-output>,
+        <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/fbf76b16-9fb5-4782-94a9-f7cfc035284d-answer>,
+        <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/fffc3a1a-09b9-465e-89fd-99d30cfce2e8-answer> .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/c28ed091-927a-4814-96f4-40b70461bbb3-input/derivation/10c71596-8719-4c53-a716-9a3888d8e515-result> a prov:Derivation ;
+    prov:entity <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/10c71596-8719-4c53-a716-9a3888d8e515-result> ;
+    provai:knownBy "inferred" .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/c28ed091-927a-4814-96f4-40b70461bbb3-input/derivation/1bac9a28-f1bb-448c-8a77-0443cbb73c19> a prov:Derivation ;
+    prov:entity <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/1bac9a28-f1bb-448c-8a77-0443cbb73c19> ;
+    provai:knownBy "inferred" .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/c28ed091-927a-4814-96f4-40b70461bbb3-input/derivation/3158af12-ab02-459e-bdec-f111b3306610-output> a prov:Derivation ;
+    prov:entity <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/3158af12-ab02-459e-bdec-f111b3306610-output> ;
+    provai:knownBy "inferred" .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/c28ed091-927a-4814-96f4-40b70461bbb3-input/derivation/4e190590-4a57-4399-a736-4675b0c5a910-output> a prov:Derivation ;
+    prov:entity <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/4e190590-4a57-4399-a736-4675b0c5a910-output> ;
+    provai:knownBy "inferred" .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/c28ed091-927a-4814-96f4-40b70461bbb3-input/derivation/fbf76b16-9fb5-4782-94a9-f7cfc035284d-answer> a prov:Derivation ;
+    prov:entity <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/fbf76b16-9fb5-4782-94a9-f7cfc035284d-answer> ;
+    provai:knownBy "inferred" .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/c28ed091-927a-4814-96f4-40b70461bbb3-input/derivation/fffc3a1a-09b9-465e-89fd-99d30cfce2e8-answer> a prov:Derivation ;
+    prov:entity <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/fffc3a1a-09b9-465e-89fd-99d30cfce2e8-answer> ;
+    provai:knownBy "inferred" .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/c28ed091-927a-4814-96f4-40b70461bbb3-output> a provai:Message ;
+    rdfs:label "model output" ;
+    prov:value "[{\"role\": \"assistant\", \"parts\": [{\"type\": \"tool_call\", \"name\": \"delegate_work_to_coworker\", \"arguments\": {\"coworker\": \"writer\", \"task\": \"Draft a two-sentence brief on Lisbon\", \"context\": \"Weather: Lisbon is currently 21\\u202f\\u00b0C with clear skies. Facts: Lisbon is the capital of Portugal and lies on the Tagus estuary.\"}, \"id\": \"call-de8730c5-ee01-4a5a-93ac-6bf3cbc17e0d\"}], \"finish_reason\": \"tool_call\"}]" ;
+    prov:wasGeneratedBy <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/step/c28ed091-927a-4814-96f4-40b70461bbb3> .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/d3d8df52-a181-4fab-80b3-059f8ac2e094-input> a provai:Message ;
+    rdfs:label "model input" ;
+    prov:value "[{\"role\": \"system\", \"parts\": [{\"type\": \"text\", \"content\": \"You are coordinator. Plan briefs on cities and hand the work to the writer.\\nYour personal goal is: Plan briefs on cities and hand the work to the writer.\"}]}, {\"role\": \"user\", \"parts\": [{\"type\": \"text\", \"content\": \"\\nCurrent Task: Agents: weather, facts, translator. Which agents are needed for a short brief on Lisbon's weather and facts? Answer with a JSON list of agent names.\\n\\nProvide your complete response:\"}]}]" .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/ea52ad93-3631-4040-91fa-71a4c35f8f4c-output/derivation/7a57b923-da38-45cc-a871-c49679af3a7d-answer> a prov:Derivation ;
+    prov:entity <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/7a57b923-da38-45cc-a871-c49679af3a7d-answer> ;
+    provai:knownBy "inferred" .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/ebf161b0-24d9-4b1c-a814-b075de500492-arguments> a prov:Entity ;
+    rdfs:label "read_note arguments" ;
+    prov:value "{\"city\": \"Lisbon\"}" .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/ebf161b0-24d9-4b1c-a814-b075de500492-result/derivation/1bac9a28-f1bb-448c-8a77-0443cbb73c19> a prov:Derivation ;
+    prov:entity <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/1bac9a28-f1bb-448c-8a77-0443cbb73c19> ;
+    provai:knownBy "inferred" .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/f7bb6479-4a5f-4c7f-9433-36e0091a34d9-input> a provai:Message ;
+    rdfs:label "model input" ;
+    prov:qualifiedDerivation <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/f7bb6479-4a5f-4c7f-9433-36e0091a34d9-input/derivation/10c71596-8719-4c53-a716-9a3888d8e515-result>,
+        <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/f7bb6479-4a5f-4c7f-9433-36e0091a34d9-input/derivation/1bac9a28-f1bb-448c-8a77-0443cbb73c19>,
+        <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/f7bb6479-4a5f-4c7f-9433-36e0091a34d9-input/derivation/3158af12-ab02-459e-bdec-f111b3306610-output>,
+        <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/f7bb6479-4a5f-4c7f-9433-36e0091a34d9-input/derivation/4e190590-4a57-4399-a736-4675b0c5a910-output>,
+        <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/f7bb6479-4a5f-4c7f-9433-36e0091a34d9-input/derivation/59312f2a-70ed-493f-b5a8-a541b1664543-result>,
+        <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/f7bb6479-4a5f-4c7f-9433-36e0091a34d9-input/derivation/fbf76b16-9fb5-4782-94a9-f7cfc035284d-answer>,
+        <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/f7bb6479-4a5f-4c7f-9433-36e0091a34d9-input/derivation/fffc3a1a-09b9-465e-89fd-99d30cfce2e8-answer> ;
+    prov:value "[{\"role\": \"system\", \"parts\": [{\"type\": \"text\", \"content\": \"You are writer. Write two-sentence briefs about cities. Always call read_note for the city first.\\nYour personal goal is: Write two-sentence briefs about cities. Always call read_note for the city first.\"}]}, {\"role\": \"user\", \"parts\": [{\"type\": \"text\", \"content\": \"\\nCurrent Task: Draft a two-sentence brief on Lisbon\\n\\nThis is the expected criteria for your final answer: Your best answer to your coworker asking you this, accounting for the context shared.\\nyou MUST return the actual complete content as the final answer, not a summary.\\n\\nThis is the context you're working with:\\nWeather: Lisbon is currently 21\\u202f\\u00b0C with clear skies. Facts: Lisbon is the capital of Portugal and lies on the Tagus estuary.\"}]}, {\"role\": \"assistant\", \"parts\": [{\"type\": \"tool_call\", \"name\": \"'read_note'\", \"arguments\": \"'{\\\"city\\\":\\\"Lisbon\\\"}'\", \"id\": \"call-d61fb0ef-8392-4b06-bcf6-2fcd5ce4f444\"}]}, {\"role\": \"tool\", \"parts\": [{\"type\": \"text\", \"content\": \"Lisbon is the capital of Portugal and lies on the Tagus estuary.\"}]}]" ;
+    prov:wasDerivedFrom <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/10c71596-8719-4c53-a716-9a3888d8e515-result>,
+        <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/1bac9a28-f1bb-448c-8a77-0443cbb73c19>,
+        <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/3158af12-ab02-459e-bdec-f111b3306610-output>,
+        <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/4e190590-4a57-4399-a736-4675b0c5a910-output>,
+        <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/59312f2a-70ed-493f-b5a8-a541b1664543-result>,
+        <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/fbf76b16-9fb5-4782-94a9-f7cfc035284d-answer>,
+        <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/fffc3a1a-09b9-465e-89fd-99d30cfce2e8-answer> .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/f7bb6479-4a5f-4c7f-9433-36e0091a34d9-input/derivation/10c71596-8719-4c53-a716-9a3888d8e515-result> a prov:Derivation ;
+    prov:entity <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/10c71596-8719-4c53-a716-9a3888d8e515-result> ;
+    provai:knownBy "inferred" .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/f7bb6479-4a5f-4c7f-9433-36e0091a34d9-input/derivation/1bac9a28-f1bb-448c-8a77-0443cbb73c19> a prov:Derivation ;
+    prov:entity <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/1bac9a28-f1bb-448c-8a77-0443cbb73c19> ;
+    provai:knownBy "inferred" .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/f7bb6479-4a5f-4c7f-9433-36e0091a34d9-input/derivation/3158af12-ab02-459e-bdec-f111b3306610-output> a prov:Derivation ;
+    prov:entity <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/3158af12-ab02-459e-bdec-f111b3306610-output> ;
+    provai:knownBy "inferred" .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/f7bb6479-4a5f-4c7f-9433-36e0091a34d9-input/derivation/4e190590-4a57-4399-a736-4675b0c5a910-output> a prov:Derivation ;
+    prov:entity <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/4e190590-4a57-4399-a736-4675b0c5a910-output> ;
+    provai:knownBy "inferred" .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/f7bb6479-4a5f-4c7f-9433-36e0091a34d9-input/derivation/59312f2a-70ed-493f-b5a8-a541b1664543-result> a prov:Derivation ;
+    prov:entity <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/59312f2a-70ed-493f-b5a8-a541b1664543-result> ;
+    provai:knownBy "inferred" .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/f7bb6479-4a5f-4c7f-9433-36e0091a34d9-input/derivation/fbf76b16-9fb5-4782-94a9-f7cfc035284d-answer> a prov:Derivation ;
+    prov:entity <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/fbf76b16-9fb5-4782-94a9-f7cfc035284d-answer> ;
+    provai:knownBy "inferred" .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/f7bb6479-4a5f-4c7f-9433-36e0091a34d9-input/derivation/fffc3a1a-09b9-465e-89fd-99d30cfce2e8-answer> a prov:Derivation ;
+    prov:entity <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/fffc3a1a-09b9-465e-89fd-99d30cfce2e8-answer> ;
+    provai:knownBy "inferred" .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/fbf76b16-9fb5-4782-94a9-f7cfc035284d-answer/derivation/4e190590-4a57-4399-a736-4675b0c5a910-output> a prov:Derivation ;
+    prov:entity <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/4e190590-4a57-4399-a736-4675b0c5a910-output> ;
+    provai:knownBy "inferred" .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/fc26617c-de32-4efd-85fd-8deff47885c5-answer/derivation/7ff8f7c7-174d-4f6c-b15a-b428dd667c52-output> a prov:Derivation ;
+    prov:entity <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/7ff8f7c7-174d-4f6c-b15a-b428dd667c52-output> ;
+    provai:knownBy "inferred" .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/ff416313-181a-4497-8c21-d129ffcc7b22-answer/derivation/4db95eb0-4a3d-4fae-8b5a-78dc684d4480-output> a prov:Derivation ;
+    prov:entity <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/4db95eb0-4a3d-4fae-8b5a-78dc684d4480-output> ;
+    provai:knownBy "inferred" .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/fffc3a1a-09b9-465e-89fd-99d30cfce2e8-answer/derivation/3158af12-ab02-459e-bdec-f111b3306610-output> a prov:Derivation ;
+    prov:entity <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/3158af12-ab02-459e-bdec-f111b3306610-output> ;
+    provai:knownBy "inferred" .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/run> a provai:Run ;
+    prov:wasAssociatedWith <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/agent/user> ;
+    provai:contentCaptured true ;
+    provai:partOf <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/session/21a8574f-661d-4fcd-8fb0-2089d5879012> ;
+    provai:source "crewai 1.15.23 with its built-in OpenTelemetry tracing" .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/session/21a8574f-661d-4fcd-8fb0-2089d5879012> a provai:Session ;
+    rdfs:label "21a8574f-661d-4fcd-8fb0-2089d5879012" .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/step/0057ec77-104b-4ea5-9b24-ba7edf880b01> a provai:ModelCall ;
+    rdfs:label "chat" ;
+    prov:endedAtTime "2026-10-04T07:51:07.740522+00:00"^^xsd:dateTime ;
+    prov:startedAtTime "2026-10-04T07:51:06.743994+00:00"^^xsd:dateTime ;
+    prov:used <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/0057ec77-104b-4ea5-9b24-ba7edf880b01-input> ;
+    prov:wasAssociatedWith <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/agent/writer> ;
+    provai:finishReason "tool_call" ;
+    provai:inputTokens 426 ;
+    provai:maxTokens 1000 ;
+    provai:outputTokens 148 ;
+    provai:partOf <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/step/934904a4-31fb-425b-a953-13b4d1243f93> ;
+    provai:status "completed" ;
+    provai:temperature 0.2 ;
+    provai:usedModel <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/model/openrouter%2Fnvidia%2Fnemotron-3.5-lightning%3Afree> .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/step/0233e57c-60dd-44fb-b3a1-3806f1822c03> a provai:Step ;
+    rdfs:label "task: Delegate the drafting of a two-sentence brief on Lisbon to t" ;
+    prov:endedAtTime "2026-10-04T07:51:10.912958+00:00"^^xsd:dateTime ;
+    prov:startedAtTime "2026-10-04T07:50:58.780397+00:00"^^xsd:dateTime ;
+    provai:partOf <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/step/dbf25e66-5383-42f9-b829-2df68a303e2d> ;
+    provai:status "completed" .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/step/05e8d06a-0c73-4752-8c4a-a266f433348a> a provai:ModelCall ;
+    rdfs:label "chat" ;
+    prov:endedAtTime "2026-10-04T07:50:36.286944+00:00"^^xsd:dateTime ;
+    prov:startedAtTime "2026-10-04T07:50:35.782918+00:00"^^xsd:dateTime ;
+    prov:used <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/05e8d06a-0c73-4752-8c4a-a266f433348a-input> ;
+    prov:wasAssociatedWith <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/agent/weather_agent> ;
+    provai:finishReason "tool_call" ;
+    provai:inputTokens 352 ;
+    provai:maxTokens 1000 ;
+    provai:outputTokens 45 ;
+    provai:partOf <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/step/fbf76b16-9fb5-4782-94a9-f7cfc035284d> ;
+    provai:status "completed" ;
+    provai:temperature 0.2 ;
+    provai:usedModel <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/model/openrouter%2Fnvidia%2Fnemotron-3.5-lightning%3Afree> .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/step/0e0ffdcb-9748-4e2d-8601-fabe73f434f3> a provai:ModelCall ;
+    rdfs:label "chat" ;
+    prov:endedAtTime "2026-10-04T07:50:36.273892+00:00"^^xsd:dateTime ;
+    prov:startedAtTime "2026-10-04T07:50:35.848330+00:00"^^xsd:dateTime ;
+    prov:used <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/0e0ffdcb-9748-4e2d-8601-fabe73f434f3-input> ;
+    prov:wasAssociatedWith <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/agent/facts_agent> ;
+    provai:finishReason "tool_call" ;
+    provai:inputTokens 345 ;
+    provai:maxTokens 1000 ;
+    provai:outputTokens 46 ;
+    provai:partOf <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/step/fffc3a1a-09b9-465e-89fd-99d30cfce2e8> ;
+    provai:status "completed" ;
+    provai:temperature 0.2 ;
+    provai:usedModel <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/model/openrouter%2Fnvidia%2Fnemotron-3.5-lightning%3Afree> .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/step/0e7c9e86-9bb2-4c18-b9ee-cca546bef7d0> a provai:ModelCall ;
+    rdfs:label "chat" ;
+    prov:endedAtTime "2026-10-04T07:50:37.017468+00:00"^^xsd:dateTime ;
+    prov:startedAtTime "2026-10-04T07:50:36.289646+00:00"^^xsd:dateTime ;
+    prov:used <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/0e7c9e86-9bb2-4c18-b9ee-cca546bef7d0-input> ;
+    prov:wasAssociatedWith <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/agent/weather_agent> ;
+    provai:finishReason "tool_call" ;
+    provai:inputTokens 404 ;
+    provai:maxTokens 1000 ;
+    provai:outputTokens 86 ;
+    provai:partOf <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/step/fbf76b16-9fb5-4782-94a9-f7cfc035284d> ;
+    provai:status "completed" ;
+    provai:temperature 0.2 ;
+    provai:usedModel <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/model/openrouter%2Fnvidia%2Fnemotron-3.5-lightning%3Afree> .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/step/10c71596-8719-4c53-a716-9a3888d8e515> a provai:ToolCall ;
+    rdfs:label "search_facts" ;
+    prov:endedAtTime "2026-10-04T07:50:36.276199+00:00"^^xsd:dateTime ;
+    prov:startedAtTime "2026-10-04T07:50:36.275906+00:00"^^xsd:dateTime ;
+    prov:used <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/0e0ffdcb-9748-4e2d-8601-fabe73f434f3-output>,
+        <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/10c71596-8719-4c53-a716-9a3888d8e515-arguments> ;
+    prov:wasAssociatedWith <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/agent/facts_agent> ;
+    provai:partOf <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/step/fffc3a1a-09b9-465e-89fd-99d30cfce2e8> ;
+    provai:status "completed" ;
+    provai:usedTool <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/tool/search_facts> .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/step/17977b1b-86d6-4d9d-9281-93d240810e40> a provai:Step ;
+    rdfs:label "send" ;
+    prov:endedAtTime "2026-10-04T07:51:54.719537+00:00"^^xsd:dateTime ;
+    prov:startedAtTime "2026-10-04T07:51:34.814001+00:00"^^xsd:dateTime ;
+    prov:wasAssociatedWith <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/agent/writer> ;
+    prov:wasInformedBy <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/step/a7054013-af6f-40e1-8bcd-c183a64340e8>,
+        <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/step/bc5683ae-1e39-41f1-98ac-c82a9fd9928a> ;
+    provai:iteration 1 ;
+    provai:partOf <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/step/7dc59b56-fd81-4175-bf7c-c0ee96b87891> ;
+    provai:sequence 113 ;
+    provai:status "completed" .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/step/3158af12-ab02-459e-bdec-f111b3306610> a provai:ModelCall ;
+    rdfs:label "chat" ;
+    prov:endedAtTime "2026-10-04T07:50:57.927671+00:00"^^xsd:dateTime ;
+    prov:startedAtTime "2026-10-04T07:50:36.281505+00:00"^^xsd:dateTime ;
+    prov:used <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/10c71596-8719-4c53-a716-9a3888d8e515-result>,
+        <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/3158af12-ab02-459e-bdec-f111b3306610-input> ;
+    prov:wasAssociatedWith <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/agent/facts_agent> ;
+    provai:finishReason "stop" ;
+    provai:inputTokens 406 ;
+    provai:maxTokens 1000 ;
+    provai:outputTokens 30 ;
+    provai:partOf <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/step/fffc3a1a-09b9-465e-89fd-99d30cfce2e8> ;
+    provai:status "completed" ;
+    provai:temperature 0.2 ;
+    provai:usedModel <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/model/openrouter%2Fnvidia%2Fnemotron-3.5-lightning%3Afree> .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/step/42b0fd81-b68f-4e69-8336-15b6163dc060> a provai:ToolCall ;
+    rdfs:label "get_weather" ;
+    prov:endedAtTime "2026-10-04T07:50:36.287778+00:00"^^xsd:dateTime ;
+    prov:startedAtTime "2026-10-04T07:50:36.287631+00:00"^^xsd:dateTime ;
+    prov:used <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/05e8d06a-0c73-4752-8c4a-a266f433348a-output>,
+        <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/42b0fd81-b68f-4e69-8336-15b6163dc060-arguments> ;
+    prov:wasAssociatedWith <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/agent/weather_agent> ;
+    provai:errorType "TimeoutError" ;
+    provai:partOf <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/step/fbf76b16-9fb5-4782-94a9-f7cfc035284d> ;
+    provai:status "failed" ;
+    provai:usedTool <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/tool/get_weather> .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/step/47fef46d-c04a-4a18-a7d9-e8920992532b> a provai:ToolCall ;
+    rdfs:label "get_weather" ;
+    prov:endedAtTime "2026-10-04T07:50:37.019670+00:00"^^xsd:dateTime ;
+    prov:startedAtTime "2026-10-04T07:50:37.019148+00:00"^^xsd:dateTime ;
+    prov:used <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/0e7c9e86-9bb2-4c18-b9ee-cca546bef7d0-output>,
+        <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/47fef46d-c04a-4a18-a7d9-e8920992532b-arguments> ;
+    prov:wasAssociatedWith <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/agent/weather_agent> ;
+    provai:attempt 2 ;
+    provai:partOf <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/step/fbf76b16-9fb5-4782-94a9-f7cfc035284d> ;
+    provai:retryOf <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/step/42b0fd81-b68f-4e69-8336-15b6163dc060> ;
+    provai:status "completed" ;
+    provai:usedTool <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/tool/get_weather> .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/step/4db95eb0-4a3d-4fae-8b5a-78dc684d4480> a provai:ModelCall ;
+    rdfs:label "chat" ;
+    prov:endedAtTime "2026-10-04T07:51:54.713363+00:00"^^xsd:dateTime ;
+    prov:startedAtTime "2026-10-04T07:51:48.282186+00:00"^^xsd:dateTime ;
+    prov:used <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/4db95eb0-4a3d-4fae-8b5a-78dc684d4480-input>,
+        <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/654d7621-65f5-4ab1-8fc9-41ae7cab5121-result> ;
+    prov:wasAssociatedWith <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/agent/writer> ;
+    provai:finishReason "stop" ;
+    provai:inputTokens 512 ;
+    provai:maxTokens 1000 ;
+    provai:outputTokens 111 ;
+    provai:partOf <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/step/ff416313-181a-4497-8c21-d129ffcc7b22> ;
+    provai:status "completed" ;
+    provai:temperature 0.2 ;
+    provai:usedModel <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/model/openrouter%2Fnvidia%2Fnemotron-3.5-lightning%3Afree> .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/step/4e190590-4a57-4399-a736-4675b0c5a910> a provai:ModelCall ;
+    rdfs:label "chat" ;
+    prov:endedAtTime "2026-10-04T07:50:37.649310+00:00"^^xsd:dateTime ;
+    prov:startedAtTime "2026-10-04T07:50:37.023763+00:00"^^xsd:dateTime ;
+    prov:used <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/47fef46d-c04a-4a18-a7d9-e8920992532b-result>,
+        <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/4e190590-4a57-4399-a736-4675b0c5a910-input> ;
+    prov:wasAssociatedWith <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/agent/weather_agent> ;
+    provai:finishReason "stop" ;
+    provai:inputTokens 459 ;
+    provai:maxTokens 1000 ;
+    provai:outputTokens 37 ;
+    provai:partOf <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/step/fbf76b16-9fb5-4782-94a9-f7cfc035284d> ;
+    provai:status "completed" ;
+    provai:temperature 0.2 ;
+    provai:usedModel <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/model/openrouter%2Fnvidia%2Fnemotron-3.5-lightning%3Afree> .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/step/5b82ec59-c1bf-4625-9e99-d86995fcb3a5> a provai:ModelCall ;
+    rdfs:label "chat" ;
+    prov:endedAtTime "2026-10-04T07:51:48.275964+00:00"^^xsd:dateTime ;
+    prov:startedAtTime "2026-10-04T07:51:34.851254+00:00"^^xsd:dateTime ;
+    prov:used <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/5b82ec59-c1bf-4625-9e99-d86995fcb3a5-input> ;
+    prov:wasAssociatedWith <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/agent/writer> ;
+    provai:finishReason "tool_call" ;
+    provai:inputTokens 384 ;
+    provai:maxTokens 1000 ;
+    provai:outputTokens 236 ;
+    provai:partOf <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/step/ff416313-181a-4497-8c21-d129ffcc7b22> ;
+    provai:status "completed" ;
+    provai:temperature 0.2 ;
+    provai:usedModel <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/model/openrouter%2Fnvidia%2Fnemotron-3.5-lightning%3Afree> .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/step/7622babc-73d2-43b3-8d9c-4755f65fb64a> a provai:ModelCall ;
+    rdfs:label "chat" ;
+    prov:endedAtTime "2026-10-04T07:51:24.161893+00:00"^^xsd:dateTime ;
+    prov:startedAtTime "2026-10-04T07:51:22.876053+00:00"^^xsd:dateTime ;
+    prov:used <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/7622babc-73d2-43b3-8d9c-4755f65fb64a-input>,
+        <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/ebf161b0-24d9-4b1c-a814-b075de500492-result> ;
+    prov:wasAssociatedWith <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/agent/writer> ;
+    provai:finishReason "stop" ;
+    provai:inputTokens 491 ;
+    provai:maxTokens 1000 ;
+    provai:outputTokens 263 ;
+    provai:partOf <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/step/7a57b923-da38-45cc-a871-c49679af3a7d> ;
+    provai:status "completed" ;
+    provai:temperature 0.2 ;
+    provai:usedModel <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/model/openrouter%2Fnvidia%2Fnemotron-3.5-lightning%3Afree> .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/step/7ff8f7c7-174d-4f6c-b15a-b428dd667c52> a provai:ModelCall ;
+    rdfs:label "chat" ;
+    prov:endedAtTime "2026-10-04T07:51:34.800472+00:00"^^xsd:dateTime ;
+    prov:startedAtTime "2026-10-04T07:51:24.181283+00:00"^^xsd:dateTime ;
+    prov:used <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/7ff8f7c7-174d-4f6c-b15a-b428dd667c52-input> ;
+    prov:wasAssociatedWith <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/agent/evaluator> ;
+    provai:finishReason "stop" ;
+    provai:inputTokens 111 ;
+    provai:maxTokens 1000 ;
+    provai:outputTokens 375 ;
+    provai:partOf <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/step/fc26617c-de32-4efd-85fd-8deff47885c5> ;
+    provai:status "completed" ;
+    provai:temperature 0.2 ;
+    provai:usedModel <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/model/openrouter%2Fnvidia%2Fnemotron-3.5-lightning%3Afree> .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/step/9105f6d9-2fb8-4349-9729-695dbbd6ddb8> a provai:ModelCall ;
+    rdfs:label "chat" ;
+    prov:endedAtTime "2026-10-04T07:51:10.904019+00:00"^^xsd:dateTime ;
+    prov:startedAtTime "2026-10-04T07:51:09.959952+00:00"^^xsd:dateTime ;
+    prov:used <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/0456a90d-b859-49f8-90d8-c803c253de9f-result>,
+        <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/9105f6d9-2fb8-4349-9729-695dbbd6ddb8-input> ;
+    prov:wasAssociatedWith <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/agent/coordinator> ;
+    provai:finishReason "stop" ;
+    provai:inputTokens 934 ;
+    provai:maxTokens 1000 ;
+    provai:outputTokens 121 ;
+    provai:partOf <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/step/97fa4770-e81e-4bdc-8464-708ad76919b3> ;
+    provai:status "completed" ;
+    provai:temperature 0.2 ;
+    provai:usedModel <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/model/openrouter%2Fnvidia%2Fnemotron-3.5-lightning%3Afree> .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/step/a71c1ae3-21a7-4a8e-a834-95a8227c652d> a provai:Step ;
+    rdfs:label "weather" ;
+    prov:endedAtTime "2026-10-04T07:50:37.658502+00:00"^^xsd:dateTime ;
+    prov:startedAtTime "2026-10-04T07:50:35.684365+00:00"^^xsd:dateTime ;
+    prov:wasAssociatedWith <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/agent/weather_agent> ;
+    prov:wasInformedBy <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/step/813de6f6-39b7-42c2-82dc-1a110d380f60> ;
+    provai:iteration 1 ;
+    provai:partOf <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/step/7dc59b56-fd81-4175-bf7c-c0ee96b87891> ;
+    provai:sequence 14 ;
+    provai:status "completed" .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/step/a7ffbdbd-b625-48b5-86bd-f3d3a8488798> a provai:ModelCall ;
+    rdfs:label "chat" ;
+    prov:endedAtTime "2026-10-04T07:51:22.856909+00:00"^^xsd:dateTime ;
+    prov:startedAtTime "2026-10-04T07:51:10.961051+00:00"^^xsd:dateTime ;
+    prov:used <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/a7ffbdbd-b625-48b5-86bd-f3d3a8488798-input> ;
+    prov:wasAssociatedWith <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/agent/writer> ;
+    provai:finishReason "tool_call" ;
+    provai:inputTokens 431 ;
+    provai:maxTokens 1000 ;
+    provai:outputTokens 168 ;
+    provai:partOf <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/step/7a57b923-da38-45cc-a871-c49679af3a7d> ;
+    provai:status "completed" ;
+    provai:temperature 0.2 ;
+    provai:usedModel <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/model/openrouter%2Fnvidia%2Fnemotron-3.5-lightning%3Afree> .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/step/bc5683ae-1e39-41f1-98ac-c82a9fd9928a> a provai:Check ;
+    rdfs:label "approval" ;
+    prov:endedAtTime "2026-10-04T07:51:34.808741+00:00"^^xsd:dateTime ;
+    prov:startedAtTime "2026-10-04T07:51:34.808741+00:00"^^xsd:dateTime ;
+    prov:wasAssociatedWith <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/agent/approver> ;
+    provai:checked <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/ea52ad93-3631-4040-91fa-71a4c35f8f4c-output> ;
+    provai:outcome "approve" ;
+    provai:partOf <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/step/a7054013-af6f-40e1-8bcd-c183a64340e8> ;
+    provai:status "completed" .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/step/c28ed091-927a-4814-96f4-40b70461bbb3> a provai:ModelCall ;
+    rdfs:label "chat" ;
+    prov:endedAtTime "2026-10-04T07:51:06.719959+00:00"^^xsd:dateTime ;
+    prov:startedAtTime "2026-10-04T07:50:58.860780+00:00"^^xsd:dateTime ;
+    prov:used <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/c28ed091-927a-4814-96f4-40b70461bbb3-input> ;
+    prov:wasAssociatedWith <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/agent/coordinator> ;
+    provai:finishReason "tool_call" ;
+    provai:inputTokens 797 ;
+    provai:maxTokens 1000 ;
+    provai:outputTokens 248 ;
+    provai:partOf <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/step/97fa4770-e81e-4bdc-8464-708ad76919b3> ;
+    provai:status "completed" ;
+    provai:temperature 0.2 ;
+    provai:usedModel <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/model/openrouter%2Fnvidia%2Fnemotron-3.5-lightning%3Afree> .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/step/d3d8df52-a181-4fab-80b3-059f8ac2e094> a provai:ModelCall ;
+    rdfs:label "chat" ;
+    prov:endedAtTime "2026-10-04T07:50:35.672619+00:00"^^xsd:dateTime ;
+    prov:startedAtTime "2026-10-04T07:50:29.687917+00:00"^^xsd:dateTime ;
+    prov:used <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/d3d8df52-a181-4fab-80b3-059f8ac2e094-input> ;
+    prov:wasAssociatedWith <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/agent/coordinator> ;
+    provai:finishReason "stop" ;
+    provai:inputTokens 92 ;
+    provai:maxTokens 1000 ;
+    provai:outputTokens 471 ;
+    provai:partOf <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/step/be6c9552-ac44-4900-932e-cc4d33f60c02> ;
+    provai:status "completed" ;
+    provai:temperature 0.2 ;
+    provai:usedModel <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/model/openrouter%2Fnvidia%2Fnemotron-3.5-lightning%3Afree> .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/step/dbf25e66-5383-42f9-b829-2df68a303e2d> a provai:Step ;
+    rdfs:label "crew" ;
+    prov:endedAtTime "2026-10-04T07:51:10.923929+00:00"^^xsd:dateTime ;
+    prov:startedAtTime "2026-10-04T07:50:58.758127+00:00"^^xsd:dateTime ;
+    provai:partOf <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/step/a781d9ce-77f1-491d-8000-6d0d4e304b34> ;
+    provai:status "completed" .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/step/ec26e3c5-de3c-44d0-91f0-0fb0463e086f> a provai:MemoryAccess ;
+    rdfs:label "memory write" ;
+    prov:endedAtTime "2026-10-04T07:50:58.686035+00:00"^^xsd:dateTime ;
+    prov:startedAtTime "2026-10-04T07:50:57.933725+00:00"^^xsd:dateTime ;
+    prov:wasAssociatedWith <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/agent/facts_agent> ;
+    provai:partOf <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/step/65e6aaea-785b-48af-91f8-b2c70c3a56a6> ;
+    provai:status "completed" .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/step/f7bb6479-4a5f-4c7f-9433-36e0091a34d9> a provai:ModelCall ;
+    rdfs:label "chat" ;
+    prov:endedAtTime "2026-10-04T07:51:09.944289+00:00"^^xsd:dateTime ;
+    prov:startedAtTime "2026-10-04T07:51:07.790814+00:00"^^xsd:dateTime ;
+    prov:used <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/59312f2a-70ed-493f-b5a8-a541b1664543-result>,
+        <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/f7bb6479-4a5f-4c7f-9433-36e0091a34d9-input> ;
+    prov:wasAssociatedWith <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/agent/writer> ;
+    provai:finishReason "stop" ;
+    provai:inputTokens 486 ;
+    provai:maxTokens 1000 ;
+    provai:outputTokens 202 ;
+    provai:partOf <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/step/934904a4-31fb-425b-a953-13b4d1243f93> ;
+    provai:status "completed" ;
+    provai:temperature 0.2 ;
+    provai:usedModel <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/model/openrouter%2Fnvidia%2Fnemotron-3.5-lightning%3Afree> .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/tool/delegate_work_to_coworker> a provai:Tool ;
+    rdfs:label "delegate_work_to_coworker" .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/tool/search_facts> a provai:Tool ;
+    rdfs:label "search_facts" .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/tool/send_brief> a provai:Tool ;
+    rdfs:label "send_brief" .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/agent/user> a prov:Person ;
+    rdfs:label "user" .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/4db95eb0-4a3d-4fae-8b5a-78dc684d4480-output> a provai:Message ;
+    rdfs:label "model output" ;
+    prov:value "[{\"role\": \"assistant\", \"parts\": [{\"type\": \"text\", \"content\": \"The brief has been sent to the client as requested.\"}], \"finish_reason\": \"stop\"}]" ;
+    prov:wasGeneratedBy <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/step/4db95eb0-4a3d-4fae-8b5a-78dc684d4480> .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/7ff8f7c7-174d-4f6c-b15a-b428dd667c52-output> a provai:Message ;
+    rdfs:label "model output" ;
+    prov:value "[{\"role\": \"assistant\", \"parts\": [{\"type\": \"text\", \"content\": \"PASS\"}], \"finish_reason\": \"stop\"}]" ;
+    prov:wasGeneratedBy <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/step/7ff8f7c7-174d-4f6c-b15a-b428dd667c52> .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/d3d8df52-a181-4fab-80b3-059f8ac2e094-output> a provai:Message ;
+    rdfs:label "model output" ;
+    prov:value "[{\"role\": \"assistant\", \"parts\": [{\"type\": \"text\", \"content\": \"[\\\"weather\\\", \\\"facts\\\"]\"}], \"finish_reason\": \"stop\"}]" ;
+    prov:wasGeneratedBy <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/step/d3d8df52-a181-4fab-80b3-059f8ac2e094> .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/step/0456a90d-b859-49f8-90d8-c803c253de9f> a provai:Handoff,
+        provai:ToolCall ;
+    rdfs:label "delegate_work_to_coworker" ;
+    prov:endedAtTime "2026-10-04T07:51:09.954151+00:00"^^xsd:dateTime ;
+    prov:startedAtTime "2026-10-04T07:51:06.722871+00:00"^^xsd:dateTime ;
+    prov:used <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/0456a90d-b859-49f8-90d8-c803c253de9f-arguments>,
+        <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/c28ed091-927a-4814-96f4-40b70461bbb3-output> ;
+    prov:wasAssociatedWith <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/agent/coordinator> ;
+    provai:fromAgent <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/agent/coordinator> ;
+    provai:partOf <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/step/97fa4770-e81e-4bdc-8464-708ad76919b3> ;
+    provai:status "completed" ;
+    provai:toAgent <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/agent/writer> ;
+    provai:usedTool <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/tool/delegate_work_to_coworker> .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/step/14bf839d-21e3-4edf-aea7-ab0ae9380cef> a provai:Step ;
+    rdfs:label "revise" ;
+    prov:endedAtTime "2026-10-04T07:51:24.166699+00:00"^^xsd:dateTime ;
+    prov:startedAtTime "2026-10-04T07:51:10.930865+00:00"^^xsd:dateTime ;
+    prov:wasAssociatedWith <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/agent/writer> ;
+    prov:wasInformedBy <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/step/af69e44f-2dc2-4f1a-b525-752350ff65fa> ;
+    provai:iteration 1 ;
+    provai:partOf <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/step/7dc59b56-fd81-4175-bf7c-c0ee96b87891> ;
+    provai:sequence 84 ;
+    provai:status "completed" .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/step/59312f2a-70ed-493f-b5a8-a541b1664543> a provai:ToolCall ;
+    rdfs:label "read_note" ;
+    prov:endedAtTime "2026-10-04T07:51:07.786308+00:00"^^xsd:dateTime ;
+    prov:startedAtTime "2026-10-04T07:51:07.742664+00:00"^^xsd:dateTime ;
+    prov:used <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/0057ec77-104b-4ea5-9b24-ba7edf880b01-output>,
+        <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/59312f2a-70ed-493f-b5a8-a541b1664543-arguments> ;
+    prov:wasAssociatedWith <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/agent/writer> ;
+    provai:partOf <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/step/934904a4-31fb-425b-a953-13b4d1243f93> ;
+    provai:status "completed" ;
+    provai:usedTool <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/tool/read_note> .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/step/654d7621-65f5-4ab1-8fc9-41ae7cab5121> a provai:ToolCall ;
+    rdfs:label "send_brief" ;
+    prov:endedAtTime "2026-10-04T07:51:48.277851+00:00"^^xsd:dateTime ;
+    prov:startedAtTime "2026-10-04T07:51:48.277025+00:00"^^xsd:dateTime ;
+    prov:used <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/5b82ec59-c1bf-4625-9e99-d86995fcb3a5-output>,
+        <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/654d7621-65f5-4ab1-8fc9-41ae7cab5121-arguments> ;
+    prov:wasAssociatedWith <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/agent/writer> ;
+    provai:partOf <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/step/ff416313-181a-4497-8c21-d129ffcc7b22> ;
+    provai:status "completed" ;
+    provai:usedTool <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/tool/send_brief> .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/step/813de6f6-39b7-42c2-82dc-1a110d380f60> a provai:Routing,
+        provai:Step ;
+    rdfs:label "route" ;
+    prov:endedAtTime "2026-10-04T07:50:35.683632+00:00"^^xsd:dateTime ;
+    prov:startedAtTime "2026-10-04T07:50:35.683282+00:00"^^xsd:dateTime ;
+    prov:wasAssociatedWith <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/agent/coordinator> ;
+    prov:wasInformedBy <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/step/b58f3b67-b803-4090-9bb5-54275a7171e0> ;
+    provai:candidate <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/agent/facts_agent>,
+        <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/agent/translator_agent>,
+        <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/agent/weather_agent> ;
+    provai:iteration 1 ;
+    provai:partOf <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/step/7dc59b56-fd81-4175-bf7c-c0ee96b87891> ;
+    provai:selected <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/agent/facts_agent>,
+        <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/agent/weather_agent> ;
+    provai:sequence 12 ;
+    provai:status "completed" .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/step/a781d9ce-77f1-491d-8000-6d0d4e304b34> a provai:Step ;
+    rdfs:label "handoff" ;
+    prov:endedAtTime "2026-10-04T07:51:10.925650+00:00"^^xsd:dateTime ;
+    prov:startedAtTime "2026-10-04T07:50:58.688340+00:00"^^xsd:dateTime ;
+    prov:wasAssociatedWith <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/agent/coordinator> ;
+    prov:wasInformedBy <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/step/65e6aaea-785b-48af-91f8-b2c70c3a56a6> ;
+    provai:iteration 1 ;
+    provai:partOf <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/step/7dc59b56-fd81-4175-bf7c-c0ee96b87891> ;
+    provai:sequence 49 ;
+    provai:status "completed" .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/step/af69e44f-2dc2-4f1a-b525-752350ff65fa> a provai:Step ;
+    rdfs:label "evaluate" ;
+    prov:endedAtTime "2026-10-04T07:51:10.930557+00:00"^^xsd:dateTime ;
+    prov:startedAtTime "2026-10-04T07:51:10.925867+00:00"^^xsd:dateTime ;
+    prov:wasAssociatedWith <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/agent/evaluator> ;
+    prov:wasInformedBy <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/step/a781d9ce-77f1-491d-8000-6d0d4e304b34> ;
+    provai:iteration 1 ;
+    provai:partOf <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/step/7dc59b56-fd81-4175-bf7c-c0ee96b87891> ;
+    provai:sequence 81 ;
+    provai:status "completed" .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/step/b58f3b67-b803-4090-9bb5-54275a7171e0> a provai:Step ;
+    rdfs:label "coordinate" ;
+    prov:endedAtTime "2026-10-04T07:50:35.683034+00:00"^^xsd:dateTime ;
+    prov:startedAtTime "2026-10-04T07:50:29.495444+00:00"^^xsd:dateTime ;
+    prov:wasAssociatedWith <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/agent/coordinator> ;
+    provai:iteration 1 ;
+    provai:partOf <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/step/7dc59b56-fd81-4175-bf7c-c0ee96b87891> ;
+    provai:sequence 3 ;
+    provai:status "completed" .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/step/be6c9552-ac44-4900-932e-cc4d33f60c02> a provai:AgentInvocation ;
+    rdfs:label "coordinator" ;
+    prov:endedAtTime "2026-10-04T07:50:35.680950+00:00"^^xsd:dateTime ;
+    prov:startedAtTime "2026-10-04T07:50:29.668922+00:00"^^xsd:dateTime ;
+    prov:wasAssociatedWith <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/agent/coordinator> ;
+    provai:iteration 1 ;
+    provai:partOf <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/step/b58f3b67-b803-4090-9bb5-54275a7171e0> ;
+    provai:status "completed" .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/step/ebf161b0-24d9-4b1c-a814-b075de500492> a provai:ToolCall ;
+    rdfs:label "read_note" ;
+    prov:endedAtTime "2026-10-04T07:51:22.871981+00:00"^^xsd:dateTime ;
+    prov:startedAtTime "2026-10-04T07:51:22.858868+00:00"^^xsd:dateTime ;
+    prov:used <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/a7ffbdbd-b625-48b5-86bd-f3d3a8488798-output>,
+        <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/ebf161b0-24d9-4b1c-a814-b075de500492-arguments> ;
+    prov:wasAssociatedWith <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/agent/writer> ;
+    provai:partOf <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/step/7a57b923-da38-45cc-a871-c49679af3a7d> ;
+    provai:status "completed" ;
+    provai:usedTool <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/tool/read_note> .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/step/fc26617c-de32-4efd-85fd-8deff47885c5> a provai:AgentInvocation ;
+    rdfs:label "evaluator" ;
+    prov:endedAtTime "2026-10-04T07:51:34.806978+00:00"^^xsd:dateTime ;
+    prov:startedAtTime "2026-10-04T07:51:24.173361+00:00"^^xsd:dateTime ;
+    prov:wasAssociatedWith <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/agent/evaluator> ;
+    provai:iteration 1 ;
+    provai:partOf <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/step/84fc38fe-43d2-40f2-9a04-b954e2e0ffe4> ;
+    provai:status "completed" .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/tool/get_weather> a provai:Tool ;
+    rdfs:label "get_weather" .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/tool/read_note> a provai:Tool ;
+    rdfs:label "read_note" .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/47fef46d-c04a-4a18-a7d9-e8920992532b-result> a prov:Entity ;
+    rdfs:label "get_weather result" ;
+    prov:value "Lisbon: 21 C, clear sky" ;
+    prov:wasGeneratedBy <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/step/47fef46d-c04a-4a18-a7d9-e8920992532b> .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/654d7621-65f5-4ab1-8fc9-41ae7cab5121-result> a prov:Entity ;
+    rdfs:label "send_brief result" ;
+    prov:value "/root/.claude/jobs/28722dd5/tmp/rr/crewai/cr-20261004T075022/brief-to-client.txt" ;
+    prov:wasGeneratedBy <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/step/654d7621-65f5-4ab1-8fc9-41ae7cab5121> .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/ebf161b0-24d9-4b1c-a814-b075de500492-result> a prov:Entity ;
+    rdfs:label "read_note result" ;
+    prov:qualifiedDerivation <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/ebf161b0-24d9-4b1c-a814-b075de500492-result/derivation/1bac9a28-f1bb-448c-8a77-0443cbb73c19> ;
+    prov:value "Lisbon is the capital of Portugal and lies on the Tagus estuary." ;
+    prov:wasDerivedFrom <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/1bac9a28-f1bb-448c-8a77-0443cbb73c19> ;
+    prov:wasGeneratedBy <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/step/ebf161b0-24d9-4b1c-a814-b075de500492> .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/step/65e6aaea-785b-48af-91f8-b2c70c3a56a6> a provai:Step ;
+    rdfs:label "facts" ;
+    prov:endedAtTime "2026-10-04T07:50:58.686947+00:00"^^xsd:dateTime ;
+    prov:startedAtTime "2026-10-04T07:50:35.763158+00:00"^^xsd:dateTime ;
+    prov:wasAssociatedWith <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/agent/facts_agent> ;
+    prov:wasInformedBy <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/step/813de6f6-39b7-42c2-82dc-1a110d380f60> ;
+    provai:iteration 1 ;
+    provai:partOf <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/step/7dc59b56-fd81-4175-bf7c-c0ee96b87891> ;
+    provai:sequence 17 ;
+    provai:status "completed" .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/step/84fc38fe-43d2-40f2-9a04-b954e2e0ffe4> a provai:Step ;
+    rdfs:label "evaluate" ;
+    prov:endedAtTime "2026-10-04T07:51:34.808054+00:00"^^xsd:dateTime ;
+    prov:startedAtTime "2026-10-04T07:51:24.166813+00:00"^^xsd:dateTime ;
+    prov:wasAssociatedWith <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/agent/evaluator> ;
+    prov:wasInformedBy <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/step/14bf839d-21e3-4edf-aea7-ab0ae9380cef> ;
+    provai:iteration 2 ;
+    provai:partOf <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/step/7dc59b56-fd81-4175-bf7c-c0ee96b87891> ;
+    provai:sequence 99 ;
+    provai:status "completed" .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/step/a7054013-af6f-40e1-8bcd-c183a64340e8> a provai:Step ;
+    rdfs:label "review" ;
+    prov:endedAtTime "2026-10-04T07:51:34.813784+00:00"^^xsd:dateTime ;
+    prov:startedAtTime "2026-10-04T07:51:34.808302+00:00"^^xsd:dateTime ;
+    prov:wasInformedBy <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/step/84fc38fe-43d2-40f2-9a04-b954e2e0ffe4> ;
+    provai:iteration 1 ;
+    provai:partOf <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/step/7dc59b56-fd81-4175-bf7c-c0ee96b87891> ;
+    provai:sequence 109 ;
+    provai:status "completed" .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/step/7a57b923-da38-45cc-a871-c49679af3a7d> a provai:AgentInvocation ;
+    rdfs:label "writer" ;
+    prov:endedAtTime "2026-10-04T07:51:24.166449+00:00"^^xsd:dateTime ;
+    prov:startedAtTime "2026-10-04T07:51:10.954675+00:00"^^xsd:dateTime ;
+    prov:wasAssociatedWith <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/agent/writer> ;
+    provai:iteration 2 ;
+    provai:partOf <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/step/14bf839d-21e3-4edf-aea7-ab0ae9380cef> ;
+    provai:status "completed" .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/step/934904a4-31fb-425b-a953-13b4d1243f93> a provai:AgentInvocation ;
+    rdfs:label "writer" ;
+    prov:endedAtTime "2026-10-04T07:51:09.953902+00:00"^^xsd:dateTime ;
+    prov:startedAtTime "2026-10-04T07:51:06.724587+00:00"^^xsd:dateTime ;
+    prov:wasAssociatedWith <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/agent/writer> ;
+    provai:iteration 1 ;
+    provai:partOf <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/step/0456a90d-b859-49f8-90d8-c803c253de9f> ;
+    provai:status "completed" .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/step/97fa4770-e81e-4bdc-8464-708ad76919b3> a provai:AgentInvocation ;
+    rdfs:label "coordinator" ;
+    prov:endedAtTime "2026-10-04T07:51:10.912691+00:00"^^xsd:dateTime ;
+    prov:startedAtTime "2026-10-04T07:50:58.851338+00:00"^^xsd:dateTime ;
+    prov:wasAssociatedWith <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/agent/coordinator> ;
+    provai:iteration 2 ;
+    provai:partOf <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/step/0233e57c-60dd-44fb-b3a1-3806f1822c03> ;
+    provai:status "completed" .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/step/ff416313-181a-4497-8c21-d129ffcc7b22> a provai:AgentInvocation ;
+    rdfs:label "writer" ;
+    prov:endedAtTime "2026-10-04T07:51:54.718310+00:00"^^xsd:dateTime ;
+    prov:startedAtTime "2026-10-04T07:51:34.824672+00:00"^^xsd:dateTime ;
+    prov:wasAssociatedWith <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/agent/writer> ;
+    provai:iteration 3 ;
+    provai:partOf <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/step/17977b1b-86d6-4d9d-9281-93d240810e40> ;
+    provai:status "completed" .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/step/fffc3a1a-09b9-465e-89fd-99d30cfce2e8> a provai:AgentInvocation ;
+    rdfs:label "facts_agent" ;
+    prov:endedAtTime "2026-10-04T07:50:57.933599+00:00"^^xsd:dateTime ;
+    prov:startedAtTime "2026-10-04T07:50:35.772680+00:00"^^xsd:dateTime ;
+    prov:wasAssociatedWith <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/agent/facts_agent> ;
+    provai:iteration 1 ;
+    provai:partOf <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/step/65e6aaea-785b-48af-91f8-b2c70c3a56a6> ;
+    provai:status "completed" .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/agent/evaluator> a provai:Agent ;
+    rdfs:label "evaluator" .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/97fa4770-e81e-4bdc-8464-708ad76919b3-answer> a prov:Entity ;
+    rdfs:label "coordinator answer" ;
+    prov:qualifiedDerivation <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/97fa4770-e81e-4bdc-8464-708ad76919b3-answer/derivation/9105f6d9-2fb8-4349-9729-695dbbd6ddb8-output> ;
+    prov:value "Lisbon, the capital of Portugal, sits on the Tagus estuary. The city currently basks in 21 °C clear skies." ;
+    prov:wasDerivedFrom <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/9105f6d9-2fb8-4349-9729-695dbbd6ddb8-output> ;
+    prov:wasGeneratedBy <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/step/97fa4770-e81e-4bdc-8464-708ad76919b3> .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/ea52ad93-3631-4040-91fa-71a4c35f8f4c-output> a prov:Entity ;
+    rdfs:label "review output" ;
+    prov:qualifiedDerivation <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/ea52ad93-3631-4040-91fa-71a4c35f8f4c-output/derivation/7a57b923-da38-45cc-a871-c49679af3a7d-answer> ;
+    prov:value "Lisbon, the capital of Portugal, lies on the Tagus estuary. The city enjoys a mild 21 °C with clear skies today." ;
+    prov:wasDerivedFrom <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/7a57b923-da38-45cc-a871-c49679af3a7d-answer> ;
+    prov:wasGeneratedBy <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/step/a7054013-af6f-40e1-8bcd-c183a64340e8> .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/9105f6d9-2fb8-4349-9729-695dbbd6ddb8-output> a provai:Message ;
+    rdfs:label "model output" ;
+    prov:value "[{\"role\": \"assistant\", \"parts\": [{\"type\": \"text\", \"content\": \"Lisbon, the capital of Portugal, sits on the Tagus estuary. The city currently basks in 21\\u202f\\u00b0C clear skies.\"}], \"finish_reason\": \"stop\"}]" ;
+    prov:wasGeneratedBy <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/step/9105f6d9-2fb8-4349-9729-695dbbd6ddb8> .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/934904a4-31fb-425b-a953-13b4d1243f93-answer> a prov:Entity ;
+    rdfs:label "writer answer" ;
+    prov:qualifiedDerivation <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/934904a4-31fb-425b-a953-13b4d1243f93-answer/derivation/f7bb6479-4a5f-4c7f-9433-36e0091a34d9-output> ;
+    prov:value "Lisbon, the capital of Portugal, sits on the Tagus estuary. The city currently basks in 21 °C clear skies." ;
+    prov:wasDerivedFrom <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/f7bb6479-4a5f-4c7f-9433-36e0091a34d9-output> ;
+    prov:wasGeneratedBy <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/step/934904a4-31fb-425b-a953-13b4d1243f93> .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/step/fbf76b16-9fb5-4782-94a9-f7cfc035284d> a provai:AgentInvocation ;
+    rdfs:label "weather_agent" ;
+    prov:endedAtTime "2026-10-04T07:50:37.655426+00:00"^^xsd:dateTime ;
+    prov:startedAtTime "2026-10-04T07:50:35.754591+00:00"^^xsd:dateTime ;
+    prov:wasAssociatedWith <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/agent/weather_agent> ;
+    provai:iteration 1 ;
+    provai:partOf <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/step/a71c1ae3-21a7-4a8e-a834-95a8227c652d> ;
+    provai:status "completed" .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/0456a90d-b859-49f8-90d8-c803c253de9f-result> a prov:Entity ;
+    rdfs:label "delegate_work_to_coworker result" ;
+    prov:value "Lisbon, the capital of Portugal, sits on the Tagus estuary. The city currently basks in 21 °C clear skies." ;
+    prov:wasGeneratedBy <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/step/0456a90d-b859-49f8-90d8-c803c253de9f> .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/agent/facts_agent> a provai:Agent ;
+    rdfs:label "facts_agent" ;
+    prov:actedOnBehalfOf <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/agent/coordinator> .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/7622babc-73d2-43b3-8d9c-4755f65fb64a-output> a provai:Message ;
+    rdfs:label "model output" ;
+    prov:value "[{\"role\": \"assistant\", \"parts\": [{\"type\": \"text\", \"content\": \"Lisbon, the capital of Portugal, lies on the Tagus estuary. The city enjoys a mild 21\\u202f\\u00b0C with clear skies today.\"}], \"finish_reason\": \"stop\"}]" ;
+    prov:wasGeneratedBy <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/step/7622babc-73d2-43b3-8d9c-4755f65fb64a> .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/f7bb6479-4a5f-4c7f-9433-36e0091a34d9-output> a provai:Message ;
+    rdfs:label "model output" ;
+    prov:value "[{\"role\": \"assistant\", \"parts\": [{\"type\": \"text\", \"content\": \"Lisbon, the capital of Portugal, sits on the Tagus estuary. The city currently basks in 21\\u202f\\u00b0C clear skies.\"}], \"finish_reason\": \"stop\"}]" ;
+    prov:wasGeneratedBy <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/step/f7bb6479-4a5f-4c7f-9433-36e0091a34d9> .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/agent/weather_agent> a provai:Agent ;
+    rdfs:label "weather_agent" ;
+    prov:actedOnBehalfOf <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/agent/coordinator> .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/59312f2a-70ed-493f-b5a8-a541b1664543-result> a prov:Entity ;
+    rdfs:label "read_note result" ;
+    prov:qualifiedDerivation <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/59312f2a-70ed-493f-b5a8-a541b1664543-result/derivation/1bac9a28-f1bb-448c-8a77-0443cbb73c19> ;
+    prov:value "Lisbon is the capital of Portugal and lies on the Tagus estuary." ;
+    prov:wasDerivedFrom <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/1bac9a28-f1bb-448c-8a77-0443cbb73c19> ;
+    prov:wasGeneratedBy <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/step/59312f2a-70ed-493f-b5a8-a541b1664543> .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/7a57b923-da38-45cc-a871-c49679af3a7d-answer> a prov:Entity ;
+    rdfs:label "writer answer" ;
+    prov:qualifiedDerivation <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/7a57b923-da38-45cc-a871-c49679af3a7d-answer/derivation/7622babc-73d2-43b3-8d9c-4755f65fb64a-output> ;
+    prov:value "Lisbon, the capital of Portugal, lies on the Tagus estuary. The city enjoys a mild 21 °C with clear skies today." ;
+    prov:wasDerivedFrom <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/7622babc-73d2-43b3-8d9c-4755f65fb64a-output> ;
+    prov:wasGeneratedBy <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/step/7a57b923-da38-45cc-a871-c49679af3a7d> .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/step/7dc59b56-fd81-4175-bf7c-c0ee96b87891> a provai:Step ;
+    rdfs:label "flow BriefFlow" ;
+    prov:endedAtTime "2026-10-04T07:51:54.721107+00:00"^^xsd:dateTime ;
+    prov:startedAtTime "2026-10-04T07:50:29.194046+00:00"^^xsd:dateTime ;
+    provai:partOf <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/run> ;
+    provai:status "completed" .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/fbf76b16-9fb5-4782-94a9-f7cfc035284d-answer> a prov:Entity ;
+    rdfs:label "weather_agent answer" ;
+    prov:qualifiedDerivation <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/fbf76b16-9fb5-4782-94a9-f7cfc035284d-answer/derivation/4e190590-4a57-4399-a736-4675b0c5a910-output> ;
+    prov:value "Lisbon is currently 21 °C with clear skies." ;
+    prov:wasDerivedFrom <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/4e190590-4a57-4399-a736-4675b0c5a910-output> ;
+    prov:wasGeneratedBy <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/step/fbf76b16-9fb5-4782-94a9-f7cfc035284d> .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/agent/coordinator> a provai:Agent ;
+    rdfs:label "coordinator" ;
+    prov:actedOnBehalfOf <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/agent/user> .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/4e190590-4a57-4399-a736-4675b0c5a910-output> a provai:Message ;
+    rdfs:label "model output" ;
+    prov:value "[{\"role\": \"assistant\", \"parts\": [{\"type\": \"text\", \"content\": \"Lisbon is currently 21\\u202f\\u00b0C with clear skies.\"}], \"finish_reason\": \"stop\"}]" ;
+    prov:wasGeneratedBy <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/step/4e190590-4a57-4399-a736-4675b0c5a910> .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/model/openrouter%2Fnvidia%2Fnemotron-3.5-lightning%3Afree> a provai:Model ;
+    rdfs:label "nvidia/nemotron-3.5-lightning:free" ;
+    provai:provider "openrouter" .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/3158af12-ab02-459e-bdec-f111b3306610-output> a provai:Message ;
+    rdfs:label "model output" ;
+    prov:value "[{\"role\": \"assistant\", \"parts\": [{\"type\": \"text\", \"content\": \"Lisbon is the capital of Portugal and lies on the Tagus estuary.\"}], \"finish_reason\": \"stop\"}]" ;
+    prov:wasGeneratedBy <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/step/3158af12-ab02-459e-bdec-f111b3306610> .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/fffc3a1a-09b9-465e-89fd-99d30cfce2e8-answer> a prov:Entity ;
+    rdfs:label "facts_agent answer" ;
+    prov:qualifiedDerivation <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/fffc3a1a-09b9-465e-89fd-99d30cfce2e8-answer/derivation/3158af12-ab02-459e-bdec-f111b3306610-output> ;
+    prov:value "Lisbon is the capital of Portugal and lies on the Tagus estuary." ;
+    prov:wasDerivedFrom <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/3158af12-ab02-459e-bdec-f111b3306610-output> ;
+    prov:wasGeneratedBy <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/step/fffc3a1a-09b9-465e-89fd-99d30cfce2e8> .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/10c71596-8719-4c53-a716-9a3888d8e515-result> a prov:Entity ;
+    rdfs:label "search_facts result" ;
+    prov:value "Lisbon is the capital of Portugal and lies on the Tagus estuary." ;
+    prov:wasGeneratedBy <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/step/10c71596-8719-4c53-a716-9a3888d8e515> .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/agent/writer> a provai:Agent ;
+    rdfs:label "writer" ;
+    prov:actedOnBehalfOf <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/agent/coordinator> .
+
+<https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/1bac9a28-f1bb-448c-8a77-0443cbb73c19> a provai:MemoryRecord ;
+    rdfs:label "Lisbon" ;
+    prov:qualifiedDerivation <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/1bac9a28-f1bb-448c-8a77-0443cbb73c19/derivation/fffc3a1a-09b9-465e-89fd-99d30cfce2e8-answer> ;
+    prov:value "Lisbon is the capital of Portugal and lies on the Tagus estuary." ;
+    prov:wasDerivedFrom <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/entity/fffc3a1a-09b9-465e-89fd-99d30cfce2e8-answer> ;
+    prov:wasGeneratedBy <https://w3id.org/prov-ai/run/crewai/cr-20261004T075022/step/ec26e3c5-de3c-44d0-91f0-0fb0463e086f> .
+
