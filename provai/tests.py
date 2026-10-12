@@ -1,4 +1,8 @@
 import importlib
+import json
+import shutil
+import tempfile
+from pathlib import Path
 
 from rdflib import RDF, Graph, Literal, URIRef
 
@@ -97,7 +101,34 @@ def later_request(base):
     return [("a later request's memory read conforms", ok), ("CQ5 finds a read from a later request", found)]
 
 
+def adk_schemas():
+    # ADK's telemetry schema 2 renames the invocation span to invoke_workflow, and ADK plans to drop call_llm
+    run_dir = next(p for p in run_dirs() if p.parent.name == "adk")
+    spans = [json.loads(line) for line in open(run_dir / "spans.jsonl")]
+    calls = {s["context"]["span_id"]: s["parent_id"] for s in spans if s["name"] == "call_llm"}
+    models = len(list(convert("adk", run_dir).subjects(RDF.type, PAI.ModelCall)))
+    out = []
+    for name, drop in (("schema 2", False), ("schema 2 without call_llm", True)):
+        with tempfile.TemporaryDirectory() as tmp:
+            with open(Path(tmp) / "spans.jsonl", "w") as f:
+                for s in spans:
+                    if s["name"] == "invocation":
+                        s = {**s, "name": "invoke_workflow", "attributes": {**s["attributes"],
+                                                                          "gen_ai.operation.name": "invoke_workflow"}}
+                    if drop and s["name"] == "call_llm":
+                        continue
+                    if drop and s.get("parent_id") in calls:
+                        s = {**s, "parent_id": calls[s["parent_id"]]}
+                    f.write(json.dumps(s) + "\n")
+            shutil.copy(run_dir / "events.jsonl", tmp)
+            g = convert("adk", Path(tmp))
+            ok, _ = check(g)
+            out.append((f"adk record from {name} conforms with every model call",
+                        ok and len(list(g.subjects(RDF.type, PAI.ModelCall))) == models))
+    return out
+
+
 def run_tests():
     base = convert("langgraph", next(p for p in run_dirs() if p.parent.name == "langgraph"))
-    results = records() + shapes(base) + conflict(base) + later_request(base)
+    results = records() + shapes(base) + conflict(base) + later_request(base) + adk_schemas()
     return results

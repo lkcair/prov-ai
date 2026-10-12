@@ -4,7 +4,7 @@ claude_agent_sdk	no	yes	yes	yes	yes	yes
 strands	no	no	no	yes	no	yes
 pydantic_ai	yes	yes	yes	yes	yes	yes
 openai_agents	no	no	yes	yes	yes	yes
-adk	no	no	yes	yes	no	yes
+adk	no	no	no	yes	no	yes
 mastra	yes	no	yes	yes	yes	yes
 llamaindex	no	no	yes	yes	yes	yes
 dspy	yes	yes	yes	yes	yes	yes

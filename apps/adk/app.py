@@ -13,12 +13,13 @@ import litellm
 from litellm.integrations.custom_logger import CustomLogger
 from google.adk.agents import LlmAgent
 from google.adk.events import Event, EventActions
+from google.adk.memory import InMemoryMemoryService
 from google.adk.models.lite_llm import LiteLlm
 from google.adk.plugins.base_plugin import BasePlugin
 from google.adk.plugins.reflect_retry_tool_plugin import ReflectAndRetryToolPlugin
 from google.adk.runners import Runner
 from google.adk.sessions import InMemorySessionService
-from google.adk.tools import FunctionTool, ToolContext
+from google.adk.tools import FunctionTool, ToolContext, load_memory
 from google.adk.tools.agent_tool import AgentTool
 from google.genai import types
 
@@ -63,6 +64,7 @@ class Native(BasePlugin):
                     agent=tool_context.agent_name, **self.ids(tool_context))
 
     async def after_tool_callback(self, *, tool, tool_args, tool_context, result):
+        result = dump(result) if hasattr(result, "model_dump") else result
         self.events("tool_end", tool=tool.name, call_id=tool_context.function_call_id, result=result,
                     **self.ids(tool_context))
 
@@ -85,18 +87,12 @@ def search_facts(city: str) -> str:
     return DOCS.get(city, "no document found")
 
 
-def read_note(city: str, tool_context: ToolContext) -> str:
-    """Read the shared note about a city."""
-    tool_context.state["memory_read"] = {"by": "writer", "memory": "notes", "key": city}
-    return tool_context.state.get(f"app:notes/{city}", "no note")
-
-
-def save_note(callback_context):
-    # the facts agent's answer goes to the shared notes, app-scoped state that outlives the session
-    events = [e for e in callback_context._invocation_context.session.events if e.author == "facts_agent"]
-    text = "".join(p.text or "" for p in events[-1].content.parts if not p.thought).strip() if events else ""
-    callback_context.state["app:notes/Lisbon"] = text
-    callback_context.state["memory_write"] = {"by": "facts_agent", "memory": "notes", "key": "Lisbon", "value": text}
+async def remember(callback_context):
+    # the facts agent's answer goes to ADK's memory service, which outlives the session
+    events = [e for e in callback_context._invocation_context.session.events
+              if e.author == "facts_agent" and text(e.content)]
+    if events:
+        await callback_context.add_events_to_memory(events=events[-1:])
 
 
 def build(model, out_dir):
@@ -110,23 +106,23 @@ def build(model, out_dir):
     config = types.GenerateContentConfig(temperature=0.2, max_output_tokens=1000)
     worker = dict(model=model, generate_content_config=config)
     weather_agent = LlmAgent(name="weather_agent", description="Finds the current weather of a city.",
-                             tools=[get_weather], **worker,
+                             tools=[get_weather], mode="single_turn", **worker,
                              instruction="You do not know the weather. Always call get_weather first, even if an "
                                          "earlier attempt failed, then answer in one sentence.")
     facts_agent = LlmAgent(name="facts_agent", description="Finds facts about a city.", tools=[search_facts],
-                           after_agent_callback=save_note, **worker,
+                           mode="single_turn", after_agent_callback=remember, **worker,
                            instruction="You do not know facts about cities. Always call search_facts first, then "
                                        "answer in one sentence.")
-    translator_agent = LlmAgent(name="translator_agent", description="Translates a text into Portuguese.", **worker,
+    translator_agent = LlmAgent(name="translator_agent", description="Translates a text into Portuguese.",
+                                mode="single_turn", **worker,
                                 instruction="Translate the text you are given into Portuguese.")
     writer = LlmAgent(name="writer", description="Writes the brief.", **worker,
-                      tools=[read_note, FunctionTool(send_brief, require_confirmation=True)],
-                      instruction="You write two-sentence briefs about a city. Always call read_note for the city "
-                                  "first. Reply with the brief only. When asked to send a brief, call send_brief "
+                      tools=[load_memory, FunctionTool(send_brief, require_confirmation=True)],
+                      instruction="You write two-sentence briefs about a city. Always call load_memory with the "
+                                  "city's name first. Reply with the brief only. When asked to send a brief, call send_brief "
                                   "with the brief and the recipient.")
     coordinator = LlmAgent(
-        name="coordinator", sub_agents=[writer], **worker,
-        tools=[AgentTool(weather_agent), AgentTool(facts_agent), AgentTool(translator_agent)],
+        name="coordinator", sub_agents=[weather_agent, facts_agent, translator_agent, writer], **worker,
         instruction="You plan a short brief on a city's weather and facts. In your first reply, call every agent "
                     "you need at once, in parallel. Then transfer to the writer with what they found.")
     evaluator = LlmAgent(name="evaluator", **worker,
@@ -154,8 +150,9 @@ async def run(model, out_dir, run_id, events):
     coordinator, evaluator, agents = build(model, out_dir)
     events("agents", definitions=definitions(agents))
     sessions = InMemorySessionService()
-    runner = Runner(app_name=APP, agent=coordinator, session_service=sessions, plugins=plugins)
-    judge = Runner(app_name=APP, agent=evaluator, session_service=sessions, plugins=plugins)
+    memory = InMemoryMemoryService()
+    runner = Runner(app_name=APP, agent=coordinator, session_service=sessions, memory_service=memory, plugins=plugins)
+    judge = Runner(app_name=APP, agent=evaluator, session_service=sessions, memory_service=memory, plugins=plugins)
     await sessions.create_session(app_name=APP, user_id="user", session_id=run_id)
 
     async def say(message, by=runner, sid=run_id):

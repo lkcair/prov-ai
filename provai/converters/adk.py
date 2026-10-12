@@ -11,7 +11,12 @@ from ..spans import latest, read, same, seconds
 from . import otel_genai as og
 
 CONFIRM = "adk_request_confirmation"
+MEMORY = "memory"
 QUOTED = re.compile(r"\[(?P<agent>[^\]]+)\] `(?P<tool>[^`]+)` tool returned result:")
+
+
+def said_in(content):
+    return "".join(p.get("text", "") for p in (content or {}).get("parts") or [] if not p.get("thought")).strip()
 
 
 def text_of(msgs):
@@ -65,7 +70,7 @@ def convert(run_dir):
 
     steps, agent_of, invocations = {}, {}, Counter()
     model_steps, tool_steps, answers = [], defaultdict(list), []
-    failed, agent_tool_results, held, quoted = {}, [], {}, []
+    failed, agent_tool_results, held, quoted, memory_reads = {}, [], {}, [], []
     done = []
     consumed, span_of_call = set(), {}
 
@@ -84,8 +89,16 @@ def convert(run_dir):
     for s in spans:
         op, a, sid = og.op(s), s["attrs"], s["id"]
         parent = steps.get(s["parent"])
-        if s["name"] == "invocation":
+        under_call_llm = by_id.get(s["parent"], {}).get("name") == "call_llm"
+        # telemetry schema 1 opens each runner call with an invocation span, schema 2 with invoke_workflow
+        if s["name"] == "invocation" or op == "invoke_workflow":
             steps[sid] = rec.step(sid, PAI.Step, parent, "invocation", s["start"], s["end"], s["status"])
+
+        elif op == "invoke_node":
+            steps[sid] = rec.step(sid, PAI.Step, parent, s["name"], s["start"], s["end"], s["status"], s["error"])
+
+        elif op == "generate_content" and (sid in consumed or under_call_llm):
+            continue
 
         elif op == "invoke_agent":
             name = a["gen_ai.agent.name"]
@@ -103,12 +116,15 @@ def convert(run_dir):
                 rec.link(agent_of[sid], PROV.actedOnBehalfOf, user)
             steps[sid] = step
 
-        elif s["name"] == "call_llm":
-            gen = next((c for c in children[sid] if og.op(c) == "generate_content"), None)
+        elif s["name"] == "call_llm" or op == "generate_content":
+            # without a call_llm span, the generate_content span is the model call itself
+            gen = s if op == "generate_content" else next(
+                (c for c in children[sid] if og.op(c) == "generate_content"), None)
             if gen is not None:
                 consumed.add(gen["id"])
             ga = gen["attrs"] if gen else a
-            step = rec.step(sid, PAI.ModelCall, parent, "call_llm", s["start"], s["end"], s["status"], s["error"])
+            step = rec.step(sid, PAI.ModelCall, parent, s["name"].split(" ")[0], s["start"], s["end"], s["status"],
+                            s["error"])
             agent = agent_for(s)
             rec.link(step, PROV.wasAssociatedWith, agent)
             og.model_call(rec, step, ga)
@@ -140,7 +156,7 @@ def convert(run_dir):
             if said and not called:
                 answers.append((s, rec.iri("entity", f"{sid}-output"), said, rec.local(agent)))
             steps[sid] = step
-            if gen is not None:
+            if gen is not None and gen is not s:
                 steps[gen["id"]] = step
 
         elif op == "execute_tool":
@@ -196,9 +212,9 @@ def convert(run_dir):
             span_of_call[cid] = s
             if res is not None:
                 done.append((rec.local(agent), name, seconds(s["end"]), res))
+            if name == "load_memory" and isinstance(result, dict):
+                memory_reads.append((step, agent, result, s))
 
-        elif op == "generate_content" and sid in consumed:
-            continue
         else:
             raise SystemExit(f"span {s['name']} has no mapping")
 
@@ -222,21 +238,39 @@ def convert(run_dir):
     def tool_step(cid):
         return tool_steps[cid][-1] if tool_steps.get(cid) else None
 
-    def agent_span(session, agent):
-        return next((s for s in spans if og.op(s) == "invoke_agent" and s["attrs"].get("gen_ai.agent.name") == agent
-                     and s["attrs"].get("gen_ai.conversation.id") == session), None)
-
     for step, agent, tool, start in quoted:
         found = [res for a, t, end, res in done if a == agent and t == tool and end <= start]
         if found:
             rec.used(step, found[-1])
 
-    # ADK state keys carry their scope as a prefix: app:, user:, or temp:
-    scopes = {}
-    for row in native:
-        for k in ((row["event"].get("actions") or {}).get("state_delta") or {}):
-            if ":" in k:
-                scopes[k.split(":", 1)[1]] = k.split(":", 1)[0]
+    # ADK's memory service makes no span or event; load_memory returns each memory with its author and time,
+    # which name the event that the memory holds
+    for step, reader, result, span in memory_reads:
+        for m in result.get("memories") or []:
+            value = said_in(m.get("content"))
+            source = next((x["event"] for x in native if x["event"].get("author") == m.get("author")
+                           and said_in(x["event"].get("content")) == value), None)
+            if source is None:
+                raise SystemExit(f"memory by {m.get('author')} has no event")
+            key = source["id"]
+            if (MEMORY, key) not in rec.versions:
+                at = when(source["timestamp"])
+                owner = next((sid for sid, a in agent_of.items() if rec.local(a) == m["author"]
+                              and seconds(by_id[sid]["start"]) <= source["timestamp"] <= seconds(by_id[sid]["end"]) + 1),
+                             None)
+                write = rec.step(f"{key}-memory-write", PAI.MemoryAccess, steps.get(owner), "memory write", at, at,
+                                 "completed")
+                rec.link(write, PROV.wasAssociatedWith, rec.agent(m["author"]))
+                record = rec.memory_write(MEMORY, key, value, write)
+                rec.set(record, PAI.scope, "user")
+                origin = source_of(m["author"], value, source["timestamp"], slack=1)
+                if origin is not None:
+                    rec.derived(record, origin, "inferred")
+            reading = rec.step(f"{span['id']}-memory-read", PAI.MemoryAccess, step, "memory read", span["start"],
+                            span["end"], "completed")
+            rec.link(reading, PROV.wasAssociatedWith, reader)
+            rec.derived(rec.iri("entity", f"{span['id']}-result"), rec.memory_read(MEMORY, key, reading), "inferred")
+
     for row in native:
         e = row["event"]
         delta = (e.get("actions") or {}).get("state_delta") or {}
@@ -257,33 +291,7 @@ def convert(run_dir):
                 rec.set(check, PAI.outcome, "approve" if r["response"].get("confirmed") else "reject")
                 rec.link(held[cid].get("ran"), PROV.wasInformedBy, check)
         for name, data in delta.items():
-            if name in ("memory_write", "memory_read") and data.get("by") == e.get("author"):
-                if name == "memory_write":
-                    span = agent_span(row["session_id"], data["by"])
-                    access = rec.step(f"{e['id']}-{name}", PAI.MemoryAccess, steps.get(span and span["id"]),
-                                      "memory write", at, at, "completed")
-                    record = rec.memory_write(data["memory"], data["key"], data.get("value"), access)
-                    rec.set(record, PAI.scope, data.get("scope") or scopes.get(f"{data['memory']}/{data['key']}"))
-                    # the event that carries the write can be stamped just before the answer's span closes
-                    source = source_of(data["by"], (data.get("value") or "").strip(), e["timestamp"], slack=1)
-                    if source is not None:
-                        rec.derived(record, source, "inferred")
-                else:
-                    n = rec.versions.get((data["memory"], data["key"]))
-                    stored = n and rec.g.value(rec.iri("entity", f"{data['memory']}/{data['key']}/{n}"), PROV.value)
-                    response = one(responses, stored and str(stored))
-                    cid = response["id"]
-                    access = rec.step(f"{e['id']}-{name}", PAI.MemoryAccess, tool_step(cid), "memory read", at, at,
-                                      "completed")
-                    record = rec.memory_read(data["memory"], data["key"], access)
-                    span = span_of_call.get(cid)
-                    if span is None:
-                        raise SystemExit(f"memory read {cid} has no tool span")
-                    value = rec.g.value(record, PROV.value) if record is not None else None
-                    if value is not None and plain((response["response"] or {}).get("result")) == str(value):
-                        rec.derived(rec.iri("entity", f"{span['id']}-result"), record, "inferred")
-                rec.link(access, PROV.wasAssociatedWith, rec.agent(data["by"]))
-            elif name == "check":
+            if name == "check":
                 check = rec.step(f"{e['id']}-check", PAI.Check, None, "check", at, at, "completed")
                 rec.link(check, PROV.wasAssociatedWith, rec.agent(data["by"]))
                 rec.link(check, PAI.checked, judged(data["by"], e["timestamp"]))
